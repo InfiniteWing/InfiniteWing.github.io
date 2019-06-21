@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Instant Gratification - A synchronous Kernels-only competition | InfiniteWing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言自五月底退伍重返人間後，經歷了一周的面試之旅，發覺到自己在資訊領域最感興趣的還是資料科學。為了充實一下自己的履歷、同時也為了填補將近半年多的空缺，我決定上Kaggle找幾個比賽來訓練自己，順便看看能不能拿個Master稱號XDD。以下將介紹我選擇的其中一個比賽「Instant Gratification - A synchronous Kernels-only competition」的比賽經">
+<meta name="keywords" content="經驗,Big Data,Kaggle,KO">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Instant Gratification - A synchronous Kernels-only competition">
+<meta property="og:url" content="https://infinitewing.github.io/2019/06/21/20190621001/index.html">
+<meta property="og:site_name" content="InfiniteWing">
+<meta property="og:description" content="前言自五月底退伍重返人間後，經歷了一周的面試之旅，發覺到自己在資訊領域最感興趣的還是資料科學。為了充實一下自己的履歷、同時也為了填補將近半年多的空缺，我決定上Kaggle找幾個比賽來訓練自己，順便看看能不能拿個Master稱號XDD。以下將介紹我選擇的其中一個比賽「Instant Gratification - A synchronous Kernels-only competition」的比賽經">
+<meta property="og:updated_time" content="2019-06-21T16:20:36.146Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Instant Gratification - A synchronous Kernels-only competition">
+<meta name="twitter:description" content="前言自五月底退伍重返人間後，經歷了一周的面試之旅，發覺到自己在資訊領域最感興趣的還是資料科學。為了充實一下自己的履歷、同時也為了填補將近半年多的空缺，我決定上Kaggle找幾個比賽來訓練自己，順便看看能不能拿個Master稱號XDD。以下將介紹我選擇的其中一個比賽「Instant Gratification - A synchronous Kernels-only competition」的比賽經">
+  
+    <link rel="alternate" href="/atom.xml" title="InfiniteWing" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/logo.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/48ec3c87e3.js"></script>
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-102261368-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body style='visibility: hidden;'>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">InfiniteWing</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Till Dreams Come True</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <a class="main-nav-link nav-icon" href="/">
+          <li class="fa fa-home" style="font-size: 1.3em;"></li>
+        </a>
+        <a class="main-nav-link nav-icon" href="/about">
+          <li class="fa fa-user" style="font-size: 1.3em;"></li>
+        </a>
+        <a class="main-nav-link nav-icon" href="/archives">
+          <li class="fa fa-archive" style="font-size: 1.3em;"></li>
+        </a>
+        <a class="main-nav-link nav-icon" href="/work">
+          <li class="fa fa-gamepad" style="font-size: 1.3em;"></li>
+        </a>
+        <a class="main-nav-link nav-icon" href="/gallery">
+          <li class="fa fa-heart" style="font-size: 1.3em;"></li>
+        </a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"><li class="fa fa-rss" style="font-size: 1.3em;"></li></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"><li class="fa fa-search" style="font-size: 1.3em;"></li></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://infinitewing.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-20190621001" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/21/20190621001/" class="article-date">
+  <time datetime="2019-06-21T15:44:54.151Z" itemprop="datePublished">2019-06-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Big-Data/">Big Data</a>►<a class="article-category-link" href="/categories/Big-Data/Competition/">Competition</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Instant Gratification - A synchronous Kernels-only competition
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <div class="post-toc-outer">
+        <div class="post-toc">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#比賽說明"><span class="toc-text">比賽說明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#EDA"><span class="toc-text">EDA</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Models"><span class="toc-text">Models</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Validation方式"><span class="toc-text">Validation方式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Stacking"><span class="toc-text">Stacking</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#小結"><span class="toc-text">小結</span></a></li></ol>
+        </div>
+      </div>
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>自五月底退伍重返人間後，經歷了一周的面試之旅，發覺到自己在資訊領域最感興趣的還是資料科學。為了充實一下自己的履歷、同時也為了填補將近半年多的空缺，我決定上Kaggle找幾個比賽來訓練自己，順便看看能不能拿個Master稱號XDD。以下將介紹我選擇的其中一個比賽「Instant Gratification - A synchronous Kernels-only competition」的比賽經驗。</p>
+<a id="more"></a>
+<h1 id="比賽說明"><a href="#比賽說明" class="headerlink" title="比賽說明"></a>比賽說明</h1><p>由於Kaggle近年來一直推Kernel Only (KO)的比賽，好處不但是能保證參賽者能提供最優、最快速、最小的解法外，更重要的是能直接檢查參賽者是否有使用Leakage的方式來獲獎。<br>但在KO光鮮亮麗的好處之外，也是有著不少壞處，諸如尖峰時段Kernel運行緩慢、偶爾會出現不知名Bug、當然還有最重要的Final Private Leaderboard公布時，需要把所有參賽者的Kernel都重新跑過一次以便獲得Private Test Set的成績。<br>這個過程是十分緩慢的，而且花費時間跟參與比賽的隊伍數目成正比，參賽者往往要等上十天半個月才能知道自己有沒有得獎獲得牌，甚至有些人還會領先了全場的Public Leaderboard，最後發現自己有個小邏輯錯誤而導致Final時沒成績。<br>諸如此類的憾事讓Kaggle決定要提供一個可以即時揭曉最終Private LeaderBoard成績的KO比賽方式；而做為一個新產品的上市，Instant Gratification這項比賽就成了Kaggle的試驗品。</p>
+<h1 id="EDA"><a href="#EDA" class="headerlink" title="EDA"></a>EDA</h1><p>因為參加比賽時已經是最後十天的階段，所以當時就有不少有用的EDA可以直接參閱，並且Train data跟Test data的generate方式也已經被強大的Kaggler給破解出來，是scikit-learn裡面的make_classification()方法。(在比賽結束後，Kaggle官方也發佈了generate train&amp;test set的程式碼，毫無意外的正是make_classification()。)<br>這裡就不贅述，直接附上一些有用的EDA連結：</p>
+<h1 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h1><p>從許多Kaggler提供的Kernel中，可以找到一些在這個dataset裡表現得較好的Model，像是QDA、 GMM、 SVM model等等。令人有些意外的是常見的xgboost、lightGBM、Catboost等等GBT model、甚至是NN model竟然榜上無名，原因就在於可供training的data資料量過少。<br>因為之前沒有接觸過QDA或是GMM，因此就花了一些時間看了他們的說明…不過說真的，數學不好的人大概也就只能粗淺的理解他們在幹嘛，基本上很難自己改良(這也導致後面無法有更進一步的突破，演算法往往才是一個大gap的突破關鍵。)。<br>這裡就概略介紹一下，也算是買個保險，避免自己以後可能會用到：</p>
+<h1 id="Validation方式"><a href="#Validation方式" class="headerlink" title="Validation方式"></a>Validation方式</h1><h1 id="Stacking"><a href="#Stacking" class="headerlink" title="Stacking"></a>Stacking</h1><h1 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h1>
+      
+      <div class="right post-end">To be continued..</div>
+    </div>
+    <footer class="article-footer">
+      <div class="center post-datetime">
+        Posted at 
+        2019-06-21 11:44:54
+      </div>
+      <a data-url="https://infinitewing.github.io/2019/06/21/20190621001/" data-id="cjx6b4k2a001424u7a7op9uyp" class="article-share-link">Share</a>
+      
+        <a href="https://infinitewing.github.io/2019/06/21/20190621001/#disqus_thread" class="article-comment-link">留言</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Big-Data/">Big Data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/KO/">KO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kaggle/">Kaggle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/經驗/">經驗</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/21/20180821001/" id="article-nav-older" class="article-nav-link-wrap">
+      <div>
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">楓之谷APP開發日誌 ─ 小結</div>
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  <div class="widget-wrap">
+    <div class="widget-profile">
+      <div class="widget-profile-avatar">
+      </div>
+      <h3 class="widget-profile-title" style="text-transform: capitalize;margin: 10px 0px;">InfiniteWing</h3>
+      <div class="widget-profile-socials">
+        <a href="https://github.com/InfiniteWing" target="_blank">
+          <i class="fa fa-github-square fa-3x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/InfiniteWing/" target="_blank">
+          <i class="fa fa-linkedin-square fa-3x"></i>
+        </a>
+        <!---a href="https://twitter.com/inthewing" target="_blank">
+          <i class="fa fa-twitter-square fa-3x"></i>
+        </a--->
+        <a href="mailto:iamshanawing@gmail.com" target="_blank">
+          <i class="fa fa-envelope-square fa-3x"></i>
+        </a>
+        <a href="https://www.kaggle.com/infinitewing" target="_blank">
+          <span class="sidebar-kaggle-outer">
+            <i class="fab fa-kaggle fa-3x" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="widget" style="color: white;">
+      Where Do We Come From?<br />What Are We?<br />Where Are We Going?
+    </div>
+  </div>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/06/21/20190621001/">Instant Gratification - A synchronous Kernels-only competition</a>
+            <span class="recent_posts_date"> - 2019-06-21</span>
+          </li>
+        
+          <li>
+            <a href="/2018/08/21/20180821001/">楓之谷APP開發日誌 ─ 小結</a>
+            <span class="recent_posts_date"> - 2018-08-21</span>
+          </li>
+        
+          <li>
+            <a href="/2018/01/01/20180101001/">WSDM - KKBox&#39;s Churn Prediction Challenge</a>
+            <span class="recent_posts_date"> - 2018-01-01</span>
+          </li>
+        
+          <li>
+            <a href="/2017/12/13/20171213001/">在GCP安裝python3，運作pytorch</a>
+            <span class="recent_posts_date"> - 2017-12-13</span>
+          </li>
+        
+          <li>
+            <a href="/2017/11/30/20171130001/">[Kaggle] Text Normalization Challenge - English Language</a>
+            <span class="recent_posts_date"> - 2017-11-30</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分類</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Big-Data/">Big Data</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Big-Data/Cloud-Computing/">Cloud Computing</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Big-Data/Competition/">Competition</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Big-Data/Deep-Learning/">Deep Learning</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/FreeBSD/">FreeBSD</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/FreeBSD/系統防護/">系統防護</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Kaggle/">Kaggle</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Kaggle/Notebook/">Notebook</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/個人作品/">個人作品</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/個人作品/楓之谷APP/">楓之谷APP</a><span class="category-list-count">8</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/網站設計/">網站設計</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/網站設計/Hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/論文寫作/">論文寫作</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android-APP/" style="font-size: 15.71px;">Android APP<span class="tag-list-count">8</span></a> <a href="/tags/Big-Data/" style="font-size: 18.57px;">Big Data<span class="tag-list-count">12</span></a> <a href="/tags/CNN/" style="font-size: 11.43px;">CNN<span class="tag-list-count">2</span></a> <a href="/tags/Cloud-Computing/" style="font-size: 12.86px;">Cloud Computing<span class="tag-list-count">3</span></a> <a href="/tags/Deep-Learning/" style="font-size: 11.43px;">Deep Learning<span class="tag-list-count">2</span></a> <a href="/tags/FreeBSD/" style="font-size: 10px;">FreeBSD<span class="tag-list-count">1</span></a> <a href="/tags/GCP/" style="font-size: 12.86px;">GCP<span class="tag-list-count">3</span></a> <a href="/tags/Hexo/" style="font-size: 11.43px;">Hexo<span class="tag-list-count">2</span></a> <a href="/tags/KO/" style="font-size: 10px;">KO<span class="tag-list-count">1</span></a> <a href="/tags/Kaggle/" style="font-size: 17.14px;">Kaggle<span class="tag-list-count">10</span></a> <a href="/tags/Keras/" style="font-size: 11.43px;">Keras<span class="tag-list-count">2</span></a> <a href="/tags/Notebook/" style="font-size: 14.29px;">Notebook<span class="tag-list-count">4</span></a> <a href="/tags/Visualization/" style="font-size: 10px;">Visualization<span class="tag-list-count">1</span></a> <a href="/tags/WSDM/" style="font-size: 10px;">WSDM<span class="tag-list-count">1</span></a> <a href="/tags/ssmtp/" style="font-size: 10px;">ssmtp<span class="tag-list-count">1</span></a> <a href="/tags/個人作品/" style="font-size: 15.71px;">個人作品<span class="tag-list-count">8</span></a> <a href="/tags/童年/" style="font-size: 15.71px;">童年<span class="tag-list-count">8</span></a> <a href="/tags/第一次/" style="font-size: 12.86px;">第一次<span class="tag-list-count">3</span></a> <a href="/tags/系統防護/" style="font-size: 10px;">系統防護<span class="tag-list-count">1</span></a> <a href="/tags/經驗/" style="font-size: 20px;">經驗<span class="tag-list-count">15</span></a> <a href="/tags/網站設計/" style="font-size: 11.43px;">網站設計<span class="tag-list-count">2</span></a> <a href="/tags/論文寫作/" style="font-size: 10px;">論文寫作<span class="tag-list-count">1</span></a> <a href="/tags/資訊安全/" style="font-size: 10px;">資訊安全<span class="tag-list-count">1</span></a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">彙整</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner center">
+      &copy; 2019 InfiniteWing all rights reserved.<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  <a class="mobile-nav-link nav-icon" href="/">
+    <li class="fa fa-home" style="font-size: 1.3em;"></li>Home
+  </a>
+  <a class="mobile-nav-link nav-icon" href="/about">
+    <li class="fa fa-user" style="font-size: 1.3em;"></li>About
+  </a>
+  <a class="mobile-nav-link nav-icon" href="/archives">
+    <li class="fa fa-archive" style="font-size: 1.3em;"></li>Archives
+  </a>
+  <a class="mobile-nav-link nav-icon" href="/work">
+    <li class="fa fa-gamepad" style="font-size: 1.3em;"></li>Work
+  </a>
+  <a class="mobile-nav-link nav-icon" href="/gallery">
+    <li class="fa fa-heart" style="font-size: 1.3em;"></li>Gallery
+  </a>
+</nav>
+    
+<script>
+  var disqus_shortname = 'infinitewing';
+  
+  var disqus_url = 'https://infinitewing.github.io/2019/06/21/20190621001/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/guider.js"></script>
+<script src="/js/js.cookie.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/youtube_embed.js"></script>
+<script src="/js/SmoothScroll.min.js"></script>
+<script src="/js/top.js"></script>
+
+<link rel="stylesheet" href="/css/InfiniteWing.css">
+<div class="IW-guider" style="display: none;">
+    <div class="audio-box">
+        <div style="text-align: center;padding-top: 3px;">
+            <span class="fa fa-step-backward youtube-audio-backward"></span>
+            <span class="fa fa-play youtube-audio-play-control"></span>
+            <span class="fa fa-stop youtube-audio-stop"></span>
+            <span class="fa fa-step-forward youtube-audio-forward"></span>
+            <span class="fa fa-youtube-play youtube-audio-youtube"></span>
+        </div>
+        <div style="display: none;">
+            <div data-video="HQnC1UHBvWA" id="youtube-audio"></div>
+        </div>
+        <script src="https://www.youtube.com/iframe_api"></script>
+    </div>
+    <div class="msg-box">
+        <span></span>
+    </div>
+    <div class="guider-img-public" style="display: none;">
+    </div>
+    <div class="guider-img-base" style="display: none;">
+        <div class="guider-img">
+
+        </div>
+    </div>
+    <div class="IW-guider-control-panel">
+        <div class="IW-guider-control-btn"><span class="fa fa-arrow-up guider-up"></span></div>
+        <div class="IW-guider-control-btn"><span class="fa fa-arrow-down guider-down"></span></div>    
+        <div class="IW-guider-control-btn"><span class="fa fa-copyright guider-copyright"></span></div>
+        <div class="IW-guider-control-btn"><span class="fa fa-music guider-music"></span></div>
+        <div class="IW-guider-control-btn"><span class="fa fa-power-off guider-power"></span></div>
+    </div>
+</div>
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>InfiniteWing</title>
-  <subtitle>Till The World Ends</subtitle>
+  <subtitle>Till Dreams Come True</subtitle>
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://infinitewing.github.io/"/>
-  <updated>2018-08-21T08:28:32.985Z</updated>
+  <updated>2019-06-21T16:20:36.146Z</updated>
   <id>https://infinitewing.github.io/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Instant Gratification - A synchronous Kernels-only competition</title>
+    <link href="https://infinitewing.github.io/2019/06/21/20190621001/"/>
+    <id>https://infinitewing.github.io/2019/06/21/20190621001/</id>
+    <published>2019-06-21T15:44:54.151Z</published>
+    <updated>2019-06-21T16:20:36.146Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>自五月底退伍重返人間後，經歷了一周的面試之旅，發覺到自己在資訊領域最感興趣的還是資料科學。為了充實一下自己的履歷、同時也為了填補將近半年多的空缺，我決定上Kaggle找幾個比賽來訓練自己，順便看看能不能拿個Master稱號XDD。以下將介紹我選擇的其中一個比賽「Instant Gratification - A synchronous Kernels-only competition」的比賽經驗。</p>
+<a id="more"></a>
+<h1 id="比賽說明"><a href="#比賽說明" class="headerlink" title="比賽說明"></a>比賽說明</h1><p>由於Kaggle近年來一直推Kernel Only (KO)的比賽，好處不但是能保證參賽者能提供最優、最快速、最小的解法外，更重要的是能直接檢查參賽者是否有使用Leakage的方式來獲獎。<br>但在KO光鮮亮麗的好處之外，也是有著不少壞處，諸如尖峰時段Kernel運行緩慢、偶爾會出現不知名Bug、當然還有最重要的Final Private Leaderboard公布時，需要把所有參賽者的Kernel都重新跑過一次以便獲得Private Test Set的成績。<br>這個過程是十分緩慢的，而且花費時間跟參與比賽的隊伍數目成正比，參賽者往往要等上十天半個月才能知道自己有沒有得獎獲得牌，甚至有些人還會領先了全場的Public Leaderboard，最後發現自己有個小邏輯錯誤而導致Final時沒成績。<br>諸如此類的憾事讓Kaggle決定要提供一個可以即時揭曉最終Private LeaderBoard成績的KO比賽方式；而做為一個新產品的上市，Instant Gratification這項比賽就成了Kaggle的試驗品。</p>
+<h1 id="EDA"><a href="#EDA" class="headerlink" title="EDA"></a>EDA</h1><p>因為參加比賽時已經是最後十天的階段，所以當時就有不少有用的EDA可以直接參閱，並且Train data跟Test data的generate方式也已經被強大的Kaggler給破解出來，是scikit-learn裡面的make_classification()方法。(在比賽結束後，Kaggle官方也發佈了generate train&amp;test set的程式碼，毫無意外的正是make_classification()。)<br>這裡就不贅述，直接附上一些有用的EDA連結：</p>
+<h1 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h1><p>從許多Kaggler提供的Kernel中，可以找到一些在這個dataset裡表現得較好的Model，像是QDA、 GMM、 SVM model等等。令人有些意外的是常見的xgboost、lightGBM、Catboost等等GBT model、甚至是NN model竟然榜上無名，原因就在於可供training的data資料量過少。<br>因為之前沒有接觸過QDA或是GMM，因此就花了一些時間看了他們的說明…不過說真的，數學不好的人大概也就只能粗淺的理解他們在幹嘛，基本上很難自己改良(這也導致後面無法有更進一步的突破，演算法往往才是一個大gap的突破關鍵。)。<br>這裡就概略介紹一下，也算是買個保險，避免自己以後可能會用到：</p>
+<h1 id="Validation方式"><a href="#Validation方式" class="headerlink" title="Validation方式"></a>Validation方式</h1><h1 id="Stacking"><a href="#Stacking" class="headerlink" title="Stacking"></a>Stacking</h1><h1 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h1>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;自五月底退伍重返人間後，經歷了一周的面試之旅，發覺到自己在資訊領域最感興趣的還是資料科學。為了充實一下自己的履歷、同時也為了填補將近半年多的空缺，我決定上Kaggle找幾個比賽來訓練自己，順便看看能不能拿個Master稱號XDD。以下將介紹我選擇的其中一個比賽「Instant Gratification - A synchronous Kernels-only competition」的比賽經驗。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/categories/Big-Data/"/>
+    
+      <category term="Competition" scheme="https://infinitewing.github.io/categories/Big-Data/Competition/"/>
+    
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
+      <category term="KO" scheme="https://infinitewing.github.io/tags/KO/"/>
+    
+  </entry>
   
   <entry>
     <title>楓之谷APP開發日誌 ─ 小結</title>
@@ -853,53 +888,6 @@
       &lt;p&gt;本來這篇是打算介紹楓之谷的地圖背景繪製，不過因為實際開發時這個好像比較晚才實裝，所以就臨時改變主題了。&lt;/p&gt;
 &lt;p&gt;今天要介紹的是怪物的技能施放以及角色的技能特效。(好吧因為發現光角色的技能特效就打友點多了，下次再講怪物的技能施放好了…)&lt;/p&gt;
 &lt;p&gt;首先再次重提當初玩楓之谷讓我最感動的事情─龍咆哮。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="個人作品" scheme="https://infinitewing.github.io/categories/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
-    
-      <category term="楓之谷APP" scheme="https://infinitewing.github.io/categories/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/%E6%A5%93%E4%B9%8B%E8%B0%B7APP/"/>
-    
-    
-      <category term="個人作品" scheme="https://infinitewing.github.io/tags/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
-    
-      <category term="Android APP" scheme="https://infinitewing.github.io/tags/Android-APP/"/>
-    
-      <category term="童年" scheme="https://infinitewing.github.io/tags/%E7%AB%A5%E5%B9%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>楓之谷APP開發日誌 ─ 第四章</title>
-    <link href="https://infinitewing.github.io/2017/01/16/MapleStory-Stage-4/"/>
-    <id>https://infinitewing.github.io/2017/01/16/MapleStory-Stage-4/</id>
-    <published>2017-01-16T07:58:41.000Z</published>
-    <updated>2017-07-10T16:09:57.045Z</updated>
-    
-    <content type="html"><![CDATA[<p>似乎相隔了許久才又想起更新這一系列的日誌，老實說這一年多也確實是發生了許許多多的事情，差點讓我都忘了怎麼繼續這即將邁入三年的開發計畫。</p>
-<p>呼，扯遠了，今天這一篇文章是要講述如何把地圖套上手機APP裡。</p>
-<img src="/2017/01/16/MapleStory-Stage-4/001.jpg" alt="冒險的起點 ─ 勇士之村" title="冒險的起點 ─ 勇士之村">
-<a id="more"></a>
-<p>好的，大家可以看到這是一張勇士之村的大圖</p>
-<p>各位一定很好奇這楓之谷的背景圖片是怎麼產生的：<br>基本上就是一個一個物件堆疊起來，然後靠各自的x,y座標，z軸來控制前後景，最後東拼西湊就能產生這麼一張完整的勇士之村地圖。</p>
-<p>(好吧其實裡面滿多血淚的，但是實在事隔多年我也差不多快忘了當初的血淚是怎麼流的xDDD，如果對官方XML裡面的格式有問題的話不妨站內私訊我。如果有足夠的緣分我剛好上線看到的話一定會完整地回覆。)</p>
-<p>不過在這個地圖裡面，其實左側跟右側、還有下方都是有一定大小的留白…因為在官方的XML資料中，有些竟然沒有邊界的VR值…。<br>幸好國外的水友是強大的，翻了好多國外的討論，最後終於得到了計算邊界的公式，然後就寫了一支程式來自動修復這個錯誤。</p>
-<img src="/2017/01/16/MapleStory-Stage-4/002.jpg" alt="修正邊界錯誤的勇士之村大圖" title="修正邊界錯誤的勇士之村大圖">
-<p>可以看到經由程式修改了VR邊界值的錯誤後，新產生出的這一張大圖的邊界已經不會有留白的部分了。這樣就有助於將這張大的背景地圖繪製到手機上，讓角色看起來真的像在勇士之村等等經典楓之谷地圖中遊走一樣。</p>
-<p>或者你現在會問說，把整個地圖物件都壓縮進一張大圖，那不就會出現很詭異的情況？比如原本某個物件應該是在角色的前面，那現在不就通通跑到後面去了？</p>
-<p>老實說對於這個事情我也實在愛莫能助，雖然都已經知道地圖要怎麼繪製了，但是遭不住Android他有運算及儲存效能的問題。<br>如果每個物件都是要動態繪製上去的話，那天曉得一幀跑完需要幾秒的時間…更何況還有傳說中的OOM，一不小心地圖都還沒畫到一半就OOM爆炸了…。</p>
-<p>所以無奈下我只能選擇把整個地圖壓縮成一張大圖，至少這樣就能減少許多運算及記憶體的耗損。</p>
-<img src="/2017/01/16/MapleStory-Stage-4/003.png" alt="將背景加入遊戲中" title="將背景加入遊戲中">
-<p>這是將地圖實際放上APP後的表現，老實說我做到這個地方已經懶得繼續做下去了…畢竟又不能上架也不能炫耀，這憋屈的感受怎麼讓人受的了…。</p>
-<p>所以從2015年4月完成地圖的實裝後，我就把整個計畫擱置了整整一年半的時間，直到最近才又因緣際會下重啟這項計畫。</p>
-<p>下一篇日誌就會來講述最近實裝的成果─背景的繪製(就是上圖黑色的地方，會用動態的地圖背景來取代，基本上加上去後就跟真的楓之谷有87%像了xDDDDDDD)</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;似乎相隔了許久才又想起更新這一系列的日誌，老實說這一年多也確實是發生了許許多多的事情，差點讓我都忘了怎麼繼續這即將邁入三年的開發計畫。&lt;/p&gt;
-&lt;p&gt;呼，扯遠了，今天這一篇文章是要講述如何把地圖套上手機APP裡。&lt;/p&gt;
-&lt;img src=&quot;/2017/01/16/MapleStory-Stage-4/001.jpg&quot; alt=&quot;冒險的起點 ─ 勇士之村&quot; title=&quot;冒險的起點 ─ 勇士之村&quot;&gt;
     
     </summary>
     

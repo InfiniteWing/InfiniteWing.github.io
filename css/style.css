@@ -524,7 +524,8 @@ body {
 .article-inner {
   overflow: hidden;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 26px;
+  text-align: justify;
 }
 .article-meta:before,
 .article-meta:after {
@@ -560,6 +561,7 @@ body {
 .article-header {
   padding: 20px 20px 0;
   color: #f7eb57;
+  text-align: left;
 }
 .article-header a {
   color: #2e9fff;
@@ -576,6 +578,7 @@ body {
   -moz-transition: color 0.2s;
   -ms-transition: color 0.2s;
   transition: color 0.2s;
+  text-align: left;
 }
 .post-toc-outer {
   text-align: center;
