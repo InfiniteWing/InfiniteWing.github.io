@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>向傳奇致敬</title>
+        <link href="css/InfiniteWing.css?2017070402" rel="stylesheet">
+        <link rel="icon" href="image/icon.png" type="image/x-icon" />
+        
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <script src="js/jquery-1.11.3.js"></script>
+        <script src="js/InfiniteWing.js?2017070401"></script>
+        <script src="js/typed.js"></script>
+        <script src="js/guider.js?2017031601"></script>
+        
+        <script src="js/jquery.snowfall.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <!--script>
+            //會擋到圖片點選
+            $().ready(function(){
+                $.snowfall.start({
+                    content: '<i class="fa fa-snowflake-o"></i>',
+                    size: {
+                        min: 20,
+                        max: 50
+                    }
+                });
+            });
+        </script-->
+        
+        <link href="js/lightgallery/css/lightgallery.css" type="text/css" rel="stylesheet" />
+        <script src="js/lightgallery/js/lightgallery.js?2017070401"></script>
+        <script src="js/lightgallery/js/lg-thumbnail.js"></script>
+        <script src="js/lightgallery/js/lg-fullscreen.js"></script>
+        <script src="js/lightgallery/js/lg-zoom.js"></script>
+        <script src="js/lightgallery/js/lg-video.js"></script>
+        <script src="js/lightgallery/js/video.js"></script>
+        <link href="js/lightgallery/css/video-js.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/wookmark.css">
+        <script src="js/wookmark.js"></script>
+        <script type="text/javascript">
+            var $lg = $('#lightGallery');
+            var page = 1;
+            var ajax_lock = false;
+            var end_of_data = false;
+            
+            function WookMark() {
+                var wookmark = new Wookmark('.wookmark', {
+                    outerOffset: 10, // Optional, the distance to the containers border
+                    itemWidth: 240 // Optional, the width of a grid item
+                });
+            }
+            function LoadPage() {
+                if (!ajax_lock && !end_of_data) {
+                    ajax_lock = true;
+                    $.ajax({
+                        url: "feed/gallery_"+page+".json",
+                        type: 'GET',
+                        dataType: 'json',
+                        data: {
+                            page: page
+                        },
+                        error: function (t1, t2, t3) {
+                            alert("Errors occured./n" + t1 + "," + t2 + "," + t3);
+                            ajax_lock = false;
+                        },
+                        success: function (jData) {
+                            if (page==25)
+                            {
+                                end_of_data = true;
+                                $("#getmore").hide();
+                            }
+                            var i = 0;
+                            //這裡改用.each這個函式來取出JData裡的物件
+                            $.each(jData, function() {
+                                //呼叫方式也稍微改變了一下，意思等同於上述的的JData[i]["idx_Key"]
+                                data='<li>'+
+                                        '<a href="image/gallery/'+jData[i]['src']+'">'+
+                                        '<img src="image/gallery_small/'+jData[i]['src']+'" width="'+jData[i]['w']+'" height="'+jData[i]['h']+'" />'+
+                                        '</a>'+
+                                        '</li>';    
+                                $lg.append(data);
+                                i++;
+                            });
+                            WookMark();
+                            if(page>1){
+                                $lg.data('lightGallery').destroy(true);
+                            }
+                            $lg.lightGallery({
+                                selector: 'a'
+                            });
+                            page++;
+                            ajax_lock = false;
+                        }
+                    });
+                }
+            }
+            $(document).ready(function() {
+                $lg = $('#lightGallery');
+                LoadPage();
+                $('#video-lightGallery').lightGallery({
+                    videojs: true
+                }); 
+            });
+        </script>
+    </head>
+    <body>
+        <div class="IW-page">
+            <div id="header" class="IW-header">
+                <nav class="IW-nav IW-nav-light">
+                    <div class="IW-nav-links">
+                        <a class="IW-nav-brand" href="index.html">HSU</a>
+                        <a class="IW-nav-link" href="gallery.html">時光隧道</a>
+                        <a class="IW-nav-link" href="life.html">生平</a>
+                        <a class="IW-nav-link" href="index.html">首頁</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="IW-body"><div style="text-align: center;">
+    <div style="max-width: 1000px;width:100%;display: inline-block;margin-top: 5vh;">
+        
+        
+        
+        <!-- Hidden video div -->
+        <div style="display:none;" id="video1">
+            <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+                <source src="video/001.mp4" type="video/mp4">
+                 Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <div style="display:none;" id="video2">
+            <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+                <source src="video/002.mp4" type="video/mp4">
+                 Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <div style="display:none;" id="video3">
+            <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+                <source src="video/003.mp4" type="video/mp4">
+                 Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <div style="display:none;" id="video4">
+            <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+                <source src="video/004.mp4" type="video/mp4">
+                 Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <h2>影片</h2>
+        <div id="video-lightGallery" class="lightGallery" >
+            <a data-poster="video/003.png" data-sub-html="中秋牌桌" data-html="#video3" >
+                <img src="video/003.png" style="width:80%;max-width:450px;" />
+            </a>
+            <a data-poster="video/001.png" data-sub-html="父親節慶祝" data-html="#video1" >
+                <img src="video/001.png" style="width:80%;max-width:450px;" />
+            </a>
+            <a data-poster="video/002.png" data-sub-html="新年包紅包" data-html="#video2" >
+                <img src="video/002.png" style="width:80%;max-width:450px;" />
+            </a>
+            <a data-poster="video/004.png" data-sub-html="新年包紅包" data-html="#video4" >
+                <img src="video/004.png" style="width:80%;max-width:450px;" />
+            </a>
+        </div>
+        <h2>相片</h2>
+        <ul class="tiles-wrap animated wookmark" id="lightGallery">
+        </ul>
+        <div>
+            <div id="getmore" class="IW-button IW-button1" onclick="LoadPage();">讀取更多</div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="IW-guider">
+    <div class="msg-box">
+        <span></span>
+    </div>
+    <div class="guider-img-base">
+        <div class="guider-img">
+
+        </div>
+    </div>
+</div>
+<div class="IW-footer">
+    <div> 2016 &copy; <a href="mailto:sars6608@gmail.com">Hsu</a> all rights reserved.</div>
+    <!--div>Icons Designed by <a href='http://www.freepik.com/free-vector/'>Freepik</a></div>
+    <div>BGM is from <a href='https://www.youtube.com/watch?v=SEKBKB-JeuM'>Youtube</a></div-->
+    <div style="display: none;">
+        <!--iframe width="560" height="315" src="https://www.youtube.com/embed/SEKBKB-JeuM?playlist=SEKBKB-JeuM&version=3&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe-->
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ea3JomRXlos?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+</div>
+</body>
+</html>

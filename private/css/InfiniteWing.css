@@ -1,0 +1,277 @@
+.sidebar-kaggle-outer{
+    display: inline-block;
+    -webkit-text-fill-color: #1e1e1e;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #1e1e1e;
+    background: white;
+    position: relative;
+    width: 36.5px;
+    height: 36.5px;
+    top: -8.9px;
+    border-radius: 7px;
+    left: -0.5px;
+}
+.sidebar-kaggle-outer > i{
+    position: relative;
+    font-size: 2em;
+    top: 4px;
+    left: 2px;
+}
+
+.sidebar-kaggle-outer:hover {
+  background-color: #999;
+}
+#aboutus-msgbox{
+    color: white;
+    font-family: 'Courier';
+    font-size: 16px;
+    line-height: 22px;
+    width: 100%;
+    padding: 8px 10px;
+    background: none repeat scroll 0% 0% #333534;
+    border: 1px solid #d9d9d9;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+    webkit-border-radius: 3px;
+    webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+    margin-bottom: -10px;
+    min-height: 300px;
+    font-size: 18px;
+    line-height: 28px;
+}
+.InfiniteWing-qa{
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+.InfiniteWing-question{
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.InfiniteWing-question:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.InfiniteWing-question.active, .InfiniteWing-question:hover{
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+    cursor: pointer;
+}
+.InfiniteWing-answer{
+    display: none;
+    padding: 10px 15px;
+    background-color: #fff;
+    border: 1px solid #337ab7;
+}
+.modal {
+    text-align: center;
+    padding: 0!important;
+}
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+.modal-content{
+    max-height: 75vh;
+    overflow: auto;
+}
+.modal-title{
+    text-align: center;
+}
+.table{
+    background: white;
+}
+.alert{
+    text-align: center;
+}
+.IW-guider{
+    width:220px;
+    padding:10px;
+    position: fixed;
+    bottom: -15px;
+    left: 10px;
+    z-index:10000;
+}
+.IW-guider .audio-box{
+    color: white; 
+    font-family: "Courier";
+    font-size: 16px;
+    width:210px;
+    margin-left: 20px;
+    padding:4px 10px;
+    background: none repeat scroll 0% 0% #333534;
+    border: 1px solid #d9d9d9;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+    webkit-border-radius: 3px;
+    webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+}
+.IW-guider .audio-box span{
+    cursor: pointer;
+}
+.IW-guider .audio-box span.active{
+    color:#2e9fff;
+}
+.IW-guider .audio-box span:hover{
+    color:#2e9fff;
+}
+.IW-guider .audio-box span.youtube-audio-youtube:hover{
+    color:#f7eb57;
+}
+.IW-guider-outerbox{
+    margin-left: 
+}
+.IW-guider .msg-box{
+    color: white; 
+    font-family: "Courier";
+    font-size: 16px;
+    line-height: 22px;
+    width:210px;
+    margin-left: 20px;
+    padding:8px 10px;
+    background: none repeat scroll 0% 0% #333534;
+    border: 1px solid #d9d9d9;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+    webkit-border-radius: 3px;
+    webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+    margin-bottom: 0px;
+}
+.IW-guider .guider-img-public{
+    display: inline-block;
+    background-image: url("images/guider/guider.png");
+    background-size: cover;    
+    background-position-x: 0px;
+    width: 300px;
+    height: 363px;
+    margin-left: -15px;
+}
+.IW-guider .guider-img{
+    display: inline-block;
+    background-image: url("images/guider/guider04.png");
+    background-size: cover;    
+    background-position-x: -20px;
+    width: 240px;
+    height:220px;
+}
+.IW-guider .guider-img-base{
+    display: inline-block;
+    background-image: url("images/guider/guider04.png");
+    background-size: cover;    
+    background-position-x: -20px;
+    width: 240px;
+    height:220px;
+    margin-left: -15px;
+}
+.IW-guider-control-panel{
+    position: fixed;
+    z-index: 10000;
+    bottom: 80px;
+    left: 5px;
+    width:40px;
+}
+.IW-guider-control-btn{
+    margin: 1px 0px;
+    background: none repeat scroll 0% 0% #333534;
+    border: 1px solid #696969;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+    webkit-border-radius: 3px;
+    webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+    background: none repeat scroll 0% 0% rgba(155,155,155,0.75);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding:4px;
+}
+.IW-guider-control-btn:hover{
+    color:#2e9fff;
+}
+.IW-guider-control-btn a{
+    color:inherit;
+}
+.IW-guider-control-btn .fa{
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 20px !important;
+    line-height: 24px;
+}
+
+.IW-guider a{
+    text-decoration:none;
+    color:#2e9fff;
+}
+.IW-guider a:hover {
+    color:#f7eb57;
+}
+.IW-text-title{
+    font-weight: normal;
+    font-size: 22px;
+    text-transform: capitalize;
+    line-height: 45px;
+    color: #42B4C8;
+    padding-bottom: 20px;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: bolder;
+}
+.IW-text-content{
+    font-size: 16px;
+    font-weight: normal;
+    color: #7a7a7a;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.IW-text-content a{
+    cursor: pointer;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.IW-text-hint{
+    font-size: 13px;
+    font-weight: normal;
+    color: #333;
+    line-height: 30px;
+}
+.typed-cursor{
+    opacity: 1;
+    color: white; 
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}

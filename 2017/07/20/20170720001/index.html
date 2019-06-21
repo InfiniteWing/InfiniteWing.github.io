@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>[Kaggle]初探深度學習─亞馬遜叢林辨識(上) | InfiniteWing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言大概一個月前開始在Kaggle上接觸有關影像辨識的競賽，一開始我是玩數數海獅有幾隻的這項競賽。 雖然這是一個物體識別(Object recognition)的競賽，但我當時還未接觸到以深度學習的方式來進行物體識別，僅僅是靠著RGB分群+XGBoost迴歸、以及簡單的Ensemble技巧，勉勉強強爬到了一個只差三名就能拿下生涯第一座銅牌的名次。雖然事後有些懊惱，但這也成為了我接下來參加亞馬遜叢">
+<meta name="keywords" content="經驗,Big Data,Deep Learning,Keras,CNN,Kaggle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Kaggle]初探深度學習─亞馬遜叢林辨識(上)">
+<meta property="og:url" content="https://infinitewing.github.io/2017/07/20/20170720001/index.html">
+<meta property="og:site_name" content="InfiniteWing">
+<meta property="og:description" content="前言大概一個月前開始在Kaggle上接觸有關影像辨識的競賽，一開始我是玩數數海獅有幾隻的這項競賽。 雖然這是一個物體識別(Object recognition)的競賽，但我當時還未接觸到以深度學習的方式來進行物體識別，僅僅是靠著RGB分群+XGBoost迴歸、以及簡單的Ensemble技巧，勉勉強強爬到了一個只差三名就能拿下生涯第一座銅牌的名次。雖然事後有些懊惱，但這也成為了我接下來參加亞馬遜叢">
+<meta property="og:image" content="https://infinitewing.github.io/2017/07/20/20170720001/001.jpg">
+<meta property="og:image" content="https://infinitewing.github.io/2017/07/20/20170720001/002.jpg">
+<meta property="og:image" content="https://infinitewing.github.io/2017/07/20/20170720001/003.jpg">
+<meta property="og:image" content="https://infinitewing.github.io/2017/07/20/20170720001/end.png">
+<meta property="og:updated_time" content="2017-08-14T15:16:58.110Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[Kaggle]初探深度學習─亞馬遜叢林辨識(上)">
+<meta name="twitter:description" content="前言大概一個月前開始在Kaggle上接觸有關影像辨識的競賽，一開始我是玩數數海獅有幾隻的這項競賽。 雖然這是一個物體識別(Object recognition)的競賽，但我當時還未接觸到以深度學習的方式來進行物體識別，僅僅是靠著RGB分群+XGBoost迴歸、以及簡單的Ensemble技巧，勉勉強強爬到了一個只差三名就能拿下生涯第一座銅牌的名次。雖然事後有些懊惱，但這也成為了我接下來參加亞馬遜叢">
+<meta name="twitter:image" content="https://infinitewing.github.io/2017/07/20/20170720001/001.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="InfiniteWing" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/logo.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/48ec3c87e3.js"></script>
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-102261368-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body style='visibility: hidden;'>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">InfiniteWing</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Till The World Ends</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        <a class="main-nav-link nav-icon" href="/">
+          <li class="fa fa-home" style="font-size: 1.3em;"></li>
+        </a>
+        <a class="main-nav-link nav-icon" href="/about">
+          <li class="fa fa-user" style="font-size: 1.3em;"></li>
+        </a>
+        <a class="main-nav-link nav-icon" href="/archives">
+          <li class="fa fa-archive" style="font-size: 1.3em;"></li>
+        </a>
+        <a class="main-nav-link nav-icon" href="/work">
+          <li class="fa fa-gamepad" style="font-size: 1.3em;"></li>
+        </a>
+        <a class="main-nav-link nav-icon" href="/gallery">
+          <li class="fa fa-heart" style="font-size: 1.3em;"></li>
+        </a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"><li class="fa fa-rss" style="font-size: 1.3em;"></li></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"><li class="fa fa-search" style="font-size: 1.3em;"></li></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://infinitewing.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-20170720001" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/20/20170720001/" class="article-date">
+  <time datetime="2017-07-19T16:21:41.000Z" itemprop="datePublished">2017-07-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Big-Data/">Big Data</a>►<a class="article-category-link" href="/categories/Big-Data/Deep-Learning/">Deep Learning</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      [Kaggle]初探深度學習─亞馬遜叢林辨識(上)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <div class="post-toc-outer">
+        <div class="post-toc">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#深度學習"><span class="toc-text">深度學習</span></a></li></ol>
+        </div>
+      </div>
+      
+        <img src="/2017/07/20/20170720001/001.jpg" alt="非關深度學習的封面圖" title="非關深度學習的封面圖">
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>大概一個月前開始在Kaggle上接觸有關影像辨識的競賽，一開始我是玩<a href="https://www.kaggle.com/c/noaa-fisheries-steller-sea-lion-population-count" target="_blank" rel="external">數數海獅有幾隻</a>的這項競賽。</p>
+<p>雖然這是一個物體識別(Object recognition)的競賽，但我當時還未接觸到以深度學習的方式來進行物體識別，僅僅是靠著RGB分群+XGBoost迴歸、以及簡單的Ensemble技巧，勉勉強強爬到了一個只差三名就能拿下生涯第一座銅牌的名次。雖然事後有些懊惱，但這也成為了我接下來參加<a href="https://www.kaggle.com/c/planet-understanding-the-amazon-from-space" target="_blank" rel="external">亞馬遜叢林辨識</a>，以及研究Keras這個Python深度學習套件的因緣。</p>
+<a id="more"></a>
+<h1 id="深度學習"><a href="#深度學習" class="headerlink" title="深度學習"></a>深度學習</h1><p>在開始介紹Keras之前，我們先來了解一下什麼是深度學習，這裡我先截一段維基百科上的定義：</p>
+<blockquote><p>深度學習（英語：deep learning）是機器學習拉出的分支，它試圖使用包含複雜結構或由多重非線性變換構成的多個處理層對資料進行高層抽象的演算法。</p>
+<p>深度學習是機器學習中一種基於對資料進行表征學習的方法。觀測值（例如一幅圖像）可以使用多種方式來表示，如每個像素強度值的向量，或者更抽象地表示成一系列邊、特定形狀的區域等。而使用某些特定的表示方法更容易從例項中學習任務（例如，人臉識別或面部表情識別）。深度學習的好處是用非監督式或半監督式的特徵學習和分層特徵提取高效演算法來替代手工取得特徵。</p>
+<footer><strong>維基百科</strong><cite><a href="https://zh.wikipedia.org/wiki/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0" target="_blank" rel="external">深度學習</a></cite></footer></blockquote>
+<p>好吧，上面這段話如果是沒接觸過神經網路的人，基本上就跟我以前一樣，連看都看不懂…根本覺得他是文字天書。同時就算已經有接觸過了(像我)，但是對深度學習裡面很多東西還是會一知半解。</p>
+<p>不過我也只是簡單介紹(如有錯誤請不吝指教)，拜萬用的谷哥所賜，我很快地找到了一張好用的圖來簡單解釋所謂的神經網路：</p>
+<img src="/2017/07/20/20170720001/002.jpg" alt="神經網路示意圖" title="神經網路示意圖">
+<p>我知道光看這張圖片會覺得很厲害，但是卻也不知道他到底可以幹嘛…簡單來說就是每個圓圈是在模擬人類的腦神經元，它裡面會有一個權重。這些圓圈彼此連接起來形成神經網路，在不同的刺激下會有不同的反應(也就是輸出)。</p>
+<p>我承認我自己也不知道在講什麼，總之就是想像成這樣：</p>
+<img src="/2017/07/20/20170720001/003.jpg" alt="神經網路組成大腦" title="神經網路組成大腦">
+<p>所謂的學習就是透過不斷的餵訓練資料給神經網路，訓練神經網路去逼近最佳的答案，在這過程中就會將可能是數百、數千萬甚至是數十億的神經元權重給更新，然後就能見證奇蹟的時刻！</p>
+<p>(要快速的理解神經網路在幹嘛，最快的方式就是自己做一個識別數字的神經網路出來，詳細參考可以點這裡。)</p>
+<p>而深度學習就是搭建一個非常深、層數非常多的神經網路，然後來完成不可能的任務。</p>
+<img src="/2017/07/20/20170720001/end.png" alt="未完待續！" title="未完待續！">
+      
+      <div class="right post-end">To be continued..</div>
+    </div>
+    <footer class="article-footer">
+      <div class="center post-datetime">
+        Posted at 
+        2017-07-20 12:21:41
+      </div>
+      <a data-url="https://infinitewing.github.io/2017/07/20/20170720001/" data-id="cjx68xdmr0006scu7oa26tus2" class="article-share-link">Share</a>
+      
+        <a href="https://infinitewing.github.io/2017/07/20/20170720001/#disqus_thread" class="article-comment-link">留言</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Big-Data/">Big Data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CNN/">CNN</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Deep-Learning/">Deep Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kaggle/">Kaggle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Keras/">Keras</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/經驗/">經驗</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/07/21/20170721001/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div>
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">
+          
+            [Kaggle]顧客訂單視覺化
+          
+        </div>
+      </div>
+    </a>
+  
+  
+    <a href="/2017/07/12/20170712001/" id="article-nav-older" class="article-nav-link-wrap">
+      <div>
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">試玩Google Cloud Platform</div>
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  <div class="widget-wrap">
+    <div class="widget-profile">
+      <div class="widget-profile-avatar">
+      </div>
+      <h3 class="widget-profile-title" style="text-transform: capitalize;margin: 10px 0px;">InfiniteWing</h3>
+      <div class="widget-profile-socials">
+        <a href="https://github.com/InfiniteWing" target="_blank">
+          <i class="fa fa-github-square fa-3x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/InfiniteWing/" target="_blank">
+          <i class="fa fa-linkedin-square fa-3x"></i>
+        </a>
+        <!---a href="https://twitter.com/inthewing" target="_blank">
+          <i class="fa fa-twitter-square fa-3x"></i>
+        </a--->
+        <a href="mailto:iamshanawing@gmail.com" target="_blank">
+          <i class="fa fa-envelope-square fa-3x"></i>
+        </a>
+        <a href="https://www.kaggle.com/infinitewing" target="_blank">
+          <span class="sidebar-kaggle-outer">
+            <i class="fab fa-kaggle fa-3x" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="widget" style="color: white;">
+      Where Do We Come From?<br />What Are We?<br />Where Are We Going?
+    </div>
+  </div>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/08/21/20180821001/">楓之谷APP開發日誌 ─ 小結</a>
+            <span class="recent_posts_date"> - 2018-08-21</span>
+          </li>
+        
+          <li>
+            <a href="/2018/01/01/20180101001/">WSDM - KKBox&#39;s Churn Prediction Challenge</a>
+            <span class="recent_posts_date"> - 2018-01-01</span>
+          </li>
+        
+          <li>
+            <a href="/2017/12/13/20171213001/">在GCP安裝python3，運作pytorch</a>
+            <span class="recent_posts_date"> - 2017-12-13</span>
+          </li>
+        
+          <li>
+            <a href="/2017/11/30/20171130001/">[Kaggle] Text Normalization Challenge - English Language</a>
+            <span class="recent_posts_date"> - 2017-11-30</span>
+          </li>
+        
+          <li>
+            <a href="/2017/10/19/20171019001/">[Kaggle] Carvana Image Masking Challenge</a>
+            <span class="recent_posts_date"> - 2017-10-19</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分類</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Big-Data/">Big Data</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Big-Data/Cloud-Computing/">Cloud Computing</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Big-Data/Competition/">Competition</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Big-Data/Deep-Learning/">Deep Learning</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/FreeBSD/">FreeBSD</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/FreeBSD/系統防護/">系統防護</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Kaggle/">Kaggle</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Kaggle/Notebook/">Notebook</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/個人作品/">個人作品</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/個人作品/楓之谷APP/">楓之谷APP</a><span class="category-list-count">8</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/網站設計/">網站設計</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/網站設計/Hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/論文寫作/">論文寫作</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android-APP/" style="font-size: 15.71px;">Android APP<span class="tag-list-count">8</span></a> <a href="/tags/Big-Data/" style="font-size: 18.57px;">Big Data<span class="tag-list-count">11</span></a> <a href="/tags/CNN/" style="font-size: 11.43px;">CNN<span class="tag-list-count">2</span></a> <a href="/tags/Cloud-Computing/" style="font-size: 12.86px;">Cloud Computing<span class="tag-list-count">3</span></a> <a href="/tags/Deep-Learning/" style="font-size: 11.43px;">Deep Learning<span class="tag-list-count">2</span></a> <a href="/tags/FreeBSD/" style="font-size: 10px;">FreeBSD<span class="tag-list-count">1</span></a> <a href="/tags/GCP/" style="font-size: 12.86px;">GCP<span class="tag-list-count">3</span></a> <a href="/tags/Hexo/" style="font-size: 11.43px;">Hexo<span class="tag-list-count">2</span></a> <a href="/tags/Kaggle/" style="font-size: 17.14px;">Kaggle<span class="tag-list-count">9</span></a> <a href="/tags/Keras/" style="font-size: 11.43px;">Keras<span class="tag-list-count">2</span></a> <a href="/tags/Notebook/" style="font-size: 14.29px;">Notebook<span class="tag-list-count">4</span></a> <a href="/tags/Visualization/" style="font-size: 10px;">Visualization<span class="tag-list-count">1</span></a> <a href="/tags/WSDM/" style="font-size: 10px;">WSDM<span class="tag-list-count">1</span></a> <a href="/tags/ssmtp/" style="font-size: 10px;">ssmtp<span class="tag-list-count">1</span></a> <a href="/tags/個人作品/" style="font-size: 15.71px;">個人作品<span class="tag-list-count">8</span></a> <a href="/tags/童年/" style="font-size: 15.71px;">童年<span class="tag-list-count">8</span></a> <a href="/tags/第一次/" style="font-size: 12.86px;">第一次<span class="tag-list-count">3</span></a> <a href="/tags/系統防護/" style="font-size: 10px;">系統防護<span class="tag-list-count">1</span></a> <a href="/tags/經驗/" style="font-size: 20px;">經驗<span class="tag-list-count">14</span></a> <a href="/tags/網站設計/" style="font-size: 11.43px;">網站設計<span class="tag-list-count">2</span></a> <a href="/tags/論文寫作/" style="font-size: 10px;">論文寫作<span class="tag-list-count">1</span></a> <a href="/tags/資訊安全/" style="font-size: 10px;">資訊安全<span class="tag-list-count">1</span></a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">彙整</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner center">
+      &copy; 2019 InfiniteWing all rights reserved.<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  <a class="mobile-nav-link nav-icon" href="/">
+    <li class="fa fa-home" style="font-size: 1.3em;"></li>Home
+  </a>
+  <a class="mobile-nav-link nav-icon" href="/about">
+    <li class="fa fa-user" style="font-size: 1.3em;"></li>About
+  </a>
+  <a class="mobile-nav-link nav-icon" href="/archives">
+    <li class="fa fa-archive" style="font-size: 1.3em;"></li>Archives
+  </a>
+  <a class="mobile-nav-link nav-icon" href="/work">
+    <li class="fa fa-gamepad" style="font-size: 1.3em;"></li>Work
+  </a>
+  <a class="mobile-nav-link nav-icon" href="/gallery">
+    <li class="fa fa-heart" style="font-size: 1.3em;"></li>Gallery
+  </a>
+</nav>
+    
+<script>
+  var disqus_shortname = 'infinitewing';
+  
+  var disqus_url = 'https://infinitewing.github.io/2017/07/20/20170720001/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/guider.js"></script>
+<script src="/js/js.cookie.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/youtube_embed.js"></script>
+<script src="/js/SmoothScroll.min.js"></script>
+<script src="/js/top.js"></script>
+
+<link rel="stylesheet" href="/css/InfiniteWing.css">
+<div class="IW-guider" style="display: none;">
+    <div class="audio-box">
+        <div style="text-align: center;padding-top: 3px;">
+            <span class="fa fa-step-backward youtube-audio-backward"></span>
+            <span class="fa fa-play youtube-audio-play-control"></span>
+            <span class="fa fa-stop youtube-audio-stop"></span>
+            <span class="fa fa-step-forward youtube-audio-forward"></span>
+            <span class="fa fa-youtube-play youtube-audio-youtube"></span>
+        </div>
+        <div style="display: none;">
+            <div data-video="HQnC1UHBvWA" id="youtube-audio"></div>
+        </div>
+        <script src="https://www.youtube.com/iframe_api"></script>
+    </div>
+    <div class="msg-box">
+        <span></span>
+    </div>
+    <div class="guider-img-public" style="display: none;">
+    </div>
+    <div class="guider-img-base" style="display: none;">
+        <div class="guider-img">
+
+        </div>
+    </div>
+    <div class="IW-guider-control-panel">
+        <div class="IW-guider-control-btn"><span class="fa fa-arrow-up guider-up"></span></div>
+        <div class="IW-guider-control-btn"><span class="fa fa-arrow-down guider-down"></span></div>    
+        <div class="IW-guider-control-btn"><span class="fa fa-copyright guider-copyright"></span></div>
+        <div class="IW-guider-control-btn"><span class="fa fa-music guider-music"></span></div>
+        <div class="IW-guider-control-btn"><span class="fa fa-power-off guider-power"></span></div>
+    </div>
+</div>
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

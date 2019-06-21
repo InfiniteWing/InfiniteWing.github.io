@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>InfiniteWing</title>
+  <subtitle>Till The World Ends</subtitle>
+  <link href="//atom.xml" rel="self"/>
+  
+  <link href="https://infinitewing.github.io/"/>
+  <updated>2018-08-21T08:28:32.985Z</updated>
+  <id>https://infinitewing.github.io/</id>
+  
+  <author>
+    <name>InfiniteWing</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>楓之谷APP開發日誌 ─ 小結</title>
+    <link href="https://infinitewing.github.io/2018/08/21/20180821001/"/>
+    <id>https://infinitewing.github.io/2018/08/21/20180821001/</id>
+    <published>2018-08-21T08:01:28.000Z</published>
+    <updated>2018-08-21T08:28:32.985Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2018/08/21/20180821001/abstract.jpg" alt="小結！" title="小結！">
+<p>畢竟現在每天都要碼字，多餘的字就不加贅述(苦笑)，以下直接放影片囉~</p>
+<a id="more"></a>
+<div style="color:red">※重要聲明，以下影片純屬個人學習使用<br>※Important statement, the following video is used for personal education use.</div><br><video src="https://infinitewing.github.io/InfiniteWing.mp4" width="1280" height="720" controls="controls"><br>Your browser does not support the video tag.<br></video><br><div style="width:100%;display:inline-block;text-align:center;">小結灑花</div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2018/08/21/20180821001/abstract.jpg&quot; alt=&quot;小結！&quot; title=&quot;小結！&quot;&gt;
+&lt;p&gt;畢竟現在每天都要碼字，多餘的字就不加贅述(苦笑)，以下直接放影片囉~&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="個人作品" scheme="https://infinitewing.github.io/categories/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
+    
+      <category term="楓之谷APP" scheme="https://infinitewing.github.io/categories/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/%E6%A5%93%E4%B9%8B%E8%B0%B7APP/"/>
+    
+    
+      <category term="個人作品" scheme="https://infinitewing.github.io/tags/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
+    
+      <category term="Android APP" scheme="https://infinitewing.github.io/tags/Android-APP/"/>
+    
+      <category term="童年" scheme="https://infinitewing.github.io/tags/%E7%AB%A5%E5%B9%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WSDM - KKBox&#39;s Churn Prediction Challenge</title>
+    <link href="https://infinitewing.github.io/2018/01/01/20180101001/"/>
+    <id>https://infinitewing.github.io/2018/01/01/20180101001/</id>
+    <published>2017-12-31T16:00:00.000Z</published>
+    <updated>2018-02-03T08:20:06.559Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2018/01/01/20180101001/001.jpg" alt="非關內文" title="非關內文">
+<p>好吧，既然我都把去年十二月的文章發布了，那乾脆趁著還有熱情與記憶的時候，先把去年底完成的競賽心得寫一寫吧！關於競賽的目標，簡單來說，我們要做的就是預測KKBOX的會員在會員期限到期後三十天內是否會續訂。首先直接上官方關於這項比賽的說明：<br><blockquote><p>The 11th ACM International Conference on Web Search and Data Mining (WSDM 2018) is challenging you to build an algorithm that predicts whether a subscription user will churn using a donated dataset from KKBOX. WSDM (pronounced “wisdom”) is one of the the premier conferences on web inspired research involving search and data mining. They’re committed to publishing original, high quality papers and presentations, with an emphasis on practical but principled novel models.</p>
+<footer><strong>WSDM - KKBox's Churn Prediction Challenge</strong></footer></blockquote></p>
+<a id="more"></a>
+<h1 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h1><p>很好，比賽的靠山看起來很強大，不過比賽過程其實一坡三折，雖然我是快結束的時候才加入比賽，但看討論區的討論，可以看出一開始給的Dataset是有leakage的，所以官方又發布了version2的資料集…然後根據實驗結果，採用官方提供的標籤法，會得到跟官方給的標籤不一致的結果…然後我自己寫的標籤法，又會讓成績比官方標籤法更好一點…總而言之這就是見證奇蹟的一課(?)。</p>
+<h1 id="解法思路"><a href="#解法思路" class="headerlink" title="解法思路"></a>解法思路</h1><p>推測因為比賽似乎充斥著leakage，所以沒什麼人有意願分享完整的代碼；不過我則是因為覺得懶又不想整理沒得獎的代碼，就只簡單的附上了基本的解法思路。</p>
+<p>嗯，因為還要寫html標籤很麻煩，所以直接附上連結~ <a href="https://www.kaggle.com/c/kkbox-churn-prediction-challenge/discussion/46078" target="_blank" rel="external">解法思路</a><br><img src="/2018/01/01/20180101001/end.jpg" alt="完結灑花！" title="完結灑花！"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2018/01/01/20180101001/001.jpg&quot; alt=&quot;非關內文&quot; title=&quot;非關內文&quot;&gt;
+&lt;p&gt;好吧，既然我都把去年十二月的文章發布了，那乾脆趁著還有熱情與記憶的時候，先把去年底完成的競賽心得寫一寫吧！關於競賽的目標，簡單來說，我們要做的就是預測KKBOX的會員在會員期限到期後三十天內是否會續訂。首先直接上官方關於這項比賽的說明：&lt;br&gt;&lt;blockquote&gt;&lt;p&gt;The 11th ACM International Conference on Web Search and Data Mining (WSDM 2018) is challenging you to build an algorithm that predicts whether a subscription user will churn using a donated dataset from KKBOX. WSDM (pronounced “wisdom”) is one of the the premier conferences on web inspired research involving search and data mining. They’re committed to publishing original, high quality papers and presentations, with an emphasis on practical but principled novel models.&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;WSDM - KKBox&#39;s Churn Prediction Challenge&lt;/strong&gt;&lt;/footer&gt;&lt;/blockquote&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/categories/Big-Data/"/>
+    
+      <category term="Competition" scheme="https://infinitewing.github.io/categories/Big-Data/Competition/"/>
+    
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
+      <category term="WSDM" scheme="https://infinitewing.github.io/tags/WSDM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在GCP安裝python3，運作pytorch</title>
+    <link href="https://infinitewing.github.io/2017/12/13/20171213001/"/>
+    <id>https://infinitewing.github.io/2017/12/13/20171213001/</id>
+    <published>2017-12-13T10:22:48.000Z</published>
+    <updated>2018-02-03T07:59:06.412Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2017/12/13/20171213001/001.jpg" alt="非關內文" title="非關內文">
+<p>好吧，這篇說是十二月中寫的，但實際上二月初我才發布…老實說我快忘了要保持一個月至少一篇日誌的習慣，雖然說墮落是人類的原罪，但為什麼人非得汲汲營營呢？嗯，因為這是個無解的命題，所以我就發發牢騷，以下會記錄我當初如何在GCP開啟pytorch並實現python3的環境，當初找資料找了許久，因為GCP的ubuntu預設是python2，對於伸手黨來說大部分的資料都是python3…。</p>
+<a id="more"></a>
+<h1 id="1-安裝python3"><a href="#1-安裝python3" class="headerlink" title="1.安裝python3"></a>1.安裝python3</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">sudo add-apt-repository ppa:fkrull/deadsnakes</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install python3.5</div><div class="line">sudo apt-get install python3.5-dev</div><div class="line">sudo apt-get install libncurses5-dev</div><div class="line">wget https://bootstrap.pypa.io/get-pip.py</div><div class="line">sudo python3.5 get-pip.py</div><div class="line"><span class="comment"># 修改/usr/bin/ 底下的路徑</span></div><div class="line">sudo ln -s /usr/bin/python3.5 /usr/<span class="built_in">local</span>/bin/python3</div><div class="line">sudo ln -s /usr/<span class="built_in">local</span>/bin/pip /usr/<span class="built_in">local</span>/bin/pip3</div></pre></td></tr></table></figure>
+<h1 id="2-安裝cuda"><a href="#2-安裝cuda" class="headerlink" title="2.安裝cuda"></a>2.安裝cuda</h1><p>cuda(<a href="https://cloud.google.com/compute/docs/gpus/add-gpus" target="_blank" rel="external">https://cloud.google.com/compute/docs/gpus/add-gpus</a>)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"Checking for CUDA and installing."</span></div><div class="line"><span class="comment"># Check for CUDA and try to install.</span></div><div class="line"><span class="keyword">if</span> ! dpkg-query -W cuda-8-0; <span class="keyword">then</span></div><div class="line">  curl -O http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_8.0.61-1_amd64.deb</div><div class="line">  dpkg -i ./cuda-repo-ubuntu1404_8.0.61-1_amd64.deb</div><div class="line">  apt-get update</div><div class="line">  apt-get install cuda-8-0 -y</div><div class="line">  apt-get install linux-headers-$(uname -r) -y</div><div class="line"><span class="keyword">fi</span></div><div class="line"><span class="comment"># Enable persistence mode</span></div><div class="line"></div><div class="line">nvidia-smi -pm 1</div></pre></td></tr></table></figure>
+<p>修改路徑<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># ~/.bashrc 加入</span></div><div class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$LD_LIBRARY_PATH</span>:/usr/<span class="built_in">local</span>/cuda/lib64:/usr/<span class="built_in">local</span>/cuda/extras/CUPTI/lib64:/usr/lib/nvidia-367</div><div class="line"><span class="built_in">export</span> CUDA_HOME=/usr/<span class="built_in">local</span>/cuda</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:/usr/<span class="built_in">local</span>/cuda/bin</div><div class="line"></div><div class="line"><span class="built_in">source</span> ~/.bashrc</div></pre></td></tr></table></figure></p>
+<h1 id="3-安裝cudnn"><a href="#3-安裝cudnn" class="headerlink" title="3.安裝cudnn"></a>3.安裝cudnn</h1><p>先下載cudnn-8.0-linux-x64-v5.1.tgz<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tar -zxvf cudnn-8.0-linux-x64-v5.1.tgz</div><div class="line"><span class="built_in">cd</span> cuda</div><div class="line">sudo cp include/* /usr/<span class="built_in">local</span>/cuda-8.0/include/</div><div class="line">sudo cp lib64/* /usr/<span class="built_in">local</span>/cuda-8.0/lib64/</div></pre></td></tr></table></figure></p>
+<h1 id="4-安裝tensorflow"><a href="#4-安裝tensorflow" class="headerlink" title="4.安裝tensorflow"></a>4.安裝tensorflow</h1><p>這裡要注意版本問題，至於為何要注意…我記得好像是因為執行會有問題？<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.2.1-cp35-cp35m-linux_x86_64.whl</div><div class="line">sudo pip install https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.2.1-cp35-cp35m-linux_x86_64.whl</div></pre></td></tr></table></figure></p>
+<h1 id="5-安裝常用套件"><a href="#5-安裝常用套件" class="headerlink" title="5.安裝常用套件"></a>5.安裝常用套件</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">sudo pip install tqdm</div><div class="line">sudo pip install numpy</div><div class="line">sudo pip install pandas</div><div class="line">sudo pip install scikit-learn</div><div class="line">sudo pip install scipy</div><div class="line">sudo pip install pymongo</div><div class="line">sudo pip install http://download.pytorch.org/whl/cu80/torch-0.3.0.post4-cp35-cp35m-linux_x86_64.whl</div><div class="line">sudo pip install torchvision</div><div class="line">sudo pip install dill</div><div class="line">sudo pip install opencv-python</div><div class="line">sudo pip install cupy</div><div class="line">sudo pip install pyinn </div><div class="line">...</div></pre></td></tr></table></figure>
+<h1 id="6-小記錄"><a href="#6-小記錄" class="headerlink" title="6.小記錄"></a>6.小記錄</h1><p>啊，看到當初截的圖，才想起來當時一口氣開了五顆GPU，一晚就能燒掉一百多美金，要不是有各項比賽的免費兌換券，根本無法支持這樣燒錢的玩法呢~<br><img src="/2017/12/13/20171213001/deep%20learning%20vm.png" alt="深度學習=燒錢遊戲" title="深度學習=燒錢遊戲"></p>
+<img src="/2017/12/13/20171213001/end.jpg" alt="完結灑花！" title="完結灑花！">]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2017/12/13/20171213001/001.jpg&quot; alt=&quot;非關內文&quot; title=&quot;非關內文&quot;&gt;
+&lt;p&gt;好吧，這篇說是十二月中寫的，但實際上二月初我才發布…老實說我快忘了要保持一個月至少一篇日誌的習慣，雖然說墮落是人類的原罪，但為什麼人非得汲汲營營呢？嗯，因為這是個無解的命題，所以我就發發牢騷，以下會記錄我當初如何在GCP開啟pytorch並實現python3的環境，當初找資料找了許久，因為GCP的ubuntu預設是python2，對於伸手黨來說大部分的資料都是python3…。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/categories/Big-Data/"/>
+    
+      <category term="Cloud Computing" scheme="https://infinitewing.github.io/categories/Big-Data/Cloud-Computing/"/>
+    
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Cloud Computing" scheme="https://infinitewing.github.io/tags/Cloud-Computing/"/>
+    
+      <category term="GCP" scheme="https://infinitewing.github.io/tags/GCP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Kaggle] Text Normalization Challenge - English Language</title>
+    <link href="https://infinitewing.github.io/2017/11/30/20171130001/"/>
+    <id>https://infinitewing.github.io/2017/11/30/20171130001/</id>
+    <published>2017-11-30T07:42:24.000Z</published>
+    <updated>2017-11-30T08:18:18.186Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2017/11/30/20171130001/001.png" alt="非關內文" title="非關內文">
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>月底了，心中一直想著要再記錄一下，於是我終於抽空寫了十天前就結束的Text Normalization Challenge 的心得(其實只是懶 =3=)。<br>這項競賽一樣是在Kaggle上發起的競賽，根據競賽描述，我們要設計能將文章語句轉換成口說語法的機器學習模型，舉個例子：<br><a id="more"></a><br><blockquote><p>Example 1.<br>原文： A baby giraffe is 6ft tall and weighs 150lb.<br>轉換： A baby giraffe is six feet tall and weighs one hundred fifty pounds sil</p>
+<p>Example 2.<br>原文： $22,750<br>轉換： twenty two thousand seven hundred fifty dollars</p>
+<p>Example 3.<br>原文： September 5, 1895<br>轉換： september fifth eighteen ninety five</p>
+<footer><strong>Text Normalization Challenge - English Language</strong></footer></blockquote></p>
+<h1 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h1><p>根據競賽的定義，在英文項目底下的文字總共可以分成17個類別，比如日期、數字、地址…，這些類別裡，文字的轉換是有跡可循的，但是偶爾會出現不明確的轉換，比如同樣是1972，在日期類別底下會轉換成nineteen seventy two，但是在數值類別的話就是one thousand nine hundred seventy two。</p>
+<p>因為有用英文寫了一下大概的解題思路，因此這邊也就懶的翻譯了，直接上原文說明：</p>
+<div style="padding: 10px;font-size: 18px;font-family: monospace;"><br>My solution is based on <a href="https://www.kaggle.com/alphasis/bigdata-trick-or-treat-lb-0-9954" target="_blank" rel="external">BingQing Wei’s public kernel</a>, then I use several step to optimized it:<br><br>1. Use xgboost to predict test cases’ class:<br>The model is similar to <a href="https://www.kaggle.com/alphasis/xgboost-with-context-label-data-acc-99-637" target="_blank" rel="external">XGboost With Context Label Data (ACC: 99.637%)</a> (the author is also BingQing Wei, big thanks to his work)<br><br>In addition, I use extra xgboost model to predict a 4 digit number is ‘DATE’ or ‘CARDINAL’.<br><br>2. For some class, use customized normalize function to deal with it:<br>I treat MEASURE, DATE, MONEY, DECIMAL, CARDINAL, and DIGIT. Because they have specific form. Each customized normalize function can reach from 98.9% to 99.7% acc. (But my customized normalize function can’t handle some rare case, such like Sept. 21th 2017. I’m wondering that did the top team have smarter way.)<br><br>For example, to deal with the ‘DECIMAL’ class. I will use a function to normalized it.<br><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">decimal2word</span><span class="params">(key)</span>:</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># 100% acc if change</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="keyword">if</span>(len(key.split()) == <span class="number">2</span>):</div><div class="line">    <span class="comment"># e.g. 0.21 million</span></div><div class="line">    unit_words = [<span class="string">'hundred'</span>, <span class="string">'thousand'</span>, <span class="string">'million'</span>, <span class="string">'billion'</span>]</div><div class="line">    <span class="keyword">if</span>(<span class="keyword">not</span> is_decimal(key.split()[<span class="number">0</span>])):</div><div class="line">        <span class="keyword">return</span> key</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">if</span>(((key.split()[<span class="number">1</span>]).lower() <span class="keyword">in</span> unit_words):</div><div class="line">            <span class="keyword">return</span> decimal2word(key.split()[<span class="number">0</span>]) + <span class="string">' '</span> + (key.split()[<span class="number">1</span>]).lower()</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            <span class="keyword">return</span> key</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    <span class="keyword">if</span>(<span class="keyword">not</span> is_decimal(key)):</div><div class="line">        <span class="keyword">return</span> key</div><div class="line">    digit_dict = &#123;<span class="string">'0'</span>: <span class="string">'o'</span>, <span class="string">'1'</span>: <span class="string">'one'</span>, <span class="string">'2'</span>: <span class="string">'two'</span>, <span class="string">'3'</span>: <span class="string">'three'</span>, <span class="string">'4'</span>: <span class="string">'four'</span>, <span class="string">'5'</span>: <span class="string">'five'</span>, <span class="string">'6'</span>: <span class="string">'six'</span>, <span class="string">'7'</span>: <span class="string">'seven'</span>, <span class="string">'8'</span>: <span class="string">'eight'</span>, <span class="string">'9'</span>: <span class="string">'nine'</span>&#125;</div><div class="line">    out = []</div><div class="line">    <span class="keyword">if</span>(key[<span class="number">0</span>] == <span class="string">'.'</span>):</div><div class="line">        <span class="comment"># e.g. .021 to point o two one</span></div><div class="line">        out.append(<span class="string">'point'</span>)</div><div class="line">        <span class="keyword">for</span> v <span class="keyword">in</span> key.replace(<span class="string">'.'</span>,<span class="string">''</span>):</div><div class="line">            out.append(digit_dict[v])</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        n1, n2 = str(int(key.split(<span class="string">'.'</span>)[<span class="number">0</span>])), key.split(<span class="string">'.'</span>)[<span class="number">1</span>]</div><div class="line">        </div><div class="line">        out.append(digit2word(n1))</div><div class="line">        out.append(<span class="string">'point'</span>)</div><div class="line">        <span class="keyword">if</span>(len(n2) == <span class="number">1</span> <span class="keyword">and</span> n2[<span class="number">0</span>] == <span class="string">'0'</span>):</div><div class="line">            out.append(<span class="string">'zero'</span>)</div><div class="line">        <span class="keyword">else</span>:            </div><div class="line">            <span class="keyword">for</span> v <span class="keyword">in</span> n2:</div><div class="line">                out.append(digit_dict[v])</div><div class="line">    word = <span class="string">' '</span>.join(out)</div><div class="line">    <span class="keyword">return</span> word</div></pre></td></tr></table></figure><br>3. Use xgboost to deal with binary ambiguous case:<br>Binary ambiguous case such like the ‘-‘ and the ‘:’, which have two target norm, original char and ‘to’. With xgboost model, it’s able to handel ~98% precision and ~99.3% recall.<br></div>
+
+<p>最後我以99.32%的accuacy完成了英文項目的競賽，算是滿意了，而且透過閱讀前十名參賽者的解題思路，也學習到了很多新的、有趣的技術..不過還是要等下個機會實際應用，才能更得其精隨。</p>
+<p>改天有空再發俄文版的解題思路，俄文的語法真的有夠難 (╯°Д°)╯ ┻━┻ 。</p>
+<img src="/2017/11/30/20171130001/end.png" alt="完結灑花！" title="完結灑花！">]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2017/11/30/20171130001/001.png&quot; alt=&quot;非關內文&quot; title=&quot;非關內文&quot;&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;月底了，心中一直想著要再記錄一下，於是我終於抽空寫了十天前就結束的Text Normalization Challenge 的心得(其實只是懶 =3=)。&lt;br&gt;這項競賽一樣是在Kaggle上發起的競賽，根據競賽描述，我們要設計能將文章語句轉換成口說語法的機器學習模型，舉個例子：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/categories/Big-Data/"/>
+    
+      <category term="Competition" scheme="https://infinitewing.github.io/categories/Big-Data/Competition/"/>
+    
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Kaggle] Carvana Image Masking Challenge</title>
+    <link href="https://infinitewing.github.io/2017/10/19/20171019001/"/>
+    <id>https://infinitewing.github.io/2017/10/19/20171019001/</id>
+    <published>2017-10-19T14:28:31.000Z</published>
+    <updated>2017-11-04T14:58:24.325Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2017/10/19/20171019001/001.jpg" alt="非關內文" title="非關內文">
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>恩，果然都是要到月初我才會想起上個月還沒有保持至少發一篇文章的事情…算了，反正發文日期可以自己調整。<br>回歸正題，這次要記錄的是在Kaggle上的一項競賽 ─ <a href="https://www.kaggle.com/c/carvana-image-masking-challenge" target="_blank" rel="external">Carvana Image Masking Challenge</a>。顧名思義，我們要做的事情就是幫內含一部車輛的圖片，找出適合的遮罩，讓圖片只留下車子。</p>
+<a id="more"></a>
+<h1 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h1><p>這樣講也許有點抽象，不過看了下圖的範例後，各位也許就能了解這項競賽所希望做的事情。</p>
+<img src="/2017/10/19/20171019001/sample.png" alt="車輛圖片遮罩範例" title="車輛圖片遮罩範例">
+<p>上圖中，左側的圖片是未經處理的原始圖片，中間的圖片則是車子的遮罩，右邊的圖片則是原始圖片經過遮罩處理，所得到的純車子照片。在過去，如果要產生車子的遮罩的話，即使有好用的影像處理軟體，仍然須用人工的方式進行。而在競賽裡，我們要做的就是透過電腦運算的方式，自動產生符合車子的遮罩範圍。</p>
+<p>好的，重點來了，我們要怎麼樣才能透過電腦自動產生符合車子的遮罩範圍呢？</p>
+<p>答案是深度學習。</p>
+<p>是的，目前最好的方式是，使用深度學習網路來完成。而現在已經有不少該競賽的獲獎者，公開自己的解題思路或是完整代碼，有興趣的人可以自己上Kaggle上學習。</p>
+<p>老實說我也沒有花心思在這項競賽上，只是簡單改寫了一下他人開源的程式碼，但是無庸置疑的，這項競賽個人認為非常有趣，而且成果已經可以說是近乎完美(近乎99.6%的準確度)。</p>
+<img src="/2017/10/19/20171019001/end.png" alt="完結灑花！" title="完結灑花！">]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2017/10/19/20171019001/001.jpg&quot; alt=&quot;非關內文&quot; title=&quot;非關內文&quot;&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;恩，果然都是要到月初我才會想起上個月還沒有保持至少發一篇文章的事情…算了，反正發文日期可以自己調整。&lt;br&gt;回歸正題，這次要記錄的是在Kaggle上的一項競賽 ─ &lt;a href=&quot;https://www.kaggle.com/c/carvana-image-masking-challenge&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Carvana Image Masking Challenge&lt;/a&gt;。顧名思義，我們要做的事情就是幫內含一部車輛的圖片，找出適合的遮罩，讓圖片只留下車子。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/categories/Big-Data/"/>
+    
+      <category term="Competition" scheme="https://infinitewing.github.io/categories/Big-Data/Competition/"/>
+    
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Kaggle] Porto Seguro’s Safe Driver Prediction</title>
+    <link href="https://infinitewing.github.io/2017/09/30/20170930001/"/>
+    <id>https://infinitewing.github.io/2017/09/30/20170930001/</id>
+    <published>2017-09-30T06:08:12.000Z</published>
+    <updated>2017-10-04T08:05:31.630Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2017/09/30/20170930001/001.png" alt="非關內文" title="非關內文">
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a href="https://www.kaggle.com/c/porto-seguro-safe-driver-prediction" target="_blank" rel="external">Porto Seguro’s Safe Driver Prediction</a> 是一項由巴西知名保險公司在Kaggle上發起的競賽，希望藉由精準預測明年各保戶是否會索取保險求償，從而調整不同客戶的保險金額。</p>
+<a id="more"></a>
+<h1 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h1><p>這項比賽才剛開始，目前大家的成績都還十分接近…就直接上筆記囉！</p>
+<iframe id="ipynb" src="notebook.HTML" width="100%"></iframe>
+
+<img src="/2017/09/30/20170930001/end.jpg" alt="完結灑花！" title="完結灑花！">]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2017/09/30/20170930001/001.png&quot; alt=&quot;非關內文&quot; title=&quot;非關內文&quot;&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.kaggle.com/c/porto-seguro-safe-driver-prediction&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Porto Seguro’s Safe Driver Prediction&lt;/a&gt; 是一項由巴西知名保險公司在Kaggle上發起的競賽，希望藉由精準預測明年各保戶是否會索取保險求償，從而調整不同客戶的保險金額。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/categories/Big-Data/"/>
+    
+      <category term="Competition" scheme="https://infinitewing.github.io/categories/Big-Data/Competition/"/>
+    
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
+      <category term="Notebook" scheme="https://infinitewing.github.io/tags/Notebook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>論文寫作簡介</title>
+    <link href="https://infinitewing.github.io/2017/08/29/20170829001/"/>
+    <id>https://infinitewing.github.io/2017/08/29/20170829001/</id>
+    <published>2017-08-29T14:03:18.000Z</published>
+    <updated>2017-08-29T14:41:00.161Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2017/08/29/20170829001/001.png" alt="非關內文" title="非關內文">
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在結束了Kaggle上的<a href="/2017/08/27/20170827001/" title="紅蘿蔔顧客訂單預測比賽">紅蘿蔔顧客訂單預測比賽</a>後，我赫然發現最後的暑假(?)似乎已經到了尾聲。雖然暑假參加了六七項的大數據比賽，同時也學了許多有趣的工具，但心中總有種不切實際的感覺，一種「啊，時間就這樣過去了！」的感嘆…。扯遠了，結束比賽後我弄了一下計畫有關的東西，接著就進入了碩士的最後課題：畢業論文。</p>
+<a id="more"></a>
+<h1 id="論文"><a href="#論文" class="headerlink" title="論文"></a>論文</h1><p>是的，在臺灣一名合格的碩士生，畢業之前一定要有一篇通過評審認可的論文提出，才能順利的領到畢業證書。因為這篇是介紹論文寫作的心得，所以就讓我們先來看看論文的定義吧！<br><blockquote><p>論文是科學或者社會研究工作者在學術書籍或學術期刊上刊登的呈現自己研究成果的文章。論文往往強調原創性的工作總結，但當然也可以是對前人工作總結的回顧及做出評價，後者也往往被稱為綜述性文章（Review）。論文的出版正在經歷著重大變化，出現了從傳統的印刷版到網絡上電子格式的興起。</p>
+<p>論文就是用來進行科學研究和描述科研成果的文章，簡稱之為論文。它既是探討問題進行科學研究的一種手段，又是描述科研成果進行學術交流的一種工具。它包括學年論文、畢業論文、學位論文、科技論文、成果論文等，總稱為論文。</p>
+<footer><strong>論文的定義</strong><cite><a href="https://zh.wikipedia.org/wiki/%E8%AE%BA%E6%96%87" target="_blank" rel="external">論文的定義</a></cite></footer></blockquote></p>
+<p>不同種類的論文會有不一樣的寫法，裡面的眉角也會有所不同。由於我做的是技術型的論文，這裡分享一下我的論文結構：<br>Ch. 1 引言<br>Ch. 2 文獻探討<br>Ch. 3 研究方法<br>Ch. 4 實驗分析<br>Ch. 5 結論</p>
+<h1 id="實用網站"><a href="#實用網站" class="headerlink" title="實用網站"></a>實用網站</h1><p>雖然我是最近才開始準備畢業論文，但是過去一年裡，為了更好的提升在比賽的成績，我有時也會自己找些論文來看…當然完整看完的論文可以說是少之又少啦，畢竟有時候直接看第三四章會比較快xDDD。</p>
+<p>以下我就簡單介紹幾個知名的論文資料庫，一般大學的話應該會有買授權才對，只要用校內IP連上該論文資料庫，裡面的論文資料就可以免費下載。</p>
+<ul>
+<li><a href="https://www.scopus.com/" target="_blank" rel="external">Scopus</a></li>
+</ul>
+<p>有關這個網站的介紹，我們引用台大圖書館的簡介：<br><blockquote><p>Scopus 為 Elsevier 所製作的全球最大索引摘要資料庫，收錄包含：</p>
+<p>近 2 萬種同儕評鑑學術期刊<br>400 種商業雜誌（trade publications）<br>360 種叢書（book series）<br>逾 3,800 種 Articles-in-Press 期刊。<br>詳見收錄清單。</p>
+<p>除連續性出版品外，同時可查詢：</p>
+<p>網路學術資源：結合學術資源搜尋引擎 Scirus。<br>專利：世界五大專利局（USPTO、WIPO、EPO、JPO、UKIPO）之專利。來源為 LexisNexis，每月更新 2 ~ 3 次。</p>
+<footer><strong>Scopus</strong><cite><a href="http://tul.blog.ntu.edu.tw/archives/8987" target="_blank" rel="external">Scopus</a></cite></footer></blockquote></p>
+<ul>
+<li><a href="https://scholar.google.com.tw/" target="_blank" rel="external">Google Scholar</a></li>
+</ul>
+<p>這個應該不用多說，谷歌的學術文章資料庫。</p>
+<ul>
+<li><a href="https://www.researchgate.net/" target="_blank" rel="external">ResearchGate</a></li>
+</ul>
+<p>如果你在上述兩個資料庫的搜尋到的文章，學校並沒有購買版權的話，那麼不妨試試看ResearchGate。以下為維基百科上對於ResearchGate的說明：</p>
+<blockquote><p>ResearchGate（researchgate.net）是一個被戲稱爲facebook for research的社交網絡服務網站，於2008年5月上線。創辦人為Ijad Madisch博士、Soeren Hofmayer與Horst Fickenscher。申請註冊該網站需要經過嚴格的審核。至2012年2月有來自192不同國家的共計1,400,000多名科學家加入了此網站。<br>ResearchGate針對科學專家學者提供一個研究分享平台。研究人員可以以註冊該網站而免費的分享全球各個領域尖端科學專家學者最新科研成果和學術著作，而且能夠按照他們的意願迅速擴大整個研究領域對自己的研究成果的關注。</p>
+<footer><strong>ResearchGate</strong><cite><a href="https://zh.wikipedia.org/wiki/ResearchGate" target="_blank" rel="external">ResearchGate</a></cite></footer></blockquote>
+<img src="/2017/08/29/20170829001/end.jpg" alt="完結灑花！" title="完結灑花！">]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2017/08/29/20170829001/001.png&quot; alt=&quot;非關內文&quot; title=&quot;非關內文&quot;&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在結束了Kaggle上的&lt;a href=&quot;/2017/08/27/20170827001/&quot; title=&quot;紅蘿蔔顧客訂單預測比賽&quot;&gt;紅蘿蔔顧客訂單預測比賽&lt;/a&gt;後，我赫然發現最後的暑假(?)似乎已經到了尾聲。雖然暑假參加了六七項的大數據比賽，同時也學了許多有趣的工具，但心中總有種不切實際的感覺，一種「啊，時間就這樣過去了！」的感嘆…。扯遠了，結束比賽後我弄了一下計畫有關的東西，接著就進入了碩士的最後課題：畢業論文。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="論文寫作" scheme="https://infinitewing.github.io/categories/%E8%AB%96%E6%96%87%E5%AF%AB%E4%BD%9C/"/>
+    
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
+    
+      <category term="論文寫作" scheme="https://infinitewing.github.io/tags/%E8%AB%96%E6%96%87%E5%AF%AB%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Kaggle]紅蘿蔔顧客訂單預測─完結</title>
+    <link href="https://infinitewing.github.io/2017/08/27/20170827001/"/>
+    <id>https://infinitewing.github.io/2017/08/27/20170827001/</id>
+    <published>2017-08-27T12:58:11.000Z</published>
+    <updated>2017-08-27T13:17:49.968Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2017/08/27/20170827001/001.jpg" alt="非關內文" title="非關內文">
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a href="https://www.kaggle.com/c/instacart-market-basket-analysis" target="_blank" rel="external">Instacart Market Basket Analysis</a> 是一項由美國Instacart公司在Kaggle上發起的資料競賽，主要是希望透過大數據分析的方式，來預測顧客下筆訂單中會出現的商品。這項比賽在2017-08-14時已經結束，由於最近有些庶務要處理，因此雖然我當天就整理好一些參賽心得，一直到今天才想到把它弄上部落格xDD。除了這篇文章以外，我還有另外兩篇關於這項競賽的文章─<a href="/2017/08/08/20170808001/" title="[Kaggle]紅蘿蔔顧客訂單預測─簡單方法">[Kaggle]紅蘿蔔顧客訂單預測─簡單方法</a>以及<a href="/2017/07/21/20170721001/" title="[Kaggle]顧客訂單視覺化">[Kaggle]顧客訂單視覺化</a>。</p>
+<a id="more"></a>
+<h1 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h1><p>既然我都花時間寫好notebook了，那這裡當然是直接上notebook囉！</p>
+<iframe id="ipynb" src="notebook.HTML" width="100%"></iframe>
+
+<h1 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h1><p>我大概是在七月後段時開始投入比賽，那時候已經有分數在0.38左右的公開Kernel，而在討論區裡也有不少高手分享了一些解題建議及程式碼，慢慢閱讀這些討論及說明後，我終於在八月初達到了前5%的成績。不過在比賽結束前一周時，有名高手選擇釋出他在排行榜前2%的完整解題程式碼…因此最後一周我就瘋狂的追趕那風雲變色的排行榜，而也是在那時我才試著學習如何在Google Gloud Platform上面建置Ubuntu的平台(<a href="/2017/08/13/20170813001/" title="在GCP開啟Ubuntu遠端桌面">在GCP開啟Ubuntu遠端桌面</a>)。在比賽結算後我的成績原本是差3位可以進前5%的銅牌頂端，不過幸運的是(?)在官方抓漏後就正式提升到銀牌最尾部xDD。雖然只是銀牌底的成績但是已經是加入Kaggle以來最好的成績。</p>
+<img src="/2017/08/27/20170827001/end.jpg" alt="完結灑花！" title="完結灑花！">]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2017/08/27/20170827001/001.jpg&quot; alt=&quot;非關內文&quot; title=&quot;非關內文&quot;&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.kaggle.com/c/instacart-market-basket-analysis&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Instacart Market Basket Analysis&lt;/a&gt; 是一項由美國Instacart公司在Kaggle上發起的資料競賽，主要是希望透過大數據分析的方式，來預測顧客下筆訂單中會出現的商品。這項比賽在2017-08-14時已經結束，由於最近有些庶務要處理，因此雖然我當天就整理好一些參賽心得，一直到今天才想到把它弄上部落格xDD。除了這篇文章以外，我還有另外兩篇關於這項競賽的文章─&lt;a href=&quot;/2017/08/08/20170808001/&quot; title=&quot;[Kaggle]紅蘿蔔顧客訂單預測─簡單方法&quot;&gt;[Kaggle]紅蘿蔔顧客訂單預測─簡單方法&lt;/a&gt;以及&lt;a href=&quot;/2017/07/21/20170721001/&quot; title=&quot;[Kaggle]顧客訂單視覺化&quot;&gt;[Kaggle]顧客訂單視覺化&lt;/a&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/categories/Big-Data/"/>
+    
+      <category term="Competition" scheme="https://infinitewing.github.io/categories/Big-Data/Competition/"/>
+    
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
+      <category term="Notebook" scheme="https://infinitewing.github.io/tags/Notebook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在GCP開啟Ubuntu遠端桌面</title>
+    <link href="https://infinitewing.github.io/2017/08/13/20170813001/"/>
+    <id>https://infinitewing.github.io/2017/08/13/20170813001/</id>
+    <published>2017-08-13T06:14:20.000Z</published>
+    <updated>2017-08-14T15:16:37.113Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2017/08/13/20170813001/001.jpg" alt="非關內文" title="非關內文">
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>大數據之所以被稱做大數據，自然是因為其資料數量龐大，雖然現今個人電腦普及，但真正面對大數據時，以個人能力組出來的電腦可能無法負荷如此龐大的資料。筆者目前使用的電腦環境是i7-6700 + 16GB DDR4 + NVIDIA 1060 6GB，雖然以個人用途來說已經是很棒的硬體設備，但有時候處理大數據卻會出現OOM或運算速度過慢的問題。對於OOM的問題，最簡單的解決方法就是上GCP開一個RAM大一點的VM，以Ubuntu作業系統來說，8核心+50GB的RAM不到0.5鎂/小時，以GCP提供的300鎂試用額度來說是綽綽有餘。針對深度運算時GPU的不夠力，由於目前GPU租賃單價過高，因此可能日後還要自行添購例如NVIDIA TITAN X之類的高級GPU。</p>
+<a id="more"></a>
+<h1 id="Google-Cloud-Platform-GCP"><a href="#Google-Cloud-Platform-GCP" class="headerlink" title="Google Cloud Platform (GCP)"></a>Google Cloud Platform (GCP)</h1><p>有關GCP的說明可以<a href="/2017/07/12/20170712001/" title="參考之前的文章">參考之前的文章</a>。在創建好GCP帳號後，就可以到Compute Engine底下新增VM個體，相關VM設定因為創建視窗已經說明很詳細就不在贅述，需要注意的是本篇文章是基於Ubuntu 14.04，因此在開機磁碟選項上必須選擇Ubuntu 14.04版本。</p>
+<img src="/2017/08/13/20170813001/002.png" alt="VM創建畫面" title="VM創建畫面">
+<p>上圖就是範例的VM創建畫面，可以看到8核心+50GB RAM的每小時使用價格不到0.35鎂，不過需注意在區域選項中可以選擇服務供應據點，每個據點的單價並不一樣。所以如果有長時間使用需求的話，最好都先看看該區域的單價是多少！</p>
+<p>創建完VM後就可以用Google預設的瀏覽器ssh打開文字終端模式，接著就進入本文章的正題：開啟Ubuntu遠端桌面。</p>
+<h1 id="Ubuntu遠端桌面"><a href="#Ubuntu遠端桌面" class="headerlink" title="Ubuntu遠端桌面"></a>Ubuntu遠端桌面</h1><p>要開啟Ubuntu遠端桌面必須經過幾個步驟，進入文字終端模式後，複製貼上以下指令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get update</div><div class="line">$ sudo apt-get install gnome-core</div><div class="line">$ sudo apt-get install vnc4server</div><div class="line">$ vncserver</div></pre></td></tr></table></figure>
+<p>上述指令說明如下：</p>
+<ol>
+<li>更新套件庫資訊</li>
+<li>安裝gnome-core</li>
+<li>安裝vnc4server</li>
+<li>啟動vncserver，第一次啟動時會詢問設定密碼，之後使用此密碼即可登入遠端桌面</li>
+</ol>
+<p>開啟vncserver後，因為還需要設定參數的關係，因此接著再輸入以下指令關閉vncserver服務(注意，這裡一定要先開啟vncserver，不然設定檔無法產生)。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ vncserver -kill :1</div><div class="line">$ vim .vnc/xstartup</div></pre></td></tr></table></figure>
+<p>修改.vnc/xstartup檔案成以下內容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"></div><div class="line"><span class="comment"># Uncomment the following two lines for normal desktop:</span></div><div class="line"><span class="built_in">unset</span> SESSION_MANAGER</div><div class="line"><span class="comment"># exec /etc/X11/xinit/xinitrc</span></div><div class="line"></div><div class="line"><span class="comment">#[ -x /etc/vnc/xstartup ] &amp;&amp; exec /etc/vnc/xstartup</span></div><div class="line"><span class="comment">#[ -r $HOME/.Xresources ] &amp;&amp; xrdb $HOME/.Xresources</span></div><div class="line"><span class="comment">#xsetroot -solid grey</span></div><div class="line"><span class="comment">#vncconfig -iconic &amp;</span></div><div class="line"><span class="comment">#x-terminal-emulator -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &amp;</span></div><div class="line"><span class="comment">#x-window-manager &amp;</span></div><div class="line"></div><div class="line">metacity &amp;</div><div class="line">gnome-settings-daemon &amp;</div><div class="line">gnome-panel &amp;</div></pre></td></tr></table></figure>
+<p>接著到GCP設定防火牆，打開5901 port後，即可回到文字終端模式輸入vncserver指令，重新打開vncserver服務：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vncserver</div></pre></td></tr></table></figure></p>
+<p>到現在為止，你的遠端桌面服務已經開始運作，最後你需要一個可以連線VNC服務的軟體，我使用的是<a href="https://www.realvnc.com/en/connect/download/vnc/" target="_blank" rel="external">realVNC</a>，下載安裝完成後，輸入你的VM外部臨時IP:5901，再輸入剛才設定的密碼，你應該就能看到精美的ubuntu遠端桌面了！</p>
+<p>文章相關連結<br>1.<a href="https://medium.com/google-cloud/graphical-user-interface-gui-for-google-compute-engine-instance-78fccda09e5c" target="_blank" rel="external">Graphical user interface (GUI) for Google Compute Engine instance</a></p>
+<img src="/2017/08/13/20170813001/end.png" alt="完結灑花！" title="完結灑花！">]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2017/08/13/20170813001/001.jpg&quot; alt=&quot;非關內文&quot; title=&quot;非關內文&quot;&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;大數據之所以被稱做大數據，自然是因為其資料數量龐大，雖然現今個人電腦普及，但真正面對大數據時，以個人能力組出來的電腦可能無法負荷如此龐大的資料。筆者目前使用的電腦環境是i7-6700 + 16GB DDR4 + NVIDIA 1060 6GB，雖然以個人用途來說已經是很棒的硬體設備，但有時候處理大數據卻會出現OOM或運算速度過慢的問題。對於OOM的問題，最簡單的解決方法就是上GCP開一個RAM大一點的VM，以Ubuntu作業系統來說，8核心+50GB的RAM不到0.5鎂/小時，以GCP提供的300鎂試用額度來說是綽綽有餘。針對深度運算時GPU的不夠力，由於目前GPU租賃單價過高，因此可能日後還要自行添購例如NVIDIA TITAN X之類的高級GPU。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/categories/Big-Data/"/>
+    
+      <category term="Cloud Computing" scheme="https://infinitewing.github.io/categories/Big-Data/Cloud-Computing/"/>
+    
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Cloud Computing" scheme="https://infinitewing.github.io/tags/Cloud-Computing/"/>
+    
+      <category term="GCP" scheme="https://infinitewing.github.io/tags/GCP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Kaggle]紅蘿蔔顧客訂單預測─簡單方法</title>
+    <link href="https://infinitewing.github.io/2017/08/08/20170808001/"/>
+    <id>https://infinitewing.github.io/2017/08/08/20170808001/</id>
+    <published>2017-08-08T13:32:45.000Z</published>
+    <updated>2017-08-14T15:16:43.047Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2017/08/08/20170808001/001.png" alt="非關內文" title="非關內文">
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a href="https://www.kaggle.com/c/instacart-market-basket-analysis" target="_blank" rel="external">Instacart Market Basket Analysis</a> 是一項由美國Instacart公司在Kaggle上發起的資料競賽，主要是希望透過大數據分析的方式，來預測顧客下筆訂單中會出現的商品。由於競賽還未結束的關係，因此先簡單介紹我已經開源的方法，日後競賽結束我也會整理相關文件，再將經驗記錄下來。</p>
+<a id="more"></a>
+<h1 id="競賽說明"><a href="#競賽說明" class="headerlink" title="競賽說明"></a>競賽說明</h1><blockquote><p>Whether you shop from meticulously planned grocery lists or let whimsy guide your grazing, our unique food rituals define who we are. Instacart, a grocery ordering and delivery app, aims to make it easy to fill your refrigerator and pantry with your personal favorites and staples when you need them. After selecting products through the Instacart app, personal shoppers review your order and do the in-store shopping and delivery for you.</p>
+<p>Instacart’s data science team plays a big part in providing this delightful shopping experience. Currently they use transactional data to develop models that predict which products a user will buy again, try for the first time, or add to their cart next during a session. Recently, Instacart open sourced this data - see their blog post on 3 Million Instacart Orders, Open Sourced.</p>
+<p>In this competition, Instacart is challenging the Kaggle community to use this anonymized data on customer orders over time to predict which previously purchased products will be in a user’s next order. They’re not only looking for the best model, Instacart’s also looking for machine learning engineers to grow their team.</p>
+<p>Winners of this competition will receive both a cash prize and a fast track through the recruiting process. For more information about exciting opportunities at Instacart, check out their careers page here or e-mail their recruiting team directly at ml.jobs@instacart.com.</p>
+<footer><strong>競賽說明</strong><cite><a href="https://www.kaggle.com/c/instacart-market-basket-analysis/" target="_blank" rel="external">競賽說明</a></cite></footer></blockquote>
+<h1 id="方法說明"><a href="#方法說明" class="headerlink" title="方法說明"></a>方法說明</h1><iframe id="ipynb" src="notebook.HTML" width="100%"></iframe>
+
+<img src="/2017/08/08/20170808001/end.jpg" alt="完結灑花！" title="完結灑花！">]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2017/08/08/20170808001/001.png&quot; alt=&quot;非關內文&quot; title=&quot;非關內文&quot;&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.kaggle.com/c/instacart-market-basket-analysis&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Instacart Market Basket Analysis&lt;/a&gt; 是一項由美國Instacart公司在Kaggle上發起的資料競賽，主要是希望透過大數據分析的方式，來預測顧客下筆訂單中會出現的商品。由於競賽還未結束的關係，因此先簡單介紹我已經開源的方法，日後競賽結束我也會整理相關文件，再將經驗記錄下來。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/categories/Big-Data/"/>
+    
+      <category term="Competition" scheme="https://infinitewing.github.io/categories/Big-Data/Competition/"/>
+    
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
+      <category term="Notebook" scheme="https://infinitewing.github.io/tags/Notebook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Kaggle]初探深度學習─亞馬遜叢林辨識(下)</title>
+    <link href="https://infinitewing.github.io/2017/07/29/20170729001/"/>
+    <id>https://infinitewing.github.io/2017/07/29/20170729001/</id>
+    <published>2017-07-29T14:07:06.000Z</published>
+    <updated>2017-08-14T15:16:51.092Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2017/07/29/20170729001/001.png" alt="非關學習" title="非關學習">
+<h1 id="Keras"><a href="#Keras" class="headerlink" title="Keras"></a>Keras</h1><a href="/2017/07/20/20170720001/" title="接續前一篇文章">接續前一篇文章</a>，由於深度學習是一項可以畢生鑽研的學問，為了避免事必躬親導致必須沿著前人的路重新走過一次，我們當然要試著站在巨人的肩膀上繼續邁進。<br><br>而Keras這個基於Python語言撰寫的深度學習API，就成為了一個很好的基石。以下節錄Keras的官方中文介紹：<br><br><a id="more"></a>
+<blockquote><p>Keras:基於Theano和TensorFlow的深度學習庫</p>
+<p>這就是Keras</p>
+<p>Keras是一個高層神經網絡API，Keras由純Python編寫而成並基Tensorflow或Theano。 Keras 為支持快速實驗而生，能夠把你的idea迅速轉換為結果，如果你有如下需求，請選擇Keras：</p>
+<ul>
+<li>簡易和快速的原型設計（keras具有高度模塊化，極簡，和可擴充特性）</li>
+<li>支持CNN和RNN，或二者的結合</li>
+<li>無縫CPU和GPU切換</li>
+</ul>
+<footer><strong>Keras中文文檔</strong><cite><a href="https://keras-cn.readthedocs.io/en/latest/" target="_blank" rel="external">Keras簡介</a></cite></footer></blockquote>
+<p>簡單的說Keras可以幫助你快速地搭建深度學習的網路架構，並且提供多種好用的API讓你快速呼叫，同時如果你希望以GPU加速深度學習運算，Keras也可以輕鬆地幫你完成這個目標。</p>
+<h1 id="亞馬遜叢林辨識"><a href="#亞馬遜叢林辨識" class="headerlink" title="亞馬遜叢林辨識"></a>亞馬遜叢林辨識</h1><p>因為有在Kaggle上整理了一份Notebook發佈，這裡當然就直接上我們設計好的Notebook啦！</p>
+<iframe id="ipynb" src="notebook.HTML" width="100%"></iframe>
+
+<img src="/2017/07/29/20170729001/end.jpg" alt="完結灑花！" title="完結灑花！">]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2017/07/29/20170729001/001.png&quot; alt=&quot;非關學習&quot; title=&quot;非關學習&quot;&gt;
+&lt;h1 id=&quot;Keras&quot;&gt;&lt;a href=&quot;#Keras&quot; class=&quot;headerlink&quot; title=&quot;Keras&quot;&gt;&lt;/a&gt;Keras&lt;/h1&gt;&lt;a href=&quot;/2017/07/20/20170720001/&quot; title=&quot;接續前一篇文章&quot;&gt;接續前一篇文章&lt;/a&gt;，由於深度學習是一項可以畢生鑽研的學問，為了避免事必躬親導致必須沿著前人的路重新走過一次，我們當然要試著站在巨人的肩膀上繼續邁進。&lt;br&gt;&lt;br&gt;而Keras這個基於Python語言撰寫的深度學習API，就成為了一個很好的基石。以下節錄Keras的官方中文介紹：&lt;br&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/categories/Big-Data/"/>
+    
+      <category term="Deep Learning" scheme="https://infinitewing.github.io/categories/Big-Data/Deep-Learning/"/>
+    
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Deep Learning" scheme="https://infinitewing.github.io/tags/Deep-Learning/"/>
+    
+      <category term="Keras" scheme="https://infinitewing.github.io/tags/Keras/"/>
+    
+      <category term="CNN" scheme="https://infinitewing.github.io/tags/CNN/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Kaggle]顧客訂單視覺化</title>
+    <link href="https://infinitewing.github.io/2017/07/21/20170721001/"/>
+    <id>https://infinitewing.github.io/2017/07/21/20170721001/</id>
+    <published>2017-07-21T12:50:36.000Z</published>
+    <updated>2017-07-21T16:15:11.931Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2017/07/21/20170721001/001.jpg" alt="非關視覺化" title="非關視覺化">
+<p>幾天前在Kaggle上建立了人生第一次的iPython筆記(iPython Notebook)，主要是處理<a href="https://www.kaggle.com/c/instacart-market-basket-analysis" target="_blank" rel="external">Instacart Market Basket Analysis</a>這項競賽中，產出每個顧客的歷史訂單視覺化。</p>
+<a id="more"></a>
+<p>由於我深知在Hexo上有許多實用的套件，Google一下關鍵字就找到了<a href="https://www.npmjs.com/package/hexo-ipynb" target="_blank" rel="external">hexo-ipynb</a>。本來是想輕輕鬆鬆就能匯入我的iPython Notebook…但是世事難料，不知道是不是版本不同的原因，該套件並無法正確運作。由於覺得要Debug麻煩的關係，我就只好自己寫一個類似的功能囉！</p>
+<p>首先你必須要把你的notebook檔案透過jupyter notebook轉成HTML檔案，並加到你的post_asset_folder當中。然後到你的js檔案中，新增以下幾行：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">iframeLoaded</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> iFrameID = <span class="built_in">document</span>.getElementById(<span class="string">'ipynb'</span>);</div><div class="line">  <span class="keyword">if</span>(iFrameID) &#123;</div><div class="line">    <span class="comment">// here you can make the height, I delete it first, then I make it again</span></div><div class="line">    iFrameID.height = <span class="string">""</span>;</div><div class="line">    iFrameID.height = (iFrameID.contentWindow.document.body.scrollHeight+<span class="number">20</span>) + <span class="string">"px"</span>;</div><div class="line">  &#125;   </div><div class="line">&#125;</div><div class="line"></div><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</div><div class="line">  <span class="comment">//ipython notebook html ifram</span></div><div class="line">  $(<span class="string">'iframe'</span>).load( <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    $(<span class="string">'iframe'</span>).contents().find(<span class="string">"body"</span>).css(<span class="string">"background"</span>,<span class="string">"#303030"</span>);</div><div class="line">    iframeLoaded();</div><div class="line">  &#125;);</div><div class="line">  </div><div class="line">  $( <span class="built_in">window</span> ).resize(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    iframeLoaded();</div><div class="line">  &#125;);</div><div class="line">&#125;)(jQuery);</div></pre></td></tr></table></figure></p>
+<p>完成上述的前置工作後，如果你要在文章中插入notebook檔案，你只需要在你的文章中插入以下html，就大功告成囉！<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">id</span>=<span class="string">"ipynb"</span> <span class="attr">src</span>=<span class="string">"notebook.HTML"</span> <span class="attr">width</span>=<span class="string">"100%"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>事不宜遲，我們來看看呈現出來的成果，這也是我在這篇文章中主要要呈現的，沒想到又變成更改Hexo設置的一環：</p>
+<iframe id="ipynb" src="notebook.HTML" width="100%"></iframe>
+
+<p>特別需要注意的是，你的html檔案檔名必須要改成大寫的.HTML，不然Hexo預設的文章解析器會把他當成一個獨立的Post，算是一個小小的Trick…本來我是也打算改這一個設定，但找了半天也還沒找到要怎麼去改解析器，最後就決定大事化小、小事化無，畢竟我也有點懶得找了xDDD。</p>
+<img src="/2017/07/21/20170721001/end.jpg" alt="完結灑花！" title="完結灑花！">]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2017/07/21/20170721001/001.jpg&quot; alt=&quot;非關視覺化&quot; title=&quot;非關視覺化&quot;&gt;
+&lt;p&gt;幾天前在Kaggle上建立了人生第一次的iPython筆記(iPython Notebook)，主要是處理&lt;a href=&quot;https://www.kaggle.com/c/instacart-market-basket-analysis&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Instacart Market Basket Analysis&lt;/a&gt;這項競賽中，產出每個顧客的歷史訂單視覺化。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/categories/Kaggle/"/>
+    
+      <category term="Notebook" scheme="https://infinitewing.github.io/categories/Kaggle/Notebook/"/>
+    
+    
+      <category term="第一次" scheme="https://infinitewing.github.io/tags/%E7%AC%AC%E4%B8%80%E6%AC%A1/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
+      <category term="Notebook" scheme="https://infinitewing.github.io/tags/Notebook/"/>
+    
+      <category term="Visualization" scheme="https://infinitewing.github.io/tags/Visualization/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Kaggle]初探深度學習─亞馬遜叢林辨識(上)</title>
+    <link href="https://infinitewing.github.io/2017/07/20/20170720001/"/>
+    <id>https://infinitewing.github.io/2017/07/20/20170720001/</id>
+    <published>2017-07-19T16:21:41.000Z</published>
+    <updated>2017-08-14T15:16:58.110Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2017/07/20/20170720001/001.jpg" alt="非關深度學習的封面圖" title="非關深度學習的封面圖">
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>大概一個月前開始在Kaggle上接觸有關影像辨識的競賽，一開始我是玩<a href="https://www.kaggle.com/c/noaa-fisheries-steller-sea-lion-population-count" target="_blank" rel="external">數數海獅有幾隻</a>的這項競賽。</p>
+<p>雖然這是一個物體識別(Object recognition)的競賽，但我當時還未接觸到以深度學習的方式來進行物體識別，僅僅是靠著RGB分群+XGBoost迴歸、以及簡單的Ensemble技巧，勉勉強強爬到了一個只差三名就能拿下生涯第一座銅牌的名次。雖然事後有些懊惱，但這也成為了我接下來參加<a href="https://www.kaggle.com/c/planet-understanding-the-amazon-from-space" target="_blank" rel="external">亞馬遜叢林辨識</a>，以及研究Keras這個Python深度學習套件的因緣。</p>
+<a id="more"></a>
+<h1 id="深度學習"><a href="#深度學習" class="headerlink" title="深度學習"></a>深度學習</h1><p>在開始介紹Keras之前，我們先來了解一下什麼是深度學習，這裡我先截一段維基百科上的定義：</p>
+<blockquote><p>深度學習（英語：deep learning）是機器學習拉出的分支，它試圖使用包含複雜結構或由多重非線性變換構成的多個處理層對資料進行高層抽象的演算法。</p>
+<p>深度學習是機器學習中一種基於對資料進行表征學習的方法。觀測值（例如一幅圖像）可以使用多種方式來表示，如每個像素強度值的向量，或者更抽象地表示成一系列邊、特定形狀的區域等。而使用某些特定的表示方法更容易從例項中學習任務（例如，人臉識別或面部表情識別）。深度學習的好處是用非監督式或半監督式的特徵學習和分層特徵提取高效演算法來替代手工取得特徵。</p>
+<footer><strong>維基百科</strong><cite><a href="https://zh.wikipedia.org/wiki/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0" target="_blank" rel="external">深度學習</a></cite></footer></blockquote>
+<p>好吧，上面這段話如果是沒接觸過神經網路的人，基本上就跟我以前一樣，連看都看不懂…根本覺得他是文字天書。同時就算已經有接觸過了(像我)，但是對深度學習裡面很多東西還是會一知半解。</p>
+<p>不過我也只是簡單介紹(如有錯誤請不吝指教)，拜萬用的谷哥所賜，我很快地找到了一張好用的圖來簡單解釋所謂的神經網路：</p>
+<img src="/2017/07/20/20170720001/002.jpg" alt="神經網路示意圖" title="神經網路示意圖">
+<p>我知道光看這張圖片會覺得很厲害，但是卻也不知道他到底可以幹嘛…簡單來說就是每個圓圈是在模擬人類的腦神經元，它裡面會有一個權重。這些圓圈彼此連接起來形成神經網路，在不同的刺激下會有不同的反應(也就是輸出)。</p>
+<p>我承認我自己也不知道在講什麼，總之就是想像成這樣：</p>
+<img src="/2017/07/20/20170720001/003.jpg" alt="神經網路組成大腦" title="神經網路組成大腦">
+<p>所謂的學習就是透過不斷的餵訓練資料給神經網路，訓練神經網路去逼近最佳的答案，在這過程中就會將可能是數百、數千萬甚至是數十億的神經元權重給更新，然後就能見證奇蹟的時刻！</p>
+<p>(要快速的理解神經網路在幹嘛，最快的方式就是自己做一個識別數字的神經網路出來，詳細參考可以點這裡。)</p>
+<p>而深度學習就是搭建一個非常深、層數非常多的神經網路，然後來完成不可能的任務。</p>
+<img src="/2017/07/20/20170720001/end.png" alt="未完待續！" title="未完待續！">]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2017/07/20/20170720001/001.jpg&quot; alt=&quot;非關深度學習的封面圖&quot; title=&quot;非關深度學習的封面圖&quot;&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;大概一個月前開始在Kaggle上接觸有關影像辨識的競賽，一開始我是玩&lt;a href=&quot;https://www.kaggle.com/c/noaa-fisheries-steller-sea-lion-population-count&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;數數海獅有幾隻&lt;/a&gt;的這項競賽。&lt;/p&gt;
+&lt;p&gt;雖然這是一個物體識別(Object recognition)的競賽，但我當時還未接觸到以深度學習的方式來進行物體識別，僅僅是靠著RGB分群+XGBoost迴歸、以及簡單的Ensemble技巧，勉勉強強爬到了一個只差三名就能拿下生涯第一座銅牌的名次。雖然事後有些懊惱，但這也成為了我接下來參加&lt;a href=&quot;https://www.kaggle.com/c/planet-understanding-the-amazon-from-space&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;亞馬遜叢林辨識&lt;/a&gt;，以及研究Keras這個Python深度學習套件的因緣。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/categories/Big-Data/"/>
+    
+      <category term="Deep Learning" scheme="https://infinitewing.github.io/categories/Big-Data/Deep-Learning/"/>
+    
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Deep Learning" scheme="https://infinitewing.github.io/tags/Deep-Learning/"/>
+    
+      <category term="Keras" scheme="https://infinitewing.github.io/tags/Keras/"/>
+    
+      <category term="CNN" scheme="https://infinitewing.github.io/tags/CNN/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>試玩Google Cloud Platform</title>
+    <link href="https://infinitewing.github.io/2017/07/12/20170712001/"/>
+    <id>https://infinitewing.github.io/2017/07/12/20170712001/</id>
+    <published>2017-07-12T08:32:19.000Z</published>
+    <updated>2017-08-14T15:16:30.974Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近參加了Kaggle上有關影像分類的比賽，於是就開始研究所謂的深度學習影像分類(Deep learning in image classification)。隨著看的文章越來越多，以及接觸了一些深度學習的框架後，我開始佩服當初我買下GTX-1060的衝動。</p>
+<p>當初本來只是想說有朝一日無聊的時候可以玩玩遊戲，壓根還沒意識到原來使用GPU進行深度學習計算已經是如日中天的火熱議題，基本上不會用GPU加速的話，那你大概就跟騎腳踏車跟F1比速度差不多(當然幾乎都是直接請框架幫忙串接GPU，不然光學那些新的東西不曉得要待到何年何月…)</p>
+<a id="more"></a>
+<p>根據我實際測試的經驗來說，以GPU完成一次訓練要1000秒的程式，丟給CPU大概要五倍以上的時間…在所謂時間就是金錢的世界裡，要挑哪個做為運算基礎已經不言而喻。</p>
+<p>扯遠了，之所以會開始嘗試Google Cloud，是因為我在享受了GTX-1060帶給我的「極速」快感後，又食髓知味的想說：快還要更快！因此就有了這次的嘗試經驗。</p>
+<h1 id="Google-Cloud-Platform"><a href="#Google-Cloud-Platform" class="headerlink" title="Google Cloud Platform"></a>Google Cloud Platform</h1><img src="/2017/07/12/20170712001/001.png" alt="Google Cloud Platform" title="Google Cloud Platform">
+<p>可能是因為進入市場比較晚的關係，之前一直可以在廣告上看到Google Cloud Platform現在對新加入的使用者，提供為期60天的300美元免費試用。</p>
+<img src="/2017/07/12/20170712001/002.png" alt="申請頁面的相關說明" title="申請頁面的相關說明">
+<p>因為註冊帳號這應該算是SOP流程，所以這邊就不詳細記錄。值得一提的是Google Cloud跟Amazon的AWS(Amazon Web Services)的功能應該算大同小異，基本上就是提供各式的雲端伺服器、計算、網路、儲存等等解決方案(不過我也只有大概玩過雲端伺服器，因此算不負責任簡介)。</p>
+<p>由於我是追求更快的GPU才會找上Google Cloud，並且之前有使用過AWS的經驗，因此我自信的就直接跳過Google提供的新手教學，直接跳到新增虛擬機器的頁面(進入主控台後，在左側的運算→Compute Engine→VM執行個體)。接著選好了有提供GPU的服務據點後，照著非常明瞭的流程引導按下了啟動VM的按鈕。</p>
+<p>注意啟動VM需要一定的時間，這裡就先說說為什麼我要棄AWS不用，跑來嘗試Google Cloud…很簡單，因為他有提供300美元的額度給我玩啊！就在我幻想著300美元可以玩伺服器等級的NVIDIA Tesla K80 GPU大概多少小時的時候，一個無情的提示從旁邊跳了出來：「你的權限不足，開啟VM失敗…」</p>
+<h1 id="天下沒有白吃的午餐"><a href="#天下沒有白吃的午餐" class="headerlink" title="天下沒有白吃的午餐"></a>天下沒有白吃的午餐</h1><p>我當下第一個反應是WTF，然後就重新看了一下Google Cloud上面的<a href="https://cloud.google.com/free-trial/?hl=zh_TW" target="_blank" rel="external">免費試用說明</a>…好吧，如果是免費試用的話，你的vCPU數量最多是8顆，同時也沒有GPU使用的權限。看起來要使用GPU除了要升級成付費帳戶之外，還需要填寫一個配額的申請表單…</p>
+<p>好吧，反正我也只是想嘗鮮試試看K80的計算速度能不能帶給我極致的享受，一小時的使用費加一加也才1美元左右，於是乎我就飛快的申請完配額解鎖，靜靜地等待解鎖的通知。(因為爬文有看到解鎖的時間很快，所以我就沒有考慮去用AWS，AWS如果要用GPU一樣要申請解鎖…)</p>
+<p>大概五分鐘之後Google服務團隊就幫我解鎖了，Nice Job！我就開始重新設定VM，接著啟動！在VM啟動期間，我還想著等一下要怎麼設定SSH連線而手忙腳亂的時候，VM開啟了。我在啟動的VM旁邊找到了SSH的相關下拉選單，然後看到了Google非常貼心的一個功能：基於網頁就能執行SSH遠端操作的功能。</p>
+<h1 id="實際測試"><a href="#實際測試" class="headerlink" title="實際測試"></a>實際測試</h1><p>這實在是一個太人性化的設計了，我一邊讚嘆一邊登入，接著才發現我除了不太會下Linux指令，連要怎麼su成root的密碼在哪都不知道…想到之後還要到Kaggle登入下載運算檔案，因此我果斷地把VM刪了，重新新增一台OS是Windows Server 2013的VM，果然還是有GUI的環境好用啊！</p>
+<img src="/2017/07/12/20170712001/003.png" alt="Windows Server可以直接用遠端桌面登入，非常方便" title="Windows Server可以直接用遠端桌面登入，非常方便">
+<p>就在環境設定完成後，我便開始測試K80的運算速度…結果我就不想多說了，K80花了大概25分鐘跑完我1060跑15分鐘就能跑完的程式碼…雖然不排除可能是我設定上有問題，但說好的速度與激情呢！？</p>
+<img src="/2017/07/12/20170712001/end.png" alt="完結灑花，說好的速度與激情呢(誤)" title="完結灑花，說好的速度與激情呢(誤)">]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;最近參加了Kaggle上有關影像分類的比賽，於是就開始研究所謂的深度學習影像分類(Deep learning in image classification)。隨著看的文章越來越多，以及接觸了一些深度學習的框架後，我開始佩服當初我買下GTX-1060的衝動。&lt;/p&gt;
+&lt;p&gt;當初本來只是想說有朝一日無聊的時候可以玩玩遊戲，壓根還沒意識到原來使用GPU進行深度學習計算已經是如日中天的火熱議題，基本上不會用GPU加速的話，那你大概就跟騎腳踏車跟F1比速度差不多(當然幾乎都是直接請框架幫忙串接GPU，不然光學那些新的東西不曉得要待到何年何月…)&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/categories/Big-Data/"/>
+    
+      <category term="Cloud Computing" scheme="https://infinitewing.github.io/categories/Big-Data/Cloud-Computing/"/>
+    
+    
+      <category term="第一次" scheme="https://infinitewing.github.io/tags/%E7%AC%AC%E4%B8%80%E6%AC%A1/"/>
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Cloud Computing" scheme="https://infinitewing.github.io/tags/Cloud-Computing/"/>
+    
+      <category term="GCP" scheme="https://infinitewing.github.io/tags/GCP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo文章相關設定</title>
+    <link href="https://infinitewing.github.io/2017/07/08/20170708001/"/>
+    <id>https://infinitewing.github.io/2017/07/08/20170708001/</id>
+    <published>2017-07-08T10:01:29.000Z</published>
+    <updated>2017-07-08T10:48:37.891Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>將我的個人網站push到GitHub上之後，我試著學了Markdown語法，然後也很順利的透過谷哥找到了一款好用的Markdown編輯器─<a href="http://markdownpad.com/" target="_blank" rel="external">MarkdownPad 2</a>。就在我寫前一篇文章寫到一半的時候，突然想到其他使用Hexo的blogger，他們文章前面好像都會有類似文章目錄的區塊，於是乎我就找了一下有沒有相關的套件可以使用。</p>
+<a id="more"></a>
+<h1 id="關鍵字的重要性"><a href="#關鍵字的重要性" class="headerlink" title="關鍵字的重要性"></a>關鍵字的重要性</h1><p>我只能說，我當初的搜尋條件絕對是下錯了，不然就是沒有仔細看…我那時以為沒有這種功能的套件，於是乎就興沖沖的自己寫了一個以html格式為基準的目錄功能。因為懶得再寫js來自動爬header，因此我寫的東西在每個header上都要手動加上id…</p>
+<p>結果昨天我心血來潮，又重新查了一下官方文件，最後在官方網站的輔助函數中找到了我要的功能：</p>
+<p>toc，解析內容中的標題標籤 (h1~h6) 並插入目錄。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;%- toc(str, [options]) %&gt;</div></pre></td></tr></table></figure>
+<p>好吧，原來Hexo3早就有提供這個功能，那我前天是在忙些什麼啊(翻桌)！</p>
+<img src="/2017/07/08/20170708001/001.png" alt="下次應該看清楚文件的..." title="下次應該看清楚文件的...">
+<p>既然知道了官方有提供這個功能，於是就可以修改在themes\landscape\layout_partial\目錄下的article.ejs檔案，在你要的地方加上toc這個輔助函數，<br>然後Hexo就會自動在上方產生你的文章目錄：</p>
+<figure class="highlight html"><figcaption><span>article.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"article-entry"</span> <span class="attr">itemprop</span>=<span class="string">"articleBody"</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-toc-outer"</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-toc"</span>&gt;</span></div><div class="line">         <span class="tag">&lt;<span class="name">%-</span> <span class="attr">toc</span>(<span class="attr">post.content</span>, &#123;<span class="attr">list_number:</span> <span class="attr">false</span>&#125;) %&gt;</span></div><div class="line">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">     ...</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="圖片資產"><a href="#圖片資產" class="headerlink" title="圖片資產"></a>圖片資產</h1><p>如果要寫出一篇生動有趣的文章，裡面的圖片絕對是不可或缺的要件之一。參考官網上有關資產資料夾的設定後，很快地就能將圖片加入你的文章當中。</p>
+<p>首先，你要修改部落格的_config.yml檔案，修改或加入這一行”post_asset_folder: true”，如此一來以後每當你新增一個文章，Hexo就會自動幫你產生那則文章的資料夾，你只要把你要的圖片丟到那個資料夾底下，接著在文章中呼叫：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; % asset_img 你的圖片.格式 圖片說明 %&#125;</div></pre></td></tr></table></figure>
+<p>接著你就可以看到美美的圖片出現在自己的文章當中了！</p>
+<img src="/2017/07/08/20170708001/end.png" alt="完結灑花！" title="完結灑花！">
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;將我的個人網站push到GitHub上之後，我試著學了Markdown語法，然後也很順利的透過谷哥找到了一款好用的Markdown編輯器─&lt;a href=&quot;http://markdownpad.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MarkdownPad 2&lt;/a&gt;。就在我寫前一篇文章寫到一半的時候，突然想到其他使用Hexo的blogger，他們文章前面好像都會有類似文章目錄的區塊，於是乎我就找了一下有沒有相關的套件可以使用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="網站設計" scheme="https://infinitewing.github.io/categories/%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88/"/>
+    
+      <category term="Hexo" scheme="https://infinitewing.github.io/categories/%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="https://infinitewing.github.io/tags/Hexo/"/>
+    
+      <category term="網站設計" scheme="https://infinitewing.github.io/tags/%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88/"/>
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[FreeBSD] 以ssmtp搭配Gamil實現ssh登入自動提醒</title>
+    <link href="https://infinitewing.github.io/2017/07/07/20170707001/"/>
+    <id>https://infinitewing.github.io/2017/07/07/20170707001/</id>
+    <published>2017-07-07T08:58:39.000Z</published>
+    <updated>2017-07-08T09:51:05.960Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>俗話說久病成良醫，經過了好幾次的資安經驗後，筆者也慢慢地養成了疑神疑鬼的性格(?)，為了避免這種病情惡化，只好用比較聰明的方法來讓自己安心。而這就是以下這篇文章要介紹的，如何透過排程機制來動態偵測ssh的使用者登入狀況，並同步寄發登入提醒。</p>
+<p>說真的既然電腦是架在公開的網路環境下，那就沒有萬無一失的防禦方式，唯有與時俱進及提高警覺才能避免重傷害…所謂不經一事不長一智，久經沙場的話自然就會有更全面的經驗，而筆者也希望自己能從一而終的在學習上永無止境。</p>
+<a id="more"></a>
+<img src="/2017/07/07/20170707001/1470294384.jpg" alt="如果每天都能如此優閒度過該有多好" title="如果每天都能如此優閒度過該有多好">
+<h1 id="ssmtp"><a href="#ssmtp" class="headerlink" title="ssmtp"></a>ssmtp</h1><p>有關ssmtp如何在Linux系統上搭配Gmail寄信的功能已經有許多前輩做了整理，但在FreeBSD方面則沒有太多的討論。筆者參考了<a href="https://blog.gtwang.org/linux/linux-send-mail-command-using-ssmtp-and-gmail/" target="_blank" rel="external">這篇文章</a>來進行設定，同時筆者的FreeBSD版本為 - FreeBSD 11.0-RELEASE-p1</p>
+<p>首先開啟你的Server，接著以pkg來安裝ssmtp。(當然你可以用su搭配安裝指令使用，筆者為了避免麻煩就先切換成root身分了。)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># pkg install ssmtp</div></pre></td></tr></table></figure>
+<p>安裝完成後即可切換目錄到/usr/local/etc/ssmtp/下查看相關檔案，接著動手更改ssmtp的設定檔案ssmtp.conf，加入以下設定：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">root=填入你的Gmail帳號</div><div class="line">mailhub=smtp.gmail.com:587</div><div class="line">AuthUser=填入你的Gmail帳號</div><div class="line">AuthPass=填入你的Gmail密碼</div><div class="line">hostname=填入你的Hostname</div><div class="line">UseTLS=YES</div><div class="line">UseSTARTTLS=YES</div></pre></td></tr></table></figure>
+<h1 id="測試寄信"><a href="#測試寄信" class="headerlink" title="測試寄信"></a>測試寄信</h1><p>完成之後就可以測試看看ssmtp是否能夠正常執行，記得在測試之前要把對應的587port防火牆打開，不然會出現錯誤。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># echo &quot;Hello ssmtp&quot; | ssmtp 你的信箱 </div></pre></td></tr></table></figure>
+<p>一切都沒有問題的話，幾秒鐘過後就有一封熱騰騰的信件出現在你的Gmail信箱中，接著就能來著手設計ssh登入後自動寄提醒信的功能。</p>
+<h1 id="偵測ssh登入"><a href="#偵測ssh登入" class="headerlink" title="偵測ssh登入"></a>偵測ssh登入</h1><p>透過ssh登入的log記錄一般是存在/var/log/auth.log裡。經由筆者查看後發現每個ssh登入成功後，都會有一行”Accepted keyboard-interactive…”的紀錄，同時也會有登入者的username以及來源IP，因此就能開始著手設計Bash shell透過正規表示來偵測登入，像是這樣：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line">log_file=<span class="string">"/var/log/auth.log"</span></div><div class="line"><span class="keyword">while</span> <span class="built_in">read</span> line; <span class="keyword">do</span></div><div class="line">	<span class="comment"># replace your own regex here</span></div><div class="line">	regex=<span class="string">"(.)*Accepted keyboard-interactive(.)*for(.)*from(.)*port(.)*ssh2(.)*"</span></div><div class="line">	<span class="keyword">if</span> [[ <span class="variable">$line</span> =~ <span class="variable">$regex</span> ]]; <span class="keyword">then</span></div><div class="line">		<span class="comment">#登入者的IP</span></div><div class="line">		ip=<span class="string">"<span class="variable">$(grep -oE '[0-9]&#123;1,3&#125;\.[0-9]&#123;1,3&#125;\.[0-9]&#123;1,3&#125;\.[0-9]&#123;1,3&#125;' &lt;&lt;&lt; "$line")</span>"</span></div><div class="line">		<span class="comment">#接著看你要做什麼處理，這邊筆者是自動寫入一筆信件資料</span></div><div class="line">		<span class="comment">#同時透過ssmtp寄送</span></div><div class="line">	<span class="keyword">fi</span></div><div class="line"><span class="keyword">done</span> &lt; <span class="variable">$log_file</span></div></pre></td></tr></table></figure>
+<p>詳細的程式碼可以在<a href="https://github.com/InfiniteWing/FreeBSD-Useful-Toys/blob/master/ssh_login.sh" target="_blank" rel="external">這裡</a>查看，不過筆者當初沒有考慮到log file會定期壓縮的問題，因此程式還有待改善，如果有更新的話會同步修改這篇文章。(注意，如果要使用筆者的程式，須建立current_login_count_file的檔案，並寫入0)</p>
+<p>如果要搭配排程的話就可以用FreeBSD的Crontab來完成~</p>
+<h1 id="更多的想法"><a href="#更多的想法" class="headerlink" title="更多的想法"></a>更多的想法</h1><p>寄送登入提醒只是最基本應用例子，也可定時寄送伺服器狀況(如硬體溫度或是攻擊警告等..)，更甚至是定期把log檔案打包寄至Gmail，避免真的有人入侵了也沒辦法分析log的窘境。</p>
+<img src="/2017/07/07/20170707001/1470294169.png" alt="完結灑花！" title="完結灑花！">
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;俗話說久病成良醫，經過了好幾次的資安經驗後，筆者也慢慢地養成了疑神疑鬼的性格(?)，為了避免這種病情惡化，只好用比較聰明的方法來讓自己安心。而這就是以下這篇文章要介紹的，如何透過排程機制來動態偵測ssh的使用者登入狀況，並同步寄發登入提醒。&lt;/p&gt;
+&lt;p&gt;說真的既然電腦是架在公開的網路環境下，那就沒有萬無一失的防禦方式，唯有與時俱進及提高警覺才能避免重傷害…所謂不經一事不長一智，久經沙場的話自然就會有更全面的經驗，而筆者也希望自己能從一而終的在學習上永無止境。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="FreeBSD" scheme="https://infinitewing.github.io/categories/FreeBSD/"/>
+    
+      <category term="系統防護" scheme="https://infinitewing.github.io/categories/FreeBSD/%E7%B3%BB%E7%B5%B1%E9%98%B2%E8%AD%B7/"/>
+    
+    
+      <category term="FreeBSD" scheme="https://infinitewing.github.io/tags/FreeBSD/"/>
+    
+      <category term="資訊安全" scheme="https://infinitewing.github.io/tags/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="系統防護" scheme="https://infinitewing.github.io/tags/%E7%B3%BB%E7%B5%B1%E9%98%B2%E8%AD%B7/"/>
+    
+      <category term="ssmtp" scheme="https://infinitewing.github.io/tags/ssmtp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第一次玩Hexo架站</title>
+    <link href="https://infinitewing.github.io/2017/07/06/20170706001/"/>
+    <id>https://infinitewing.github.io/2017/07/06/20170706001/</id>
+    <published>2017-07-06T10:36:32.000Z</published>
+    <updated>2017-07-08T09:58:30.377Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>看了許多人的GitHub Page之後，心頭躍躍欲試。之前一直考慮是要自己重寫一個可以產生靜態網站的程式或是選用現成的網誌工具，最後還是不敵懶惰的天性選擇了許多人使用的Hexo。</p>
+<p>經過一天的努力終於弄好了整個Hexo的環境，修改了一些設定及版面CSS設計後，完成了這個自己的個人網站~</p>
+<h1 id="安裝Hexo"><a href="#安裝Hexo" class="headerlink" title="安裝Hexo"></a>安裝Hexo</h1><p>開始以Hexo(<a href="https://hexo.io/zh-tw/" target="_blank" rel="external">https://hexo.io/zh-tw/</a>)作為靜態網站架站工具前，你的電腦必須支援以下功能：</p>
+<ul>
+<li><a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a></li>
+<li><a href="http://git-scm.com/" target="_blank" rel="external">Git</a><a id="more"></a>
+</li>
+</ul>
+<p>確定安裝了以上的相依套件後，你就可以用node.js的套件安裝包npm來完成Hexo的安裝</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<h1 id="Run-Hexo"><a href="#Run-Hexo" class="headerlink" title="Run Hexo"></a>Run Hexo</h1><p>安裝完成後需要執行建立部落格檔案的動作，請在CMD下切換到你要存放部落格的目錄，接著打下指令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &apos;your_folder_name&apos;</div><div class="line">$ cd &apos;your_folder_name&apos;</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<p>如此一來最基本的部落格檔案就自動生成了，有關生成後的檔案結構可以到<a href="https://hexo.io/zh-tw/docs/setup.html" target="_blank" rel="external">Hexo中文官網</a>查看。這時候的部落格雖然是空的，但已經可以直接運行來查看是否成功安裝。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>打開你常用的瀏覽器，照著CMD輸出上的網址打上(一般預設是localhost:4000/)，沒有意外發生的話，你應該就能看到陽春版的Hexo預設主題 - landscape。</p>
+<img src="/2017/07/06/20170706001/landscape.png" alt="Hexo預設的landscape主題" title="Hexo預設的landscape主題">
+<p>有關更進階的產生日誌、更換主題的說明可以參考<a href="https://hexo.io/zh-tw/docs/setup.html" target="_blank" rel="external">Hexo中文官網</a>，應該都滿容易理解的~</p>
+<h1 id="個人化"><a href="#個人化" class="headerlink" title="個人化"></a>個人化</h1><p>雖然說連自己寫個靜態部落格產生器都懶，但為了讓自己的網誌有個人的特色(或者說自己看了會比較順眼)，因此我決定修改一下預設的主題CSS及Layout檔。這裡不說Hexo的檔案結構非常完整，基本上如果你對網站設計跟程式語言有接觸的話，應該不難去找到如何修改成自己需要的主題。</p>
+<p>如果是要改生成出來的模板效果，有時候需要去修改Hexo的原始js程式碼，舉例來說我就覺得首頁的per_page跟archives底下的per_page共用有點不太人性，因為預設landscape的archives表現是一個區塊一個區塊，如果只有十筆資料的話下方會留許多空白，因此我就改了node_modules/hexo-generator-archive/底下的index.js以及lib/generator.js</p>
+<figure class="highlight javascript"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> per_page;</div><div class="line"><span class="keyword">var</span> archive_per_page;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (hexo.config.archive === <span class="number">1</span>) &#123;</div><div class="line">  per_page = <span class="number">0</span>;</div><div class="line">  archive_per_page = <span class="number">0</span></div><div class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> hexo.config.per_page === <span class="string">'undefined'</span>) &#123;</div><div class="line">  per_page = <span class="number">10</span>;</div><div class="line">  archive_per_page=<span class="number">18</span>;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  per_page = hexo.config.per_page;</div><div class="line">  archive_per_page = hexo.config.archive_per_page;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>lib/generator.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">generate</span>(<span class="params">path, posts, options</span>) </span>&#123;</div><div class="line">  options = options || &#123;&#125;;</div><div class="line">  options.archive = <span class="literal">true</span>;</div><div class="line">  <span class="keyword">if</span>(path.match(<span class="string">'^archives/.*$'</span>))&#123;</div><div class="line">      perPage = config.archive_generator.archive_per_page;</div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">      perPage = config.archive_generator.per_page;</div><div class="line">  &#125;</div><div class="line">  result = result.concat(pagination(path, posts, &#123;</div><div class="line">    <span class="attr">perPage</span>: perPage,</div><div class="line">    <span class="attr">layout</span>: [<span class="string">'archive'</span>, <span class="string">'index'</span>],</div><div class="line">    <span class="attr">format</span>: paginationDir + <span class="string">'/%d/'</span>,</div><div class="line">    <span class="attr">data</span>: options</div><div class="line">  &#125;));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如此一來就能達到理想的效果了~</p>
+<img src="/2017/07/06/20170706001/end.png" alt="完結灑花！" title="完結灑花！">
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;看了許多人的GitHub Page之後，心頭躍躍欲試。之前一直考慮是要自己重寫一個可以產生靜態網站的程式或是選用現成的網誌工具，最後還是不敵懶惰的天性選擇了許多人使用的Hexo。&lt;/p&gt;
+&lt;p&gt;經過一天的努力終於弄好了整個Hexo的環境，修改了一些設定及版面CSS設計後，完成了這個自己的個人網站~&lt;/p&gt;
+&lt;h1 id=&quot;安裝Hexo&quot;&gt;&lt;a href=&quot;#安裝Hexo&quot; class=&quot;headerlink&quot; title=&quot;安裝Hexo&quot;&gt;&lt;/a&gt;安裝Hexo&lt;/h1&gt;&lt;p&gt;開始以Hexo(&lt;a href=&quot;https://hexo.io/zh-tw/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://hexo.io/zh-tw/&lt;/a&gt;)作為靜態網站架站工具前，你的電腦必須支援以下功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://nodejs.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Node.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://git-scm.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git&lt;/a&gt;
+    
+    </summary>
+    
+      <category term="網站設計" scheme="https://infinitewing.github.io/categories/%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88/"/>
+    
+      <category term="Hexo" scheme="https://infinitewing.github.io/categories/%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="https://infinitewing.github.io/tags/Hexo/"/>
+    
+      <category term="網站設計" scheme="https://infinitewing.github.io/tags/%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88/"/>
+    
+      <category term="第一次" scheme="https://infinitewing.github.io/tags/%E7%AC%AC%E4%B8%80%E6%AC%A1/"/>
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>楓之谷APP開發日誌 ─ 第六章</title>
+    <link href="https://infinitewing.github.io/2017/02/02/MapleStory-Stage-6/"/>
+    <id>https://infinitewing.github.io/2017/02/02/MapleStory-Stage-6/</id>
+    <published>2017-02-02T10:07:41.000Z</published>
+    <updated>2017-07-07T16:59:42.481Z</updated>
+    
+    <content type="html"><![CDATA[<p>各位2017新年快樂～這一項專案終於迎來了他的第三個年頭，老實說當初我也根本不曉得這項瘋狂的計畫會持續這麼久。</p>
+<p>雖然說不能上架讓人很難過，但其實偶爾打開APP，還真會有種我真厲害的自豪之情油然而生。所以不能上架就算了吧，至少有其他作品能上架(?)。</p>
+<p>話又說回來，當然還是上架有人能回饋互動的感覺更好一些，至少能在我懶散魂發作的時候給一點前進的動力。所以如果剛好有那麼一點後起之秀或是剛好想自製楓之谷的巴友，剛剛好找到了這篇系列紀錄文，可以的話就留言紀念一下吧～就跟我常會在圖書館借來的書後面還書時間表上簽名一樣(?)。</p>
+<a id="more"></a>
+<p>這一次要來講怪物施放技能的相關準備事項及說明，首先我們先看到下面這張慘圖：<br><img src="/2017/02/02/MapleStory-Stage-6/002.png" alt="加入背景後的實裝畫面" title="加入背景後的實裝畫面"><br><img src="/2017/02/02/MapleStory-Stage-6/001.png" alt="哪有人出門就遇到大八的T.T" title="哪有人出門就遇到大八的T.T"></p>
+<p>好的，這裡可以看到我被地獄巴洛古○○的畫面有兩隻地獄巴洛古（好吧我這才發現有一隻是巴洛古），同時施放了兩種不同的技能。</p>
+<p>其中一種是會發出一顆黑色重力球（地獄巴洛古施放的，姑且當作是重力球）的技能，另外一種是範圍指定技。</p>
+<p>（兩者的差別在於，重力球是屬於射出型的，要打到才會受到攻擊；而範圍指定技是指在範圍內就會直接被攻擊，無法閃躲）</p>
+<img src="/2017/02/02/MapleStory-Stage-6/003.png" alt="出沒在奇幻村的野生拉圖斯..." title="出沒在奇幻村的野生拉圖斯...">
+<p>這裡展示的是拉圖斯的技能，是說要是奇幻村有拉圖斯出沒的話，那新手是要怎麼解浴袍的桑拿套服的任務啊</p>
+<p>從不同時期的BOSS資料中不難看出，在一開始設計時的BOSS並沒有現在這麼喪心病狂的功能，很有可能是在版本更新時才又加裝到地圖編輯器的。以巴洛古和拉圖斯為例，前者就只有簡單的投擲火球(?)跟兩招蟀氣的範圍技，而拉圖斯作為玩具城的頭號BOSS，不僅有更多的技能，包含了有地圖警告(Area Warning)的顯示，同時還有自身BUFF技能。</p>
+<p>(自身BUFF技能就是指會讓BOSS狀態增強的技能，像是物理攻擊力增加、防禦上升等等，而先前介紹的技能都屬於會對玩家造成傷害的攻擊技能。迷之聲：不過因為BUFF技能和地圖警告要實裝的話還要花不少時間打程式碼，所以就…)</p>
+<p>至於炎魔、黑龍王這類型的超巨大BOSS，則因為Android容易OOM的關係(其實只是懶)，所以就沒有實裝上來。基本上這類型的超巨大BOSS與一般BOSS差異不會太大，只要注意狀態轉換應該就OK(不過我也沒有仔細看過這類型BOSS的資料檔，因此只能說是不負責任推估)</p>
+<p>最後就用獅子王的咆哮來祝各位新年快樂！</p>
+<img src="/2017/02/02/MapleStory-Stage-6/004.png" alt="獅子王的咆哮！" title="獅子王的咆哮！">
+<img src="/2017/02/02/MapleStory-Stage-6/005.png" alt="好吧，這麼大隻的確是打不贏..." title="好吧，這麼大隻的確是打不贏...">
+<p>下一篇終於要來說明地圖的背景繪製了～</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;各位2017新年快樂～這一項專案終於迎來了他的第三個年頭，老實說當初我也根本不曉得這項瘋狂的計畫會持續這麼久。&lt;/p&gt;
+&lt;p&gt;雖然說不能上架讓人很難過，但其實偶爾打開APP，還真會有種我真厲害的自豪之情油然而生。所以不能上架就算了吧，至少有其他作品能上架(?)。&lt;/p&gt;
+&lt;p&gt;話又說回來，當然還是上架有人能回饋互動的感覺更好一些，至少能在我懶散魂發作的時候給一點前進的動力。所以如果剛好有那麼一點後起之秀或是剛好想自製楓之谷的巴友，剛剛好找到了這篇系列紀錄文，可以的話就留言紀念一下吧～就跟我常會在圖書館借來的書後面還書時間表上簽名一樣(?)。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="個人作品" scheme="https://infinitewing.github.io/categories/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
+    
+      <category term="楓之谷APP" scheme="https://infinitewing.github.io/categories/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/%E6%A5%93%E4%B9%8B%E8%B0%B7APP/"/>
+    
+    
+      <category term="個人作品" scheme="https://infinitewing.github.io/tags/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
+    
+      <category term="Android APP" scheme="https://infinitewing.github.io/tags/Android-APP/"/>
+    
+      <category term="童年" scheme="https://infinitewing.github.io/tags/%E7%AB%A5%E5%B9%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>楓之谷APP開發日誌 ─ 第五章</title>
+    <link href="https://infinitewing.github.io/2017/01/22/MapleStory-Stage-5/"/>
+    <id>https://infinitewing.github.io/2017/01/22/MapleStory-Stage-5/</id>
+    <published>2017-01-22T08:52:14.000Z</published>
+    <updated>2017-07-07T17:00:21.063Z</updated>
+    
+    <content type="html"><![CDATA[<p>本來這篇是打算介紹楓之谷的地圖背景繪製，不過因為實際開發時這個好像比較晚才實裝，所以就臨時改變主題了。</p>
+<p>今天要介紹的是怪物的技能施放以及角色的技能特效。(好吧因為發現光角色的技能特效就打友點多了，下次再講怪物的技能施放好了…)</p>
+<p>首先再次重提當初玩楓之谷讓我最感動的事情─龍咆哮。<br><a id="more"></a><br><img src="/2017/01/22/MapleStory-Stage-5/001.jpg" alt="龍咆哮" title="龍咆哮"></p>
+<p>當年的龍咆哮雖然沒有後來的天怒、暴風雪等等法師四轉技能來的帥氣，不過在冰原雪域還是高手練功點的時代，能放出龍咆哮的龍騎士基本上一定是自由市場裡最引人注目的存在。</p>
+<p>其實早在兩年前我就已經把單純只有在角色身上出現特效的技能表現給大致完成了，不過由於最近我又打算加上天怒、暴風雪、穢土轉生等等超帥四轉技能到遊戲裡，所以關於技能的部分又重新修改了一下。</p>
+<p>原先的話是只有針對Effect(也就是角色身上出現的特效)做處理，不過因為天怒、暴風雪等等大型範圍技能，還牽扯到Tile的部分(用天怒來解釋，也就是後面場景的光柱)，所以基本上我又重新把技能相關程式加工了一次，同時也將技能打中的Hit效果做處理。</p>
+<p>我們用以下這張天怒圖來做解釋好了：</p>
+<img src="/2017/01/22/MapleStory-Stage-5/002.jpg" alt="002.jpg" title="">
+<p>紅色1的地方，就是技能裡面的Effect部分，基本上是跟著人移動的<br>綠色2的地方，就是Tile的部分，屬於類似技能背景的東西。同時在Tile的繪製上，他是採取彼此的間隔(就是每兩個tile中間會隔固定大小的間距)。</p>
+<p>至於Hit的效果，就是當技能打到怪物時，怪物身上除了會跳出一排傷害數字外，同時也會有受到傷害的顯示效果：</p>
+<img src="/2017/01/22/MapleStory-Stage-5/003.png" alt="003.png" title="">
+<p>上方的圖例是怪物受到龍咆哮的攻擊後，身上會出現Hit的效果。</p>
+<p>諸如上述，經過一番努力之後，我的手機裡終於出現了第一種能同時放龍咆哮、天怒、暴風雪的隱藏職業魔劍士。</p>
+<img src="/2017/01/22/MapleStory-Stage-5/004.png" alt="天怒實裝畫面" title="天怒實裝畫面">
+<p>明明是劍士，卻能放天怒這樣對嗎！！！</p>
+<img src="/2017/01/22/MapleStory-Stage-5/005.png" alt="天怒實裝畫面" title="天怒實裝畫面">
+<p>老實說楓之谷越出越豐富，龍咆哮已經不知道被甩開幾個街角了，帥氣程度根本比不上龍神之怒。</p>
+<img src="/2017/01/22/MapleStory-Stage-5/006.png" alt="華麗Level Max的龍神之怒" title="華麗Level Max的龍神之怒">
+<p>好，今天的介紹就到此告一段落，不過其實已經可以看到技能示意圖的後方已經出現了背景的繪製，等接下來說明完怪物的技能施放後，應該就會開始說明楓之谷的地圖背景繪製機制了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本來這篇是打算介紹楓之谷的地圖背景繪製，不過因為實際開發時這個好像比較晚才實裝，所以就臨時改變主題了。&lt;/p&gt;
+&lt;p&gt;今天要介紹的是怪物的技能施放以及角色的技能特效。(好吧因為發現光角色的技能特效就打友點多了，下次再講怪物的技能施放好了…)&lt;/p&gt;
+&lt;p&gt;首先再次重提當初玩楓之谷讓我最感動的事情─龍咆哮。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="個人作品" scheme="https://infinitewing.github.io/categories/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
+    
+      <category term="楓之谷APP" scheme="https://infinitewing.github.io/categories/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/%E6%A5%93%E4%B9%8B%E8%B0%B7APP/"/>
+    
+    
+      <category term="個人作品" scheme="https://infinitewing.github.io/tags/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
+    
+      <category term="Android APP" scheme="https://infinitewing.github.io/tags/Android-APP/"/>
+    
+      <category term="童年" scheme="https://infinitewing.github.io/tags/%E7%AB%A5%E5%B9%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>楓之谷APP開發日誌 ─ 第四章</title>
+    <link href="https://infinitewing.github.io/2017/01/16/MapleStory-Stage-4/"/>
+    <id>https://infinitewing.github.io/2017/01/16/MapleStory-Stage-4/</id>
+    <published>2017-01-16T07:58:41.000Z</published>
+    <updated>2017-07-10T16:09:57.045Z</updated>
+    
+    <content type="html"><![CDATA[<p>似乎相隔了許久才又想起更新這一系列的日誌，老實說這一年多也確實是發生了許許多多的事情，差點讓我都忘了怎麼繼續這即將邁入三年的開發計畫。</p>
+<p>呼，扯遠了，今天這一篇文章是要講述如何把地圖套上手機APP裡。</p>
+<img src="/2017/01/16/MapleStory-Stage-4/001.jpg" alt="冒險的起點 ─ 勇士之村" title="冒險的起點 ─ 勇士之村">
+<a id="more"></a>
+<p>好的，大家可以看到這是一張勇士之村的大圖</p>
+<p>各位一定很好奇這楓之谷的背景圖片是怎麼產生的：<br>基本上就是一個一個物件堆疊起來，然後靠各自的x,y座標，z軸來控制前後景，最後東拼西湊就能產生這麼一張完整的勇士之村地圖。</p>
+<p>(好吧其實裡面滿多血淚的，但是實在事隔多年我也差不多快忘了當初的血淚是怎麼流的xDDD，如果對官方XML裡面的格式有問題的話不妨站內私訊我。如果有足夠的緣分我剛好上線看到的話一定會完整地回覆。)</p>
+<p>不過在這個地圖裡面，其實左側跟右側、還有下方都是有一定大小的留白…因為在官方的XML資料中，有些竟然沒有邊界的VR值…。<br>幸好國外的水友是強大的，翻了好多國外的討論，最後終於得到了計算邊界的公式，然後就寫了一支程式來自動修復這個錯誤。</p>
+<img src="/2017/01/16/MapleStory-Stage-4/002.jpg" alt="修正邊界錯誤的勇士之村大圖" title="修正邊界錯誤的勇士之村大圖">
+<p>可以看到經由程式修改了VR邊界值的錯誤後，新產生出的這一張大圖的邊界已經不會有留白的部分了。這樣就有助於將這張大的背景地圖繪製到手機上，讓角色看起來真的像在勇士之村等等經典楓之谷地圖中遊走一樣。</p>
+<p>或者你現在會問說，把整個地圖物件都壓縮進一張大圖，那不就會出現很詭異的情況？比如原本某個物件應該是在角色的前面，那現在不就通通跑到後面去了？</p>
+<p>老實說對於這個事情我也實在愛莫能助，雖然都已經知道地圖要怎麼繪製了，但是遭不住Android他有運算及儲存效能的問題。<br>如果每個物件都是要動態繪製上去的話，那天曉得一幀跑完需要幾秒的時間…更何況還有傳說中的OOM，一不小心地圖都還沒畫到一半就OOM爆炸了…。</p>
+<p>所以無奈下我只能選擇把整個地圖壓縮成一張大圖，至少這樣就能減少許多運算及記憶體的耗損。</p>
+<img src="/2017/01/16/MapleStory-Stage-4/003.png" alt="將背景加入遊戲中" title="將背景加入遊戲中">
+<p>這是將地圖實際放上APP後的表現，老實說我做到這個地方已經懶得繼續做下去了…畢竟又不能上架也不能炫耀，這憋屈的感受怎麼讓人受的了…。</p>
+<p>所以從2015年4月完成地圖的實裝後，我就把整個計畫擱置了整整一年半的時間，直到最近才又因緣際會下重啟這項計畫。</p>
+<p>下一篇日誌就會來講述最近實裝的成果─背景的繪製(就是上圖黑色的地方，會用動態的地圖背景來取代，基本上加上去後就跟真的楓之谷有87%像了xDDDDDDD)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;似乎相隔了許久才又想起更新這一系列的日誌，老實說這一年多也確實是發生了許許多多的事情，差點讓我都忘了怎麼繼續這即將邁入三年的開發計畫。&lt;/p&gt;
+&lt;p&gt;呼，扯遠了，今天這一篇文章是要講述如何把地圖套上手機APP裡。&lt;/p&gt;
+&lt;img src=&quot;/2017/01/16/MapleStory-Stage-4/001.jpg&quot; alt=&quot;冒險的起點 ─ 勇士之村&quot; title=&quot;冒險的起點 ─ 勇士之村&quot;&gt;
+    
+    </summary>
+    
+      <category term="個人作品" scheme="https://infinitewing.github.io/categories/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
+    
+      <category term="楓之谷APP" scheme="https://infinitewing.github.io/categories/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/%E6%A5%93%E4%B9%8B%E8%B0%B7APP/"/>
+    
+    
+      <category term="個人作品" scheme="https://infinitewing.github.io/tags/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
+    
+      <category term="Android APP" scheme="https://infinitewing.github.io/tags/Android-APP/"/>
+    
+      <category term="童年" scheme="https://infinitewing.github.io/tags/%E7%AB%A5%E5%B9%B4/"/>
+    
+  </entry>
+  
+</feed>
