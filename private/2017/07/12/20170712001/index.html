@@ -12,15 +12,15 @@
 <meta property="og:url" content="https://infinitewing.github.io/private/2017/07/12/20170712001/index.html">
 <meta property="og:site_name" content="InfiniteWing">
 <meta property="og:description" content="前言最近參加了Kaggle上有關影像分類的比賽，於是就開始研究所謂的深度學習影像分類(Deep learning in image classification)。隨著看的文章越來越多，以及接觸了一些深度學習的框架後，我開始佩服當初我買下GTX-1060的衝動。 當初本來只是想說有朝一日無聊的時候可以玩玩遊戲，壓根還沒意識到原來使用GPU進行深度學習計算已經是如日中天的火熱議題，基本上不會用GPU">
-<meta property="og:image" content="https://infinitewing.github.io/2017/07/12/20170712001/001.png">
-<meta property="og:image" content="https://infinitewing.github.io/2017/07/12/20170712001/002.png">
-<meta property="og:image" content="https://infinitewing.github.io/2017/07/12/20170712001/003.png">
-<meta property="og:image" content="https://infinitewing.github.io/2017/07/12/20170712001/end.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/07/12/20170712001/001.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/07/12/20170712001/002.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/07/12/20170712001/003.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/07/12/20170712001/end.png">
 <meta property="og:updated_time" content="2017-08-14T15:16:30.974Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="試玩Google Cloud Platform">
 <meta name="twitter:description" content="前言最近參加了Kaggle上有關影像分類的比賽，於是就開始研究所謂的深度學習影像分類(Deep learning in image classification)。隨著看的文章越來越多，以及接觸了一些深度學習的框架後，我開始佩服當初我買下GTX-1060的衝動。 當初本來只是想說有朝一日無聊的時候可以玩玩遊戲，壓根還沒意識到原來使用GPU進行深度學習計算已經是如日中天的火熱議題，基本上不會用GPU">
-<meta name="twitter:image" content="https://infinitewing.github.io/2017/07/12/20170712001/001.png">
+<meta name="twitter:image" content="https://infinitewing.github.io/private/2017/07/12/20170712001/001.png">
   
     <link rel="alternate" href="/atom.xml" title="InfiniteWing" type="application/atom+xml">
   
@@ -61,7 +61,7 @@ ga('send', 'pageview');
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/private/" id="subtitle">Till The World Ends</a>
+          <a href="/private/" id="subtitle">Till Dreams Come True</a>
         </h2>
       
     </div>
@@ -133,9 +133,9 @@ ga('send', 'pageview');
 <a id="more"></a>
 <p>根據我實際測試的經驗來說，以GPU完成一次訓練要1000秒的程式，丟給CPU大概要五倍以上的時間…在所謂時間就是金錢的世界裡，要挑哪個做為運算基礎已經不言而喻。</p>
 <p>扯遠了，之所以會開始嘗試Google Cloud，是因為我在享受了GTX-1060帶給我的「極速」快感後，又食髓知味的想說：快還要更快！因此就有了這次的嘗試經驗。</p>
-<h1 id="Google-Cloud-Platform"><a href="#Google-Cloud-Platform" class="headerlink" title="Google Cloud Platform"></a>Google Cloud Platform</h1><img src="/2017/07/12/20170712001/001.png" alt="Google Cloud Platform" title="Google Cloud Platform">
+<h1 id="Google-Cloud-Platform"><a href="#Google-Cloud-Platform" class="headerlink" title="Google Cloud Platform"></a>Google Cloud Platform</h1><img src="/private/2017/07/12/20170712001/001.png" alt="Google Cloud Platform" title="Google Cloud Platform">
 <p>可能是因為進入市場比較晚的關係，之前一直可以在廣告上看到Google Cloud Platform現在對新加入的使用者，提供為期60天的300美元免費試用。</p>
-<img src="/2017/07/12/20170712001/002.png" alt="申請頁面的相關說明" title="申請頁面的相關說明">
+<img src="/private/2017/07/12/20170712001/002.png" alt="申請頁面的相關說明" title="申請頁面的相關說明">
 <p>因為註冊帳號這應該算是SOP流程，所以這邊就不詳細記錄。值得一提的是Google Cloud跟Amazon的AWS(Amazon Web Services)的功能應該算大同小異，基本上就是提供各式的雲端伺服器、計算、網路、儲存等等解決方案(不過我也只有大概玩過雲端伺服器，因此算不負責任簡介)。</p>
 <p>由於我是追求更快的GPU才會找上Google Cloud，並且之前有使用過AWS的經驗，因此我自信的就直接跳過Google提供的新手教學，直接跳到新增虛擬機器的頁面(進入主控台後，在左側的運算→Compute Engine→VM執行個體)。接著選好了有提供GPU的服務據點後，照著非常明瞭的流程引導按下了啟動VM的按鈕。</p>
 <p>注意啟動VM需要一定的時間，這裡就先說說為什麼我要棄AWS不用，跑來嘗試Google Cloud…很簡單，因為他有提供300美元的額度給我玩啊！就在我幻想著300美元可以玩伺服器等級的NVIDIA Tesla K80 GPU大概多少小時的時候，一個無情的提示從旁邊跳了出來：「你的權限不足，開啟VM失敗…」</p>
@@ -143,9 +143,9 @@ ga('send', 'pageview');
 <p>好吧，反正我也只是想嘗鮮試試看K80的計算速度能不能帶給我極致的享受，一小時的使用費加一加也才1美元左右，於是乎我就飛快的申請完配額解鎖，靜靜地等待解鎖的通知。(因為爬文有看到解鎖的時間很快，所以我就沒有考慮去用AWS，AWS如果要用GPU一樣要申請解鎖…)</p>
 <p>大概五分鐘之後Google服務團隊就幫我解鎖了，Nice Job！我就開始重新設定VM，接著啟動！在VM啟動期間，我還想著等一下要怎麼設定SSH連線而手忙腳亂的時候，VM開啟了。我在啟動的VM旁邊找到了SSH的相關下拉選單，然後看到了Google非常貼心的一個功能：基於網頁就能執行SSH遠端操作的功能。</p>
 <h1 id="實際測試"><a href="#實際測試" class="headerlink" title="實際測試"></a>實際測試</h1><p>這實在是一個太人性化的設計了，我一邊讚嘆一邊登入，接著才發現我除了不太會下Linux指令，連要怎麼su成root的密碼在哪都不知道…想到之後還要到Kaggle登入下載運算檔案，因此我果斷地把VM刪了，重新新增一台OS是Windows Server 2013的VM，果然還是有GUI的環境好用啊！</p>
-<img src="/2017/07/12/20170712001/003.png" alt="Windows Server可以直接用遠端桌面登入，非常方便" title="Windows Server可以直接用遠端桌面登入，非常方便">
+<img src="/private/2017/07/12/20170712001/003.png" alt="Windows Server可以直接用遠端桌面登入，非常方便" title="Windows Server可以直接用遠端桌面登入，非常方便">
 <p>就在環境設定完成後，我便開始測試K80的運算速度…結果我就不想多說了，K80花了大概25分鐘跑完我1060跑15分鐘就能跑完的程式碼…雖然不排除可能是我設定上有問題，但說好的速度與激情呢！？</p>
-<img src="/2017/07/12/20170712001/end.png" alt="完結灑花，說好的速度與激情呢(誤)" title="完結灑花，說好的速度與激情呢(誤)">
+<img src="/private/2017/07/12/20170712001/end.png" alt="完結灑花，說好的速度與激情呢(誤)" title="完結灑花，說好的速度與激情呢(誤)">
       
       <div class="right post-end">To be continued..</div>
     </div>
@@ -154,7 +154,7 @@ ga('send', 'pageview');
         Posted at 
         2017-07-12 04:32:19
       </div>
-      <a data-url="https://infinitewing.github.io/private/2017/07/12/20170712001/" data-id="cjx68ww4u00023su781f3w9b5" class="article-share-link">Share</a>
+      <a data-url="https://infinitewing.github.io/private/2017/07/12/20170712001/" data-id="cjx6bqspu0006usu7cxfgomf3" class="article-share-link">Share</a>
       
         <a href="https://infinitewing.github.io/private/2017/07/12/20170712001/#disqus_thread" class="article-comment-link">留言</a>
       

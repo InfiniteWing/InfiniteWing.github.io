@@ -12,14 +12,14 @@
 <meta property="og:url" content="https://infinitewing.github.io/private/2017/12/13/20171213001/index.html">
 <meta property="og:site_name" content="InfiniteWing">
 <meta property="og:description" content="好吧，這篇說是十二月中寫的，但實際上二月初我才發布…老實說我快忘了要保持一個月至少一篇日誌的習慣，雖然說墮落是人類的原罪，但為什麼人非得汲汲營營呢？嗯，因為這是個無解的命題，所以我就發發牢騷，以下會記錄我當初如何在GCP開啟pytorch並實現python3的環境，當初找資料找了許久，因為GCP的ubuntu預設是python2，對於伸手黨來說大部分的資料都是python3…。">
-<meta property="og:image" content="https://infinitewing.github.io/2017/12/13/20171213001/001.jpg">
-<meta property="og:image" content="https://infinitewing.github.io/2017/12/13/20171213001/deep%20learning%20vm.png">
-<meta property="og:image" content="https://infinitewing.github.io/2017/12/13/20171213001/end.jpg">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/12/13/20171213001/001.jpg">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/12/13/20171213001/deep%20learning%20vm.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/12/13/20171213001/end.jpg">
 <meta property="og:updated_time" content="2018-02-03T07:59:06.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在GCP安裝python3，運作pytorch">
 <meta name="twitter:description" content="好吧，這篇說是十二月中寫的，但實際上二月初我才發布…老實說我快忘了要保持一個月至少一篇日誌的習慣，雖然說墮落是人類的原罪，但為什麼人非得汲汲營營呢？嗯，因為這是個無解的命題，所以我就發發牢騷，以下會記錄我當初如何在GCP開啟pytorch並實現python3的環境，當初找資料找了許久，因為GCP的ubuntu預設是python2，對於伸手黨來說大部分的資料都是python3…。">
-<meta name="twitter:image" content="https://infinitewing.github.io/2017/12/13/20171213001/001.jpg">
+<meta name="twitter:image" content="https://infinitewing.github.io/private/2017/12/13/20171213001/001.jpg">
   
     <link rel="alternate" href="/atom.xml" title="InfiniteWing" type="application/atom+xml">
   
@@ -60,7 +60,7 @@ ga('send', 'pageview');
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/private/" id="subtitle">Till The World Ends</a>
+          <a href="/private/" id="subtitle">Till Dreams Come True</a>
         </h2>
       
     </div>
@@ -127,7 +127,7 @@ ga('send', 'pageview');
         </div>
       </div>
       
-        <img src="/2017/12/13/20171213001/001.jpg" alt="非關內文" title="非關內文">
+        <img src="/private/2017/12/13/20171213001/001.jpg" alt="非關內文" title="非關內文">
 <p>好吧，這篇說是十二月中寫的，但實際上二月初我才發布…老實說我快忘了要保持一個月至少一篇日誌的習慣，雖然說墮落是人類的原罪，但為什麼人非得汲汲營營呢？嗯，因為這是個無解的命題，所以我就發發牢騷，以下會記錄我當初如何在GCP開啟pytorch並實現python3的環境，當初找資料找了許久，因為GCP的ubuntu預設是python2，對於伸手黨來說大部分的資料都是python3…。</p>
 <a id="more"></a>
 <h1 id="1-安裝python3"><a href="#1-安裝python3" class="headerlink" title="1.安裝python3"></a>1.安裝python3</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">sudo add-apt-repository ppa:fkrull/deadsnakes</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install python3.5</div><div class="line">sudo apt-get install python3.5-dev</div><div class="line">sudo apt-get install libncurses5-dev</div><div class="line">wget https://bootstrap.pypa.io/get-pip.py</div><div class="line">sudo python3.5 get-pip.py</div><div class="line"><span class="comment"># 修改/usr/bin/ 底下的路徑</span></div><div class="line">sudo ln -s /usr/bin/python3.5 /usr/<span class="built_in">local</span>/bin/python3</div><div class="line">sudo ln -s /usr/<span class="built_in">local</span>/bin/pip /usr/<span class="built_in">local</span>/bin/pip3</div></pre></td></tr></table></figure>
@@ -137,8 +137,8 @@ ga('send', 'pageview');
 <h1 id="3-安裝cudnn"><a href="#3-安裝cudnn" class="headerlink" title="3.安裝cudnn"></a>3.安裝cudnn</h1><p>先下載cudnn-8.0-linux-x64-v5.1.tgz<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tar -zxvf cudnn-8.0-linux-x64-v5.1.tgz</div><div class="line"><span class="built_in">cd</span> cuda</div><div class="line">sudo cp include/* /usr/<span class="built_in">local</span>/cuda-8.0/include/</div><div class="line">sudo cp lib64/* /usr/<span class="built_in">local</span>/cuda-8.0/lib64/</div></pre></td></tr></table></figure></p>
 <h1 id="4-安裝tensorflow"><a href="#4-安裝tensorflow" class="headerlink" title="4.安裝tensorflow"></a>4.安裝tensorflow</h1><p>這裡要注意版本問題，至於為何要注意…我記得好像是因為執行會有問題？<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.2.1-cp35-cp35m-linux_x86_64.whl</div><div class="line">sudo pip install https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.2.1-cp35-cp35m-linux_x86_64.whl</div></pre></td></tr></table></figure></p>
 <h1 id="5-安裝常用套件"><a href="#5-安裝常用套件" class="headerlink" title="5.安裝常用套件"></a>5.安裝常用套件</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">sudo pip install tqdm</div><div class="line">sudo pip install numpy</div><div class="line">sudo pip install pandas</div><div class="line">sudo pip install scikit-learn</div><div class="line">sudo pip install scipy</div><div class="line">sudo pip install pymongo</div><div class="line">sudo pip install http://download.pytorch.org/whl/cu80/torch-0.3.0.post4-cp35-cp35m-linux_x86_64.whl</div><div class="line">sudo pip install torchvision</div><div class="line">sudo pip install dill</div><div class="line">sudo pip install opencv-python</div><div class="line">sudo pip install cupy</div><div class="line">sudo pip install pyinn </div><div class="line">...</div></pre></td></tr></table></figure>
-<h1 id="6-小記錄"><a href="#6-小記錄" class="headerlink" title="6.小記錄"></a>6.小記錄</h1><p>啊，看到當初截的圖，才想起來當時一口氣開了五顆GPU，一晚就能燒掉一百多美金，要不是有各項比賽的免費兌換券，根本無法支持這樣燒錢的玩法呢~<br><img src="/2017/12/13/20171213001/deep%20learning%20vm.png" alt="深度學習=燒錢遊戲" title="深度學習=燒錢遊戲"></p>
-<img src="/2017/12/13/20171213001/end.jpg" alt="完結灑花！" title="完結灑花！">
+<h1 id="6-小記錄"><a href="#6-小記錄" class="headerlink" title="6.小記錄"></a>6.小記錄</h1><p>啊，看到當初截的圖，才想起來當時一口氣開了五顆GPU，一晚就能燒掉一百多美金，要不是有各項比賽的免費兌換券，根本無法支持這樣燒錢的玩法呢~<br><img src="/private/2017/12/13/20171213001/deep%20learning%20vm.png" alt="深度學習=燒錢遊戲" title="深度學習=燒錢遊戲"></p>
+<img src="/private/2017/12/13/20171213001/end.jpg" alt="完結灑花！" title="完結灑花！">
       
       <div class="right post-end">To be continued..</div>
     </div>
@@ -147,7 +147,7 @@ ga('send', 'pageview');
         Posted at 
         2017-12-13 06:22:48
       </div>
-      <a data-url="https://infinitewing.github.io/private/2017/12/13/20171213001/" data-id="cjx68ww5k00103su7i2jhiegy" class="article-share-link">Share</a>
+      <a data-url="https://infinitewing.github.io/private/2017/12/13/20171213001/" data-id="cjx6bqsqj0014usu70yy217ae" class="article-share-link">Share</a>
       
         <a href="https://infinitewing.github.io/private/2017/12/13/20171213001/#disqus_thread" class="article-comment-link">留言</a>
       

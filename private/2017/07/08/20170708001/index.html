@@ -12,13 +12,13 @@
 <meta property="og:url" content="https://infinitewing.github.io/private/2017/07/08/20170708001/index.html">
 <meta property="og:site_name" content="InfiniteWing">
 <meta property="og:description" content="前言將我的個人網站push到GitHub上之後，我試著學了Markdown語法，然後也很順利的透過谷哥找到了一款好用的Markdown編輯器─MarkdownPad 2。就在我寫前一篇文章寫到一半的時候，突然想到其他使用Hexo的blogger，他們文章前面好像都會有類似文章目錄的區塊，於是乎我就找了一下有沒有相關的套件可以使用。">
-<meta property="og:image" content="https://infinitewing.github.io/2017/07/08/20170708001/001.png">
-<meta property="og:image" content="https://infinitewing.github.io/2017/07/08/20170708001/end.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/07/08/20170708001/001.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/07/08/20170708001/end.png">
 <meta property="og:updated_time" content="2017-07-08T10:48:37.891Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo文章相關設定">
 <meta name="twitter:description" content="前言將我的個人網站push到GitHub上之後，我試著學了Markdown語法，然後也很順利的透過谷哥找到了一款好用的Markdown編輯器─MarkdownPad 2。就在我寫前一篇文章寫到一半的時候，突然想到其他使用Hexo的blogger，他們文章前面好像都會有類似文章目錄的區塊，於是乎我就找了一下有沒有相關的套件可以使用。">
-<meta name="twitter:image" content="https://infinitewing.github.io/2017/07/08/20170708001/001.png">
+<meta name="twitter:image" content="https://infinitewing.github.io/private/2017/07/08/20170708001/001.png">
   
     <link rel="alternate" href="/atom.xml" title="InfiniteWing" type="application/atom+xml">
   
@@ -59,7 +59,7 @@ ga('send', 'pageview');
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/private/" id="subtitle">Till The World Ends</a>
+          <a href="/private/" id="subtitle">Till Dreams Come True</a>
         </h2>
       
     </div>
@@ -133,14 +133,14 @@ ga('send', 'pageview');
 <p>toc，解析內容中的標題標籤 (h1~h6) 並插入目錄。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;%- toc(str, [options]) %&gt;</div></pre></td></tr></table></figure>
 <p>好吧，原來Hexo3早就有提供這個功能，那我前天是在忙些什麼啊(翻桌)！</p>
-<img src="/2017/07/08/20170708001/001.png" alt="下次應該看清楚文件的..." title="下次應該看清楚文件的...">
+<img src="/private/2017/07/08/20170708001/001.png" alt="下次應該看清楚文件的..." title="下次應該看清楚文件的...">
 <p>既然知道了官方有提供這個功能，於是就可以修改在themes\landscape\layout_partial\目錄下的article.ejs檔案，在你要的地方加上toc這個輔助函數，<br>然後Hexo就會自動在上方產生你的文章目錄：</p>
 <figure class="highlight html"><figcaption><span>article.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"article-entry"</span> <span class="attr">itemprop</span>=<span class="string">"articleBody"</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-toc-outer"</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-toc"</span>&gt;</span></div><div class="line">         <span class="tag">&lt;<span class="name">%-</span> <span class="attr">toc</span>(<span class="attr">post.content</span>, &#123;<span class="attr">list_number:</span> <span class="attr">false</span>&#125;) %&gt;</span></div><div class="line">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">     ...</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <h1 id="圖片資產"><a href="#圖片資產" class="headerlink" title="圖片資產"></a>圖片資產</h1><p>如果要寫出一篇生動有趣的文章，裡面的圖片絕對是不可或缺的要件之一。參考官網上有關資產資料夾的設定後，很快地就能將圖片加入你的文章當中。</p>
 <p>首先，你要修改部落格的_config.yml檔案，修改或加入這一行”post_asset_folder: true”，如此一來以後每當你新增一個文章，Hexo就會自動幫你產生那則文章的資料夾，你只要把你要的圖片丟到那個資料夾底下，接著在文章中呼叫：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; % asset_img 你的圖片.格式 圖片說明 %&#125;</div></pre></td></tr></table></figure>
 <p>接著你就可以看到美美的圖片出現在自己的文章當中了！</p>
-<img src="/2017/07/08/20170708001/end.png" alt="完結灑花！" title="完結灑花！">
+<img src="/private/2017/07/08/20170708001/end.png" alt="完結灑花！" title="完結灑花！">
 
       
       <div class="right post-end">To be continued..</div>
@@ -150,7 +150,7 @@ ga('send', 'pageview');
         Posted at 
         2017-07-08 06:01:29
       </div>
-      <a data-url="https://infinitewing.github.io/private/2017/07/08/20170708001/" data-id="cjx68ww4z00073su73dfuysbg" class="article-share-link">Share</a>
+      <a data-url="https://infinitewing.github.io/private/2017/07/08/20170708001/" data-id="cjx6bqspr0002usu7h70fbqac" class="article-share-link">Share</a>
       
         <a href="https://infinitewing.github.io/private/2017/07/08/20170708001/#disqus_thread" class="article-comment-link">留言</a>
       

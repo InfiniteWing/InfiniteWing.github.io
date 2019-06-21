@@ -12,14 +12,14 @@
 <meta property="og:url" content="https://infinitewing.github.io/private/2017/01/16/MapleStory-Stage-4/index.html">
 <meta property="og:site_name" content="InfiniteWing">
 <meta property="og:description" content="似乎相隔了許久才又想起更新這一系列的日誌，老實說這一年多也確實是發生了許許多多的事情，差點讓我都忘了怎麼繼續這即將邁入三年的開發計畫。 呼，扯遠了，今天這一篇文章是要講述如何把地圖套上手機APP裡。">
-<meta property="og:image" content="https://infinitewing.github.io/2017/01/16/MapleStory-Stage-4/001.jpg">
-<meta property="og:image" content="https://infinitewing.github.io/2017/01/16/MapleStory-Stage-4/002.jpg">
-<meta property="og:image" content="https://infinitewing.github.io/2017/01/16/MapleStory-Stage-4/003.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/01/16/MapleStory-Stage-4/001.jpg">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/01/16/MapleStory-Stage-4/002.jpg">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/01/16/MapleStory-Stage-4/003.png">
 <meta property="og:updated_time" content="2017-07-10T16:09:57.045Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="楓之谷APP開發日誌 ─ 第四章">
 <meta name="twitter:description" content="似乎相隔了許久才又想起更新這一系列的日誌，老實說這一年多也確實是發生了許許多多的事情，差點讓我都忘了怎麼繼續這即將邁入三年的開發計畫。 呼，扯遠了，今天這一篇文章是要講述如何把地圖套上手機APP裡。">
-<meta name="twitter:image" content="https://infinitewing.github.io/2017/01/16/MapleStory-Stage-4/001.jpg">
+<meta name="twitter:image" content="https://infinitewing.github.io/private/2017/01/16/MapleStory-Stage-4/001.jpg">
   
     <link rel="alternate" href="/atom.xml" title="InfiniteWing" type="application/atom+xml">
   
@@ -60,7 +60,7 @@ ga('send', 'pageview');
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/private/" id="subtitle">Till The World Ends</a>
+          <a href="/private/" id="subtitle">Till Dreams Come True</a>
         </h2>
       
     </div>
@@ -129,18 +129,18 @@ ga('send', 'pageview');
       
         <p>似乎相隔了許久才又想起更新這一系列的日誌，老實說這一年多也確實是發生了許許多多的事情，差點讓我都忘了怎麼繼續這即將邁入三年的開發計畫。</p>
 <p>呼，扯遠了，今天這一篇文章是要講述如何把地圖套上手機APP裡。</p>
-<img src="/2017/01/16/MapleStory-Stage-4/001.jpg" alt="冒險的起點 ─ 勇士之村" title="冒險的起點 ─ 勇士之村">
+<img src="/private/2017/01/16/MapleStory-Stage-4/001.jpg" alt="冒險的起點 ─ 勇士之村" title="冒險的起點 ─ 勇士之村">
 <a id="more"></a>
 <p>好的，大家可以看到這是一張勇士之村的大圖</p>
 <p>各位一定很好奇這楓之谷的背景圖片是怎麼產生的：<br>基本上就是一個一個物件堆疊起來，然後靠各自的x,y座標，z軸來控制前後景，最後東拼西湊就能產生這麼一張完整的勇士之村地圖。</p>
 <p>(好吧其實裡面滿多血淚的，但是實在事隔多年我也差不多快忘了當初的血淚是怎麼流的xDDD，如果對官方XML裡面的格式有問題的話不妨站內私訊我。如果有足夠的緣分我剛好上線看到的話一定會完整地回覆。)</p>
 <p>不過在這個地圖裡面，其實左側跟右側、還有下方都是有一定大小的留白…因為在官方的XML資料中，有些竟然沒有邊界的VR值…。<br>幸好國外的水友是強大的，翻了好多國外的討論，最後終於得到了計算邊界的公式，然後就寫了一支程式來自動修復這個錯誤。</p>
-<img src="/2017/01/16/MapleStory-Stage-4/002.jpg" alt="修正邊界錯誤的勇士之村大圖" title="修正邊界錯誤的勇士之村大圖">
+<img src="/private/2017/01/16/MapleStory-Stage-4/002.jpg" alt="修正邊界錯誤的勇士之村大圖" title="修正邊界錯誤的勇士之村大圖">
 <p>可以看到經由程式修改了VR邊界值的錯誤後，新產生出的這一張大圖的邊界已經不會有留白的部分了。這樣就有助於將這張大的背景地圖繪製到手機上，讓角色看起來真的像在勇士之村等等經典楓之谷地圖中遊走一樣。</p>
 <p>或者你現在會問說，把整個地圖物件都壓縮進一張大圖，那不就會出現很詭異的情況？比如原本某個物件應該是在角色的前面，那現在不就通通跑到後面去了？</p>
 <p>老實說對於這個事情我也實在愛莫能助，雖然都已經知道地圖要怎麼繪製了，但是遭不住Android他有運算及儲存效能的問題。<br>如果每個物件都是要動態繪製上去的話，那天曉得一幀跑完需要幾秒的時間…更何況還有傳說中的OOM，一不小心地圖都還沒畫到一半就OOM爆炸了…。</p>
 <p>所以無奈下我只能選擇把整個地圖壓縮成一張大圖，至少這樣就能減少許多運算及記憶體的耗損。</p>
-<img src="/2017/01/16/MapleStory-Stage-4/003.png" alt="將背景加入遊戲中" title="將背景加入遊戲中">
+<img src="/private/2017/01/16/MapleStory-Stage-4/003.png" alt="將背景加入遊戲中" title="將背景加入遊戲中">
 <p>這是將地圖實際放上APP後的表現，老實說我做到這個地方已經懶得繼續做下去了…畢竟又不能上架也不能炫耀，這憋屈的感受怎麼讓人受的了…。</p>
 <p>所以從2015年4月完成地圖的實裝後，我就把整個計畫擱置了整整一年半的時間，直到最近才又因緣際會下重啟這項計畫。</p>
 <p>下一篇日誌就會來講述最近實裝的成果─背景的繪製(就是上圖黑色的地方，會用動態的地圖背景來取代，基本上加上去後就跟真的楓之谷有87%像了xDDDDDDD)</p>
@@ -153,7 +153,7 @@ ga('send', 'pageview');
         Posted at 
         2017-01-16 03:58:41
       </div>
-      <a data-url="https://infinitewing.github.io/private/2017/01/16/MapleStory-Stage-4/" data-id="cjx68ww5y001u3su7q5z8ytzm" class="article-share-link">Share</a>
+      <a data-url="https://infinitewing.github.io/private/2017/01/16/MapleStory-Stage-4/" data-id="cjx6bqsqv001susu75gpsmz6g" class="article-share-link">Share</a>
       
         <a href="https://infinitewing.github.io/private/2017/01/16/MapleStory-Stage-4/#disqus_thread" class="article-comment-link">留言</a>
       

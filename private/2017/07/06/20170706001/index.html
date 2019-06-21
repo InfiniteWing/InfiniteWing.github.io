@@ -12,13 +12,13 @@
 <meta property="og:url" content="https://infinitewing.github.io/private/2017/07/06/20170706001/index.html">
 <meta property="og:site_name" content="InfiniteWing">
 <meta property="og:description" content="前言看了許多人的GitHub Page之後，心頭躍躍欲試。之前一直考慮是要自己重寫一個可以產生靜態網站的程式或是選用現成的網誌工具，最後還是不敵懶惰的天性選擇了許多人使用的Hexo。 經過一天的努力終於弄好了整個Hexo的環境，修改了一些設定及版面CSS設計後，完成了這個自己的個人網站~ 安裝Hexo開始以Hexo(https://hexo.io/zh-tw/)作為靜態網站架站工具前，你的電腦必須">
-<meta property="og:image" content="https://infinitewing.github.io/2017/07/06/20170706001/landscape.png">
-<meta property="og:image" content="https://infinitewing.github.io/2017/07/06/20170706001/end.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/07/06/20170706001/landscape.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/07/06/20170706001/end.png">
 <meta property="og:updated_time" content="2017-07-08T09:58:30.377Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一次玩Hexo架站">
 <meta name="twitter:description" content="前言看了許多人的GitHub Page之後，心頭躍躍欲試。之前一直考慮是要自己重寫一個可以產生靜態網站的程式或是選用現成的網誌工具，最後還是不敵懶惰的天性選擇了許多人使用的Hexo。 經過一天的努力終於弄好了整個Hexo的環境，修改了一些設定及版面CSS設計後，完成了這個自己的個人網站~ 安裝Hexo開始以Hexo(https://hexo.io/zh-tw/)作為靜態網站架站工具前，你的電腦必須">
-<meta name="twitter:image" content="https://infinitewing.github.io/2017/07/06/20170706001/landscape.png">
+<meta name="twitter:image" content="https://infinitewing.github.io/private/2017/07/06/20170706001/landscape.png">
   
     <link rel="alternate" href="/atom.xml" title="InfiniteWing" type="application/atom+xml">
   
@@ -59,7 +59,7 @@ ga('send', 'pageview');
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/private/" id="subtitle">Till The World Ends</a>
+          <a href="/private/" id="subtitle">Till Dreams Come True</a>
         </h2>
       
     </div>
@@ -141,14 +141,14 @@ ga('send', 'pageview');
 <p>如此一來最基本的部落格檔案就自動生成了，有關生成後的檔案結構可以到<a href="https://hexo.io/zh-tw/docs/setup.html" target="_blank" rel="external">Hexo中文官網</a>查看。這時候的部落格雖然是空的，但已經可以直接運行來查看是否成功安裝。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 <p>打開你常用的瀏覽器，照著CMD輸出上的網址打上(一般預設是localhost:4000/)，沒有意外發生的話，你應該就能看到陽春版的Hexo預設主題 - landscape。</p>
-<img src="/2017/07/06/20170706001/landscape.png" alt="Hexo預設的landscape主題" title="Hexo預設的landscape主題">
+<img src="/private/2017/07/06/20170706001/landscape.png" alt="Hexo預設的landscape主題" title="Hexo預設的landscape主題">
 <p>有關更進階的產生日誌、更換主題的說明可以參考<a href="https://hexo.io/zh-tw/docs/setup.html" target="_blank" rel="external">Hexo中文官網</a>，應該都滿容易理解的~</p>
 <h1 id="個人化"><a href="#個人化" class="headerlink" title="個人化"></a>個人化</h1><p>雖然說連自己寫個靜態部落格產生器都懶，但為了讓自己的網誌有個人的特色(或者說自己看了會比較順眼)，因此我決定修改一下預設的主題CSS及Layout檔。這裡不說Hexo的檔案結構非常完整，基本上如果你對網站設計跟程式語言有接觸的話，應該不難去找到如何修改成自己需要的主題。</p>
 <p>如果是要改生成出來的模板效果，有時候需要去修改Hexo的原始js程式碼，舉例來說我就覺得首頁的per_page跟archives底下的per_page共用有點不太人性，因為預設landscape的archives表現是一個區塊一個區塊，如果只有十筆資料的話下方會留許多空白，因此我就改了node_modules/hexo-generator-archive/底下的index.js以及lib/generator.js</p>
 <figure class="highlight javascript"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> per_page;</div><div class="line"><span class="keyword">var</span> archive_per_page;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (hexo.config.archive === <span class="number">1</span>) &#123;</div><div class="line">  per_page = <span class="number">0</span>;</div><div class="line">  archive_per_page = <span class="number">0</span></div><div class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> hexo.config.per_page === <span class="string">'undefined'</span>) &#123;</div><div class="line">  per_page = <span class="number">10</span>;</div><div class="line">  archive_per_page=<span class="number">18</span>;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  per_page = hexo.config.per_page;</div><div class="line">  archive_per_page = hexo.config.archive_per_page;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><figcaption><span>lib/generator.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">generate</span>(<span class="params">path, posts, options</span>) </span>&#123;</div><div class="line">  options = options || &#123;&#125;;</div><div class="line">  options.archive = <span class="literal">true</span>;</div><div class="line">  <span class="keyword">if</span>(path.match(<span class="string">'^archives/.*$'</span>))&#123;</div><div class="line">      perPage = config.archive_generator.archive_per_page;</div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">      perPage = config.archive_generator.per_page;</div><div class="line">  &#125;</div><div class="line">  result = result.concat(pagination(path, posts, &#123;</div><div class="line">    <span class="attr">perPage</span>: perPage,</div><div class="line">    <span class="attr">layout</span>: [<span class="string">'archive'</span>, <span class="string">'index'</span>],</div><div class="line">    <span class="attr">format</span>: paginationDir + <span class="string">'/%d/'</span>,</div><div class="line">    <span class="attr">data</span>: options</div><div class="line">  &#125;));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>如此一來就能達到理想的效果了~</p>
-<img src="/2017/07/06/20170706001/end.png" alt="完結灑花！" title="完結灑花！">
+<img src="/private/2017/07/06/20170706001/end.png" alt="完結灑花！" title="完結灑花！">
 
       
       <div class="right post-end">To be continued..</div>
@@ -158,7 +158,7 @@ ga('send', 'pageview');
         Posted at 
         2017-07-06 06:36:32
       </div>
-      <a data-url="https://infinitewing.github.io/private/2017/07/06/20170706001/" data-id="cjx68ww4p00003su7k7e5rx1c" class="article-share-link">Share</a>
+      <a data-url="https://infinitewing.github.io/private/2017/07/06/20170706001/" data-id="cjx6bqspn0000usu7ouhzvxth" class="article-share-link">Share</a>
       
         <a href="https://infinitewing.github.io/private/2017/07/06/20170706001/#disqus_thread" class="article-comment-link">留言</a>
       

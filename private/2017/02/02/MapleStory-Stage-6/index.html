@@ -12,16 +12,16 @@
 <meta property="og:url" content="https://infinitewing.github.io/private/2017/02/02/MapleStory-Stage-6/index.html">
 <meta property="og:site_name" content="InfiniteWing">
 <meta property="og:description" content="各位2017新年快樂～這一項專案終於迎來了他的第三個年頭，老實說當初我也根本不曉得這項瘋狂的計畫會持續這麼久。 雖然說不能上架讓人很難過，但其實偶爾打開APP，還真會有種我真厲害的自豪之情油然而生。所以不能上架就算了吧，至少有其他作品能上架(?)。 話又說回來，當然還是上架有人能回饋互動的感覺更好一些，至少能在我懶散魂發作的時候給一點前進的動力。所以如果剛好有那麼一點後起之秀或是剛好想自製楓之谷的">
-<meta property="og:image" content="https://infinitewing.github.io/2017/02/02/MapleStory-Stage-6/002.png">
-<meta property="og:image" content="https://infinitewing.github.io/2017/02/02/MapleStory-Stage-6/001.png">
-<meta property="og:image" content="https://infinitewing.github.io/2017/02/02/MapleStory-Stage-6/003.png">
-<meta property="og:image" content="https://infinitewing.github.io/2017/02/02/MapleStory-Stage-6/004.png">
-<meta property="og:image" content="https://infinitewing.github.io/2017/02/02/MapleStory-Stage-6/005.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/02/02/MapleStory-Stage-6/002.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/02/02/MapleStory-Stage-6/001.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/02/02/MapleStory-Stage-6/003.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/02/02/MapleStory-Stage-6/004.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/02/02/MapleStory-Stage-6/005.png">
 <meta property="og:updated_time" content="2017-07-07T16:59:42.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="楓之谷APP開發日誌 ─ 第六章">
 <meta name="twitter:description" content="各位2017新年快樂～這一項專案終於迎來了他的第三個年頭，老實說當初我也根本不曉得這項瘋狂的計畫會持續這麼久。 雖然說不能上架讓人很難過，但其實偶爾打開APP，還真會有種我真厲害的自豪之情油然而生。所以不能上架就算了吧，至少有其他作品能上架(?)。 話又說回來，當然還是上架有人能回饋互動的感覺更好一些，至少能在我懶散魂發作的時候給一點前進的動力。所以如果剛好有那麼一點後起之秀或是剛好想自製楓之谷的">
-<meta name="twitter:image" content="https://infinitewing.github.io/2017/02/02/MapleStory-Stage-6/002.png">
+<meta name="twitter:image" content="https://infinitewing.github.io/private/2017/02/02/MapleStory-Stage-6/002.png">
   
     <link rel="alternate" href="/atom.xml" title="InfiniteWing" type="application/atom+xml">
   
@@ -62,7 +62,7 @@ ga('send', 'pageview');
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/private/" id="subtitle">Till The World Ends</a>
+          <a href="/private/" id="subtitle">Till Dreams Come True</a>
         </h2>
       
     </div>
@@ -133,18 +133,18 @@ ga('send', 'pageview');
 <p>雖然說不能上架讓人很難過，但其實偶爾打開APP，還真會有種我真厲害的自豪之情油然而生。所以不能上架就算了吧，至少有其他作品能上架(?)。</p>
 <p>話又說回來，當然還是上架有人能回饋互動的感覺更好一些，至少能在我懶散魂發作的時候給一點前進的動力。所以如果剛好有那麼一點後起之秀或是剛好想自製楓之谷的巴友，剛剛好找到了這篇系列紀錄文，可以的話就留言紀念一下吧～就跟我常會在圖書館借來的書後面還書時間表上簽名一樣(?)。</p>
 <a id="more"></a>
-<p>這一次要來講怪物施放技能的相關準備事項及說明，首先我們先看到下面這張慘圖：<br><img src="/2017/02/02/MapleStory-Stage-6/002.png" alt="加入背景後的實裝畫面" title="加入背景後的實裝畫面"><br><img src="/2017/02/02/MapleStory-Stage-6/001.png" alt="哪有人出門就遇到大八的T.T" title="哪有人出門就遇到大八的T.T"></p>
+<p>這一次要來講怪物施放技能的相關準備事項及說明，首先我們先看到下面這張慘圖：<br><img src="/private/2017/02/02/MapleStory-Stage-6/002.png" alt="加入背景後的實裝畫面" title="加入背景後的實裝畫面"><br><img src="/private/2017/02/02/MapleStory-Stage-6/001.png" alt="哪有人出門就遇到大八的T.T" title="哪有人出門就遇到大八的T.T"></p>
 <p>好的，這裡可以看到我被地獄巴洛古○○的畫面有兩隻地獄巴洛古（好吧我這才發現有一隻是巴洛古），同時施放了兩種不同的技能。</p>
 <p>其中一種是會發出一顆黑色重力球（地獄巴洛古施放的，姑且當作是重力球）的技能，另外一種是範圍指定技。</p>
 <p>（兩者的差別在於，重力球是屬於射出型的，要打到才會受到攻擊；而範圍指定技是指在範圍內就會直接被攻擊，無法閃躲）</p>
-<img src="/2017/02/02/MapleStory-Stage-6/003.png" alt="出沒在奇幻村的野生拉圖斯..." title="出沒在奇幻村的野生拉圖斯...">
+<img src="/private/2017/02/02/MapleStory-Stage-6/003.png" alt="出沒在奇幻村的野生拉圖斯..." title="出沒在奇幻村的野生拉圖斯...">
 <p>這裡展示的是拉圖斯的技能，是說要是奇幻村有拉圖斯出沒的話，那新手是要怎麼解浴袍的桑拿套服的任務啊</p>
 <p>從不同時期的BOSS資料中不難看出，在一開始設計時的BOSS並沒有現在這麼喪心病狂的功能，很有可能是在版本更新時才又加裝到地圖編輯器的。以巴洛古和拉圖斯為例，前者就只有簡單的投擲火球(?)跟兩招蟀氣的範圍技，而拉圖斯作為玩具城的頭號BOSS，不僅有更多的技能，包含了有地圖警告(Area Warning)的顯示，同時還有自身BUFF技能。</p>
 <p>(自身BUFF技能就是指會讓BOSS狀態增強的技能，像是物理攻擊力增加、防禦上升等等，而先前介紹的技能都屬於會對玩家造成傷害的攻擊技能。迷之聲：不過因為BUFF技能和地圖警告要實裝的話還要花不少時間打程式碼，所以就…)</p>
 <p>至於炎魔、黑龍王這類型的超巨大BOSS，則因為Android容易OOM的關係(其實只是懶)，所以就沒有實裝上來。基本上這類型的超巨大BOSS與一般BOSS差異不會太大，只要注意狀態轉換應該就OK(不過我也沒有仔細看過這類型BOSS的資料檔，因此只能說是不負責任推估)</p>
 <p>最後就用獅子王的咆哮來祝各位新年快樂！</p>
-<img src="/2017/02/02/MapleStory-Stage-6/004.png" alt="獅子王的咆哮！" title="獅子王的咆哮！">
-<img src="/2017/02/02/MapleStory-Stage-6/005.png" alt="好吧，這麼大隻的確是打不贏..." title="好吧，這麼大隻的確是打不贏...">
+<img src="/private/2017/02/02/MapleStory-Stage-6/004.png" alt="獅子王的咆哮！" title="獅子王的咆哮！">
+<img src="/private/2017/02/02/MapleStory-Stage-6/005.png" alt="好吧，這麼大隻的確是打不贏..." title="好吧，這麼大隻的確是打不贏...">
 <p>下一篇終於要來說明地圖的背景繪製了～</p>
 
       
@@ -155,7 +155,7 @@ ga('send', 'pageview');
         Posted at 
         2017-02-02 06:07:41
       </div>
-      <a data-url="https://infinitewing.github.io/private/2017/02/02/MapleStory-Stage-6/" data-id="cjx68ww60001y3su7yb5w5zgc" class="article-share-link">Share</a>
+      <a data-url="https://infinitewing.github.io/private/2017/02/02/MapleStory-Stage-6/" data-id="cjx6bqsqw001uusu71bao4ibl" class="article-share-link">Share</a>
       
         <a href="https://infinitewing.github.io/private/2017/02/02/MapleStory-Stage-6/#disqus_thread" class="article-comment-link">留言</a>
       

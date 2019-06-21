@@ -6,21 +6,21 @@
   <title>[Kaggle]初探深度學習─亞馬遜叢林辨識(上) | InfiniteWing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前言大概一個月前開始在Kaggle上接觸有關影像辨識的競賽，一開始我是玩數數海獅有幾隻的這項競賽。 雖然這是一個物體識別(Object recognition)的競賽，但我當時還未接觸到以深度學習的方式來進行物體識別，僅僅是靠著RGB分群+XGBoost迴歸、以及簡單的Ensemble技巧，勉勉強強爬到了一個只差三名就能拿下生涯第一座銅牌的名次。雖然事後有些懊惱，但這也成為了我接下來參加亞馬遜叢">
-<meta name="keywords" content="經驗,Big Data,Deep Learning,Keras,CNN,Kaggle">
+<meta name="keywords" content="經驗,Big Data,Kaggle,Deep Learning,Keras,CNN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Kaggle]初探深度學習─亞馬遜叢林辨識(上)">
 <meta property="og:url" content="https://infinitewing.github.io/private/2017/07/20/20170720001/index.html">
 <meta property="og:site_name" content="InfiniteWing">
 <meta property="og:description" content="前言大概一個月前開始在Kaggle上接觸有關影像辨識的競賽，一開始我是玩數數海獅有幾隻的這項競賽。 雖然這是一個物體識別(Object recognition)的競賽，但我當時還未接觸到以深度學習的方式來進行物體識別，僅僅是靠著RGB分群+XGBoost迴歸、以及簡單的Ensemble技巧，勉勉強強爬到了一個只差三名就能拿下生涯第一座銅牌的名次。雖然事後有些懊惱，但這也成為了我接下來參加亞馬遜叢">
-<meta property="og:image" content="https://infinitewing.github.io/2017/07/20/20170720001/001.jpg">
-<meta property="og:image" content="https://infinitewing.github.io/2017/07/20/20170720001/002.jpg">
-<meta property="og:image" content="https://infinitewing.github.io/2017/07/20/20170720001/003.jpg">
-<meta property="og:image" content="https://infinitewing.github.io/2017/07/20/20170720001/end.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/07/20/20170720001/001.jpg">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/07/20/20170720001/002.jpg">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/07/20/20170720001/003.jpg">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/07/20/20170720001/end.png">
 <meta property="og:updated_time" content="2017-08-14T15:16:58.110Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[Kaggle]初探深度學習─亞馬遜叢林辨識(上)">
 <meta name="twitter:description" content="前言大概一個月前開始在Kaggle上接觸有關影像辨識的競賽，一開始我是玩數數海獅有幾隻的這項競賽。 雖然這是一個物體識別(Object recognition)的競賽，但我當時還未接觸到以深度學習的方式來進行物體識別，僅僅是靠著RGB分群+XGBoost迴歸、以及簡單的Ensemble技巧，勉勉強強爬到了一個只差三名就能拿下生涯第一座銅牌的名次。雖然事後有些懊惱，但這也成為了我接下來參加亞馬遜叢">
-<meta name="twitter:image" content="https://infinitewing.github.io/2017/07/20/20170720001/001.jpg">
+<meta name="twitter:image" content="https://infinitewing.github.io/private/2017/07/20/20170720001/001.jpg">
   
     <link rel="alternate" href="/atom.xml" title="InfiniteWing" type="application/atom+xml">
   
@@ -61,7 +61,7 @@ ga('send', 'pageview');
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/private/" id="subtitle">Till The World Ends</a>
+          <a href="/private/" id="subtitle">Till Dreams Come True</a>
         </h2>
       
     </div>
@@ -128,7 +128,7 @@ ga('send', 'pageview');
         </div>
       </div>
       
-        <img src="/2017/07/20/20170720001/001.jpg" alt="非關深度學習的封面圖" title="非關深度學習的封面圖">
+        <img src="/private/2017/07/20/20170720001/001.jpg" alt="非關深度學習的封面圖" title="非關深度學習的封面圖">
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>大概一個月前開始在Kaggle上接觸有關影像辨識的競賽，一開始我是玩<a href="https://www.kaggle.com/c/noaa-fisheries-steller-sea-lion-population-count" target="_blank" rel="external">數數海獅有幾隻</a>的這項競賽。</p>
 <p>雖然這是一個物體識別(Object recognition)的競賽，但我當時還未接觸到以深度學習的方式來進行物體識別，僅僅是靠著RGB分群+XGBoost迴歸、以及簡單的Ensemble技巧，勉勉強強爬到了一個只差三名就能拿下生涯第一座銅牌的名次。雖然事後有些懊惱，但這也成為了我接下來參加<a href="https://www.kaggle.com/c/planet-understanding-the-amazon-from-space" target="_blank" rel="external">亞馬遜叢林辨識</a>，以及研究Keras這個Python深度學習套件的因緣。</p>
 <a id="more"></a>
@@ -138,14 +138,14 @@ ga('send', 'pageview');
 <footer><strong>維基百科</strong><cite><a href="https://zh.wikipedia.org/wiki/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0" target="_blank" rel="external">深度學習</a></cite></footer></blockquote>
 <p>好吧，上面這段話如果是沒接觸過神經網路的人，基本上就跟我以前一樣，連看都看不懂…根本覺得他是文字天書。同時就算已經有接觸過了(像我)，但是對深度學習裡面很多東西還是會一知半解。</p>
 <p>不過我也只是簡單介紹(如有錯誤請不吝指教)，拜萬用的谷哥所賜，我很快地找到了一張好用的圖來簡單解釋所謂的神經網路：</p>
-<img src="/2017/07/20/20170720001/002.jpg" alt="神經網路示意圖" title="神經網路示意圖">
+<img src="/private/2017/07/20/20170720001/002.jpg" alt="神經網路示意圖" title="神經網路示意圖">
 <p>我知道光看這張圖片會覺得很厲害，但是卻也不知道他到底可以幹嘛…簡單來說就是每個圓圈是在模擬人類的腦神經元，它裡面會有一個權重。這些圓圈彼此連接起來形成神經網路，在不同的刺激下會有不同的反應(也就是輸出)。</p>
 <p>我承認我自己也不知道在講什麼，總之就是想像成這樣：</p>
-<img src="/2017/07/20/20170720001/003.jpg" alt="神經網路組成大腦" title="神經網路組成大腦">
+<img src="/private/2017/07/20/20170720001/003.jpg" alt="神經網路組成大腦" title="神經網路組成大腦">
 <p>所謂的學習就是透過不斷的餵訓練資料給神經網路，訓練神經網路去逼近最佳的答案，在這過程中就會將可能是數百、數千萬甚至是數十億的神經元權重給更新，然後就能見證奇蹟的時刻！</p>
 <p>(要快速的理解神經網路在幹嘛，最快的方式就是自己做一個識別數字的神經網路出來，詳細參考可以點這裡。)</p>
 <p>而深度學習就是搭建一個非常深、層數非常多的神經網路，然後來完成不可能的任務。</p>
-<img src="/2017/07/20/20170720001/end.png" alt="未完待續！" title="未完待續！">
+<img src="/private/2017/07/20/20170720001/end.png" alt="未完待續！" title="未完待續！">
       
       <div class="right post-end">To be continued..</div>
     </div>
@@ -154,7 +154,7 @@ ga('send', 'pageview');
         Posted at 
         2017-07-20 12:21:41
       </div>
-      <a data-url="https://infinitewing.github.io/private/2017/07/20/20170720001/" data-id="cjx68ww54000b3su73d6hti8j" class="article-share-link">Share</a>
+      <a data-url="https://infinitewing.github.io/private/2017/07/20/20170720001/" data-id="cjx6bqsq5000gusu7jlnakj10" class="article-share-link">Share</a>
       
         <a href="https://infinitewing.github.io/private/2017/07/20/20170720001/#disqus_thread" class="article-comment-link">留言</a>
       

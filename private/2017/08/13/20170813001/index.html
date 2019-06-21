@@ -12,14 +12,14 @@
 <meta property="og:url" content="https://infinitewing.github.io/private/2017/08/13/20170813001/index.html">
 <meta property="og:site_name" content="InfiniteWing">
 <meta property="og:description" content="前言大數據之所以被稱做大數據，自然是因為其資料數量龐大，雖然現今個人電腦普及，但真正面對大數據時，以個人能力組出來的電腦可能無法負荷如此龐大的資料。筆者目前使用的電腦環境是i7-6700 + 16GB DDR4 + NVIDIA 1060 6GB，雖然以個人用途來說已經是很棒的硬體設備，但有時候處理大數據卻會出現OOM或運算速度過慢的問題。對於OOM的問題，最簡單的解決方法就是上GCP開一個RA">
-<meta property="og:image" content="https://infinitewing.github.io/2017/08/13/20170813001/001.jpg">
-<meta property="og:image" content="https://infinitewing.github.io/2017/08/13/20170813001/002.png">
-<meta property="og:image" content="https://infinitewing.github.io/2017/08/13/20170813001/end.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/08/13/20170813001/001.jpg">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/08/13/20170813001/002.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/08/13/20170813001/end.png">
 <meta property="og:updated_time" content="2017-08-14T15:16:37.113Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在GCP開啟Ubuntu遠端桌面">
 <meta name="twitter:description" content="前言大數據之所以被稱做大數據，自然是因為其資料數量龐大，雖然現今個人電腦普及，但真正面對大數據時，以個人能力組出來的電腦可能無法負荷如此龐大的資料。筆者目前使用的電腦環境是i7-6700 + 16GB DDR4 + NVIDIA 1060 6GB，雖然以個人用途來說已經是很棒的硬體設備，但有時候處理大數據卻會出現OOM或運算速度過慢的問題。對於OOM的問題，最簡單的解決方法就是上GCP開一個RA">
-<meta name="twitter:image" content="https://infinitewing.github.io/2017/08/13/20170813001/001.jpg">
+<meta name="twitter:image" content="https://infinitewing.github.io/private/2017/08/13/20170813001/001.jpg">
   
     <link rel="alternate" href="/atom.xml" title="InfiniteWing" type="application/atom+xml">
   
@@ -60,7 +60,7 @@ ga('send', 'pageview');
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/private/" id="subtitle">Till The World Ends</a>
+          <a href="/private/" id="subtitle">Till Dreams Come True</a>
         </h2>
       
     </div>
@@ -127,11 +127,11 @@ ga('send', 'pageview');
         </div>
       </div>
       
-        <img src="/2017/08/13/20170813001/001.jpg" alt="非關內文" title="非關內文">
+        <img src="/private/2017/08/13/20170813001/001.jpg" alt="非關內文" title="非關內文">
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>大數據之所以被稱做大數據，自然是因為其資料數量龐大，雖然現今個人電腦普及，但真正面對大數據時，以個人能力組出來的電腦可能無法負荷如此龐大的資料。筆者目前使用的電腦環境是i7-6700 + 16GB DDR4 + NVIDIA 1060 6GB，雖然以個人用途來說已經是很棒的硬體設備，但有時候處理大數據卻會出現OOM或運算速度過慢的問題。對於OOM的問題，最簡單的解決方法就是上GCP開一個RAM大一點的VM，以Ubuntu作業系統來說，8核心+50GB的RAM不到0.5鎂/小時，以GCP提供的300鎂試用額度來說是綽綽有餘。針對深度運算時GPU的不夠力，由於目前GPU租賃單價過高，因此可能日後還要自行添購例如NVIDIA TITAN X之類的高級GPU。</p>
 <a id="more"></a>
-<h1 id="Google-Cloud-Platform-GCP"><a href="#Google-Cloud-Platform-GCP" class="headerlink" title="Google Cloud Platform (GCP)"></a>Google Cloud Platform (GCP)</h1><p>有關GCP的說明可以<a href="/2017/07/12/20170712001/" title="參考之前的文章">參考之前的文章</a>。在創建好GCP帳號後，就可以到Compute Engine底下新增VM個體，相關VM設定因為創建視窗已經說明很詳細就不在贅述，需要注意的是本篇文章是基於Ubuntu 14.04，因此在開機磁碟選項上必須選擇Ubuntu 14.04版本。</p>
-<img src="/2017/08/13/20170813001/002.png" alt="VM創建畫面" title="VM創建畫面">
+<h1 id="Google-Cloud-Platform-GCP"><a href="#Google-Cloud-Platform-GCP" class="headerlink" title="Google Cloud Platform (GCP)"></a>Google Cloud Platform (GCP)</h1><p>有關GCP的說明可以<a href="/private/2017/07/12/20170712001/" title="參考之前的文章">參考之前的文章</a>。在創建好GCP帳號後，就可以到Compute Engine底下新增VM個體，相關VM設定因為創建視窗已經說明很詳細就不在贅述，需要注意的是本篇文章是基於Ubuntu 14.04，因此在開機磁碟選項上必須選擇Ubuntu 14.04版本。</p>
+<img src="/private/2017/08/13/20170813001/002.png" alt="VM創建畫面" title="VM創建畫面">
 <p>上圖就是範例的VM創建畫面，可以看到8核心+50GB RAM的每小時使用價格不到0.35鎂，不過需注意在區域選項中可以選擇服務供應據點，每個據點的單價並不一樣。所以如果有長時間使用需求的話，最好都先看看該區域的單價是多少！</p>
 <p>創建完VM後就可以用Google預設的瀏覽器ssh打開文字終端模式，接著就進入本文章的正題：開啟Ubuntu遠端桌面。</p>
 <h1 id="Ubuntu遠端桌面"><a href="#Ubuntu遠端桌面" class="headerlink" title="Ubuntu遠端桌面"></a>Ubuntu遠端桌面</h1><p>要開啟Ubuntu遠端桌面必須經過幾個步驟，進入文字終端模式後，複製貼上以下指令：</p>
@@ -150,7 +150,7 @@ ga('send', 'pageview');
 <p>接著到GCP設定防火牆，打開5901 port後，即可回到文字終端模式輸入vncserver指令，重新打開vncserver服務：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vncserver</div></pre></td></tr></table></figure></p>
 <p>到現在為止，你的遠端桌面服務已經開始運作，最後你需要一個可以連線VNC服務的軟體，我使用的是<a href="https://www.realvnc.com/en/connect/download/vnc/" target="_blank" rel="external">realVNC</a>，下載安裝完成後，輸入你的VM外部臨時IP:5901，再輸入剛才設定的密碼，你應該就能看到精美的ubuntu遠端桌面了！</p>
 <p>文章相關連結<br>1.<a href="https://medium.com/google-cloud/graphical-user-interface-gui-for-google-compute-engine-instance-78fccda09e5c" target="_blank" rel="external">Graphical user interface (GUI) for Google Compute Engine instance</a></p>
-<img src="/2017/08/13/20170813001/end.png" alt="完結灑花！" title="完結灑花！">
+<img src="/private/2017/08/13/20170813001/end.png" alt="完結灑花！" title="完結灑花！">
       
       <div class="right post-end">To be continued..</div>
     </div>
@@ -159,7 +159,7 @@ ga('send', 'pageview');
         Posted at 
         2017-08-13 02:14:20
       </div>
-      <a data-url="https://infinitewing.github.io/private/2017/08/13/20170813001/" data-id="cjx68ww5c000k3su7xlvxk71j" class="article-share-link">Share</a>
+      <a data-url="https://infinitewing.github.io/private/2017/08/13/20170813001/" data-id="cjx6bqsq7000jusu7dnkr3bza" class="article-share-link">Share</a>
       
         <a href="https://infinitewing.github.io/private/2017/08/13/20170813001/#disqus_thread" class="article-comment-link">留言</a>
       

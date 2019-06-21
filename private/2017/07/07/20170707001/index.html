@@ -12,13 +12,13 @@
 <meta property="og:url" content="https://infinitewing.github.io/private/2017/07/07/20170707001/index.html">
 <meta property="og:site_name" content="InfiniteWing">
 <meta property="og:description" content="前言俗話說久病成良醫，經過了好幾次的資安經驗後，筆者也慢慢地養成了疑神疑鬼的性格(?)，為了避免這種病情惡化，只好用比較聰明的方法來讓自己安心。而這就是以下這篇文章要介紹的，如何透過排程機制來動態偵測ssh的使用者登入狀況，並同步寄發登入提醒。 說真的既然電腦是架在公開的網路環境下，那就沒有萬無一失的防禦方式，唯有與時俱進及提高警覺才能避免重傷害…所謂不經一事不長一智，久經沙場的話自然就會有更全面">
-<meta property="og:image" content="https://infinitewing.github.io/2017/07/07/20170707001/1470294384.jpg">
-<meta property="og:image" content="https://infinitewing.github.io/2017/07/07/20170707001/1470294169.png">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/07/07/20170707001/1470294384.jpg">
+<meta property="og:image" content="https://infinitewing.github.io/private/2017/07/07/20170707001/1470294169.png">
 <meta property="og:updated_time" content="2017-07-08T09:51:05.960Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[FreeBSD] 以ssmtp搭配Gamil實現ssh登入自動提醒">
 <meta name="twitter:description" content="前言俗話說久病成良醫，經過了好幾次的資安經驗後，筆者也慢慢地養成了疑神疑鬼的性格(?)，為了避免這種病情惡化，只好用比較聰明的方法來讓自己安心。而這就是以下這篇文章要介紹的，如何透過排程機制來動態偵測ssh的使用者登入狀況，並同步寄發登入提醒。 說真的既然電腦是架在公開的網路環境下，那就沒有萬無一失的防禦方式，唯有與時俱進及提高警覺才能避免重傷害…所謂不經一事不長一智，久經沙場的話自然就會有更全面">
-<meta name="twitter:image" content="https://infinitewing.github.io/2017/07/07/20170707001/1470294384.jpg">
+<meta name="twitter:image" content="https://infinitewing.github.io/private/2017/07/07/20170707001/1470294384.jpg">
   
     <link rel="alternate" href="/atom.xml" title="InfiniteWing" type="application/atom+xml">
   
@@ -59,7 +59,7 @@ ga('send', 'pageview');
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/private/" id="subtitle">Till The World Ends</a>
+          <a href="/private/" id="subtitle">Till Dreams Come True</a>
         </h2>
       
     </div>
@@ -129,7 +129,7 @@ ga('send', 'pageview');
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>俗話說久病成良醫，經過了好幾次的資安經驗後，筆者也慢慢地養成了疑神疑鬼的性格(?)，為了避免這種病情惡化，只好用比較聰明的方法來讓自己安心。而這就是以下這篇文章要介紹的，如何透過排程機制來動態偵測ssh的使用者登入狀況，並同步寄發登入提醒。</p>
 <p>說真的既然電腦是架在公開的網路環境下，那就沒有萬無一失的防禦方式，唯有與時俱進及提高警覺才能避免重傷害…所謂不經一事不長一智，久經沙場的話自然就會有更全面的經驗，而筆者也希望自己能從一而終的在學習上永無止境。</p>
 <a id="more"></a>
-<img src="/2017/07/07/20170707001/1470294384.jpg" alt="如果每天都能如此優閒度過該有多好" title="如果每天都能如此優閒度過該有多好">
+<img src="/private/2017/07/07/20170707001/1470294384.jpg" alt="如果每天都能如此優閒度過該有多好" title="如果每天都能如此優閒度過該有多好">
 <h1 id="ssmtp"><a href="#ssmtp" class="headerlink" title="ssmtp"></a>ssmtp</h1><p>有關ssmtp如何在Linux系統上搭配Gmail寄信的功能已經有許多前輩做了整理，但在FreeBSD方面則沒有太多的討論。筆者參考了<a href="https://blog.gtwang.org/linux/linux-send-mail-command-using-ssmtp-and-gmail/" target="_blank" rel="external">這篇文章</a>來進行設定，同時筆者的FreeBSD版本為 - FreeBSD 11.0-RELEASE-p1</p>
 <p>首先開啟你的Server，接著以pkg來安裝ssmtp。(當然你可以用su搭配安裝指令使用，筆者為了避免麻煩就先切換成root身分了。)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># pkg install ssmtp</div></pre></td></tr></table></figure>
@@ -143,7 +143,7 @@ ga('send', 'pageview');
 <p>詳細的程式碼可以在<a href="https://github.com/InfiniteWing/FreeBSD-Useful-Toys/blob/master/ssh_login.sh" target="_blank" rel="external">這裡</a>查看，不過筆者當初沒有考慮到log file會定期壓縮的問題，因此程式還有待改善，如果有更新的話會同步修改這篇文章。(注意，如果要使用筆者的程式，須建立current_login_count_file的檔案，並寫入0)</p>
 <p>如果要搭配排程的話就可以用FreeBSD的Crontab來完成~</p>
 <h1 id="更多的想法"><a href="#更多的想法" class="headerlink" title="更多的想法"></a>更多的想法</h1><p>寄送登入提醒只是最基本應用例子，也可定時寄送伺服器狀況(如硬體溫度或是攻擊警告等..)，更甚至是定期把log檔案打包寄至Gmail，避免真的有人入侵了也沒辦法分析log的窘境。</p>
-<img src="/2017/07/07/20170707001/1470294169.png" alt="完結灑花！" title="完結灑花！">
+<img src="/private/2017/07/07/20170707001/1470294169.png" alt="完結灑花！" title="完結灑花！">
 
       
       <div class="right post-end">To be continued..</div>
@@ -153,7 +153,7 @@ ga('send', 'pageview');
         Posted at 
         2017-07-07 04:58:39
       </div>
-      <a data-url="https://infinitewing.github.io/private/2017/07/07/20170707001/" data-id="cjx68ww4y00063su72ittyv4r" class="article-share-link">Share</a>
+      <a data-url="https://infinitewing.github.io/private/2017/07/07/20170707001/" data-id="cjx6bqspw0007usu74dy9wl3k" class="article-share-link">Share</a>
       
         <a href="https://infinitewing.github.io/private/2017/07/07/20170707001/#disqus_thread" class="article-comment-link">留言</a>
       
