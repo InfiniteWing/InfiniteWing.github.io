@@ -6,7 +6,7 @@
   <title>試玩Google Cloud Platform | InfiniteWing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前言最近參加了Kaggle上有關影像分類的比賽，於是就開始研究所謂的深度學習影像分類(Deep learning in image classification)。隨著看的文章越來越多，以及接觸了一些深度學習的框架後，我開始佩服當初我買下GTX-1060的衝動。 當初本來只是想說有朝一日無聊的時候可以玩玩遊戲，壓根還沒意識到原來使用GPU進行深度學習計算已經是如日中天的火熱議題，基本上不會用GPU">
-<meta name="keywords" content="經驗,第一次,Big Data,Cloud Computing,GCP">
+<meta name="keywords" content="第一次,經驗,Big Data,Cloud Computing,GCP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="試玩Google Cloud Platform">
 <meta property="og:url" content="https://infinitewing.github.io/private/2017/07/12/20170712001/index.html">
@@ -228,7 +228,7 @@ ga('send', 'pageview');
         Posted at 
         2017-07-12 04:32:19
       </div>
-      <a data-url="https://infinitewing.github.io/private/2017/07/12/20170712001/" data-id="cjxexihdo001uhwu7yvr0yv16" class="article-share-link">Share</a>
+      <a data-url="https://infinitewing.github.io/private/2017/07/12/20170712001/" data-id="ck2isq50v0006bgu8fmjz4ztq" class="article-share-link">Share</a>
       
         <a href="https://infinitewing.github.io/private/2017/07/12/20170712001/#disqus_thread" class="article-comment-link">留言</a>
       
@@ -462,7 +462,21 @@ ga('send', 'pageview');
         <div class="IW-guider-control-btn"><span class="fa fa-music guider-music"></span></div>
         <div class="IW-guider-control-btn"><span class="fa fa-power-off guider-power"></span></div>
     </div>
+	
+	<!--- live2D --->
+	<link rel="stylesheet" href="/private/css/live2d.css">
+	<div id="landlord">
+		<canvas id="live2d" width="2000" height="2000" class="live2d"></canvas>
+	</div>
+
+	<script type="text/javascript" src="/private/js/live2d.js"></script>
+	<script type="text/javascript">
+		var path = 'Midsummer Pixie';
+		loadlive2d("live2d", "/private/model/"+path+"/model.json");
+	</script>
+	<!--- End Live2D --->
 </div>
+
 <script src="/private/js/script.js"></script>
 
     </div>

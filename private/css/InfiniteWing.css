@@ -156,7 +156,7 @@
 }
 .IW-guider .guider-img-public{
     display: inline-block;
-    background-image: url("images/guider/guider.png");
+    //background-image: url("images/guider/guider.png");
     background-size: cover;    
     background-position-x: 0px;
     width: 300px;
