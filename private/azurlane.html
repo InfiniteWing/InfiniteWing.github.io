@@ -1,0 +1,45 @@
+<style type="text/css">
+	body{
+		background: transparent !important;
+	}
+</style>
+<body style="background: transparent;">
+	<!--- Live2D Ver.3 --->
+	<script src="/private/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/private/js/pixi.min.js"></script>
+	<script type="text/javascript" src="/private/js/live2dcubismcore.min.js"></script>
+	<script type="text/javascript" src="/private/js/live2dcubismframework.js"></script>
+	<script type="text/javascript" src="/private/js/loadModel.js"></script>
+	<script type="text/javascript" src="/private/js/live2dcubismpixi.js"></script>
+	<link rel="stylesheet" href="/private/css/live2d_v3.css">
+
+	<div class="landlord" id="landlord">
+		<canvas id="live2d" class="live2d" style="margin-left:0px; margin-top:0px; width:300px; "></canvas>
+	</div>
+	<script> 
+		var getUrlParameter = function getUrlParameter(sParam) {
+			var sPageURL = window.location.search.substring(1),
+				sURLVariables = sPageURL.split('&'),
+				sParameterName,
+				i;
+
+			for (i = 0; i < sURLVariables.length; i++) {
+				sParameterName = sURLVariables[i].split('=');
+
+				if (sParameterName[0] === sParam) {
+					return sParameterName[1] === undefined ? True : decodeURIComponent(sParameterName[1]);
+				}
+			}
+		};
+		var modelPath = "";
+		var modelWidth = 1600;
+		var modelHight = 2400;
+		$(document).ready(function(){
+			var model_name = getUrlParameter('model_name');
+			modelPath = "/private/model_azurlane/"+model_name+"/"+model_name+".model3.json";
+			loadModel(modelPath);
+			$("#landlord").addClass("live2d_azurlane_"+model_name);
+		});
+	</script>
+	<!--- End Live2D Ver.3 --->
+</body>

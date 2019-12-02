@@ -229,3 +229,5 @@ function parseBoolean(str) {
             tmp.push($('<img />').attr('src', imgs[ i ]));
     };
 })(jQuery);
+
+
