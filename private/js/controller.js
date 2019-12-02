@@ -11,6 +11,6 @@ $(function () {
 		}
 		var model_name = azurlane_models[model_index];
 		var iframe_height = iframe_heights[model_index];
-		$('#live2d_iframe').attr('src', "azurlane.html?model_name="+model_name).css('height', iframe_height);
+		$('#live2d_iframe').attr('src', "/private/azurlane.html?model_name="+model_name).css('height', iframe_height);
 	});
 });
