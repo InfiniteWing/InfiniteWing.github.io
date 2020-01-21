@@ -8,6 +8,30 @@ body{
 	zoom: 20%;
 	margin-left: -100px;
 }
+
+.live2d_azurlane_wuqi_2{
+	margin-top: -280px;
+    margin-left: -210px;
+}
+
+.live2d_azurlane_wuqi_2 > canvas{
+    margin-top: -24% !important;
+    margin-left: -11% !important;
+	zoom: 130% !important;
+}
+
+.live2d_azurlane_nengdai_2 > canvas{
+    margin-top: -65% !important;
+    margin-left: -15% !important;
+	zoom: 130% !important;
+}
+
+.live2d_azurlane_genaisennao_2 > canvas{
+    margin-top: -33% !important;
+    margin-left: -10% !important;
+	zoom: 110% !important;
+}
+
 .live2d_azurlane_aidang_2{
 	margin-top: -180px;
 }

@@ -1,6 +1,6 @@
-var azurlane_models = ["aidang_2", "beierfasite_2", "dujiaoshou_4", "shengluyisi_2", "huonululu_3", "shengluyisi_3", "tierbici_2", "xianghe_2", "xixuegui_4"];
+var azurlane_models = ["wuqi_2", "nengdai_2", "genaisennao_2", "aidang_2", "beierfasite_2", "dujiaoshou_4", "shengluyisi_2", "huonululu_3", "shengluyisi_3", "tierbici_2", "xianghe_2", "xixuegui_4"];
 
-var iframe_heights = ["400px","400px","300px","360px","300px","400px","360px","400px","400px"]
+var iframe_heights = ["400px", "400px", "400px", "400px", "400px","300px","360px","300px","400px","360px","400px","400px"]
 
 var model_index = 0;
 $(function () {
