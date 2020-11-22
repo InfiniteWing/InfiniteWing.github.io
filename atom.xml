@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>InfiniteWing</title>
-  <subtitle>Till Dreams Come True</subtitle>
+  <subtitle>Give me a place to stand on, and I will move the Earth</subtitle>
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://infinitewing.github.io/"/>
-  <updated>2019-06-21T16:20:36.146Z</updated>
+  <updated>2020-07-11T07:29:09.528Z</updated>
   <id>https://infinitewing.github.io/</id>
   
   <author>
@@ -16,11 +16,79 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Instant Gratification - A synchronous Kernels-only competition</title>
+    <title>[Performance comparison] CSV reader C/C++ V.S. Python</title>
+    <link href="https://infinitewing.github.io/2020/07/11/20200711001/"/>
+    <id>https://infinitewing.github.io/2020/07/11/20200711001/</id>
+    <published>2020-07-11T07:01:10.000Z</published>
+    <updated>2020-07-11T07:29:09.528Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>隨著科技日新月異，人類每天生活都會產生數以百PB，甚至上EB的資料；撇除那些未系統化的資料，作為一名數據科學家平時最常接觸到的資料不外乎是CSV/TSV/XML/JSON等等結構化的資料。</p>
+<a id="more"></a>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;隨著科技日新月異，人類每天生活都會產生數以百PB，甚至上EB的資料；撇除那些未系統化的資料，作為一名數據科學家平時最常接觸到的資料不外乎是CSV/TSV/XML/JSON等等結構化的資料。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Performance comparison" scheme="https://infinitewing.github.io/categories/Performance-comparison/"/>
+    
+      <category term="C/C++" scheme="https://infinitewing.github.io/categories/Performance-comparison/C-C/"/>
+    
+      <category term="Python" scheme="https://infinitewing.github.io/categories/Performance-comparison/C-C/Python/"/>
+    
+    
+      <category term="C/C++" scheme="https://infinitewing.github.io/tags/C-C/"/>
+    
+      <category term="Python" scheme="https://infinitewing.github.io/tags/Python/"/>
+    
+      <category term="Experience" scheme="https://infinitewing.github.io/tags/Experience/"/>
+    
+      <category term="Performance comparison" scheme="https://infinitewing.github.io/tags/Performance-comparison/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Kaggle] Jigsaw Unintended Bias in Toxicity Classification</title>
+    <link href="https://infinitewing.github.io/2019/06/28/20190628001/"/>
+    <id>https://infinitewing.github.io/2019/06/28/20190628001/</id>
+    <published>2019-06-28T09:48:45.000Z</published>
+    <updated>2019-06-28T10:00:39.211Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>隨著前次 <a href="/2019/06/21/20190621001/" title="[Kaggle] Instant Gratification - A synchronous Kernels-only competition">[Kaggle] Instant Gratification - A synchronous Kernels-only competition</a> 比賽的落幕，我在短暫的休息了一天後又馬不停蹄地繼續開啟下一個比賽。之所以這麼樣的汲汲營營，並不只是為了想在短時間內學到許多新東西，更重要的原因在於這比賽只剩不到一周的時間就要結束了…身為一名標準的工程師，死線往往能成為推進他前進的原動力，所以我就參賽啦～</p>
+<a id="more"></a>
+<h1 id="比賽說明"><a href="#比賽說明" class="headerlink" title="比賽說明"></a>比賽說明</h1><h1 id="EDA"><a href="#EDA" class="headerlink" title="EDA"></a>EDA</h1><h1 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h1><p>BERT、GPT2、LSTM、GRU、XLNET</p>
+<h1 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h1><p>因為時間甚趕的關係，儘管Kaggle官方Kernel提供每位使用者4X NVIDIA P100的使用額度，但為了提早訓練完模型，我還是上了GCP租了一台新的NVIDIA V100…訓練速度大概就比P100快一半，但是真的是……非常的燒錢。我在比賽結束之後去查看了一下V100租了快兩天半的總花費…一百鎂！<br>好吧，深度學習真的是有錢人在玩的遊戲、深度學習真的是有錢人在玩的遊戲、深度學習真的是有錢人在玩的遊戲…會這樣講不過是自怨自艾而已，如果能從頭參與比賽的話，模型訓練的時間其實不會成為劣勢，重要的事情還是在於了解模型並能調整參數。從比賽後各位隊伍分享出來的方法就能知道，有些部分是我還沒有想到的，而有些部分則是我想到了但基於時間再加上不熟的關係而沒有做出來，這幾點在往後的比賽都能成為借鏡。<br>我想Master大概只離我有半年的時間而已XDD。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;隨著前次 &lt;a href=&quot;/2019/06/21/20190621001/&quot; title=&quot;[Kaggle] Instant Gratification - A synchronous Kernels-only competition&quot;&gt;[Kaggle] Instant Gratification - A synchronous Kernels-only competition&lt;/a&gt; 比賽的落幕，我在短暫的休息了一天後又馬不停蹄地繼續開啟下一個比賽。之所以這麼樣的汲汲營營，並不只是為了想在短時間內學到許多新東西，更重要的原因在於這比賽只剩不到一周的時間就要結束了…身為一名標準的工程師，死線往往能成為推進他前進的原動力，所以我就參賽啦～&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/categories/Big-Data/"/>
+    
+      <category term="Competition" scheme="https://infinitewing.github.io/categories/Big-Data/Competition/"/>
+    
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="NLP" scheme="https://infinitewing.github.io/tags/NLP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Kaggle] Instant Gratification - A synchronous Kernels-only competition</title>
     <link href="https://infinitewing.github.io/2019/06/21/20190621001/"/>
     <id>https://infinitewing.github.io/2019/06/21/20190621001/</id>
-    <published>2019-06-21T15:44:54.151Z</published>
-    <updated>2019-06-21T16:20:36.146Z</updated>
+    <published>2019-06-21T15:44:54.000Z</published>
+    <updated>2019-06-28T09:50:41.962Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>自五月底退伍重返人間後，經歷了一周的面試之旅，發覺到自己在資訊領域最感興趣的還是資料科學。為了充實一下自己的履歷、同時也為了填補將近半年多的空缺，我決定上Kaggle找幾個比賽來訓練自己，順便看看能不能拿個Master稱號XDD。以下將介紹我選擇的其中一個比賽「Instant Gratification - A synchronous Kernels-only competition」的比賽經驗。</p>
 <a id="more"></a>
@@ -42,9 +110,9 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
-      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
-    
       <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
     
       <category term="KO" scheme="https://infinitewing.github.io/tags/KO/"/>
     
@@ -113,9 +181,9 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
-      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
-    
       <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
     
       <category term="WSDM" scheme="https://infinitewing.github.io/tags/WSDM/"/>
     
@@ -197,9 +265,9 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
-      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
-    
       <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
     
   </entry>
   
@@ -236,9 +304,9 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
-      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
-    
       <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
     
   </entry>
   
@@ -271,11 +339,11 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
-      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
-    
       <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
       <category term="Notebook" scheme="https://infinitewing.github.io/tags/Notebook/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
     
   </entry>
   
@@ -361,11 +429,11 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
-      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
-    
       <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
       <category term="Notebook" scheme="https://infinitewing.github.io/tags/Notebook/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
     
   </entry>
   
@@ -456,11 +524,11 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
-      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
-    
       <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
       <category term="Notebook" scheme="https://infinitewing.github.io/tags/Notebook/"/>
+    
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
     
   </entry>
   
@@ -502,6 +570,8 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
       <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
     
       <category term="Deep Learning" scheme="https://infinitewing.github.io/tags/Deep-Learning/"/>
@@ -509,8 +579,6 @@
       <category term="Keras" scheme="https://infinitewing.github.io/tags/Keras/"/>
     
       <category term="CNN" scheme="https://infinitewing.github.io/tags/CNN/"/>
-    
-      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
   </entry>
   
@@ -596,6 +664,8 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
+    
       <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
     
       <category term="Deep Learning" scheme="https://infinitewing.github.io/tags/Deep-Learning/"/>
@@ -603,8 +673,6 @@
       <category term="Keras" scheme="https://infinitewing.github.io/tags/Keras/"/>
     
       <category term="CNN" scheme="https://infinitewing.github.io/tags/CNN/"/>
-    
-      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
   </entry>
   
@@ -805,102 +873,6 @@
       <category term="第一次" scheme="https://infinitewing.github.io/tags/%E7%AC%AC%E4%B8%80%E6%AC%A1/"/>
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>楓之谷APP開發日誌 ─ 第六章</title>
-    <link href="https://infinitewing.github.io/2017/02/02/MapleStory-Stage-6/"/>
-    <id>https://infinitewing.github.io/2017/02/02/MapleStory-Stage-6/</id>
-    <published>2017-02-02T10:07:41.000Z</published>
-    <updated>2017-07-07T16:59:42.481Z</updated>
-    
-    <content type="html"><![CDATA[<p>各位2017新年快樂～這一項專案終於迎來了他的第三個年頭，老實說當初我也根本不曉得這項瘋狂的計畫會持續這麼久。</p>
-<p>雖然說不能上架讓人很難過，但其實偶爾打開APP，還真會有種我真厲害的自豪之情油然而生。所以不能上架就算了吧，至少有其他作品能上架(?)。</p>
-<p>話又說回來，當然還是上架有人能回饋互動的感覺更好一些，至少能在我懶散魂發作的時候給一點前進的動力。所以如果剛好有那麼一點後起之秀或是剛好想自製楓之谷的巴友，剛剛好找到了這篇系列紀錄文，可以的話就留言紀念一下吧～就跟我常會在圖書館借來的書後面還書時間表上簽名一樣(?)。</p>
-<a id="more"></a>
-<p>這一次要來講怪物施放技能的相關準備事項及說明，首先我們先看到下面這張慘圖：<br><img src="/2017/02/02/MapleStory-Stage-6/002.png" alt="加入背景後的實裝畫面" title="加入背景後的實裝畫面"><br><img src="/2017/02/02/MapleStory-Stage-6/001.png" alt="哪有人出門就遇到大八的T.T" title="哪有人出門就遇到大八的T.T"></p>
-<p>好的，這裡可以看到我被地獄巴洛古○○的畫面有兩隻地獄巴洛古（好吧我這才發現有一隻是巴洛古），同時施放了兩種不同的技能。</p>
-<p>其中一種是會發出一顆黑色重力球（地獄巴洛古施放的，姑且當作是重力球）的技能，另外一種是範圍指定技。</p>
-<p>（兩者的差別在於，重力球是屬於射出型的，要打到才會受到攻擊；而範圍指定技是指在範圍內就會直接被攻擊，無法閃躲）</p>
-<img src="/2017/02/02/MapleStory-Stage-6/003.png" alt="出沒在奇幻村的野生拉圖斯..." title="出沒在奇幻村的野生拉圖斯...">
-<p>這裡展示的是拉圖斯的技能，是說要是奇幻村有拉圖斯出沒的話，那新手是要怎麼解浴袍的桑拿套服的任務啊</p>
-<p>從不同時期的BOSS資料中不難看出，在一開始設計時的BOSS並沒有現在這麼喪心病狂的功能，很有可能是在版本更新時才又加裝到地圖編輯器的。以巴洛古和拉圖斯為例，前者就只有簡單的投擲火球(?)跟兩招蟀氣的範圍技，而拉圖斯作為玩具城的頭號BOSS，不僅有更多的技能，包含了有地圖警告(Area Warning)的顯示，同時還有自身BUFF技能。</p>
-<p>(自身BUFF技能就是指會讓BOSS狀態增強的技能，像是物理攻擊力增加、防禦上升等等，而先前介紹的技能都屬於會對玩家造成傷害的攻擊技能。迷之聲：不過因為BUFF技能和地圖警告要實裝的話還要花不少時間打程式碼，所以就…)</p>
-<p>至於炎魔、黑龍王這類型的超巨大BOSS，則因為Android容易OOM的關係(其實只是懶)，所以就沒有實裝上來。基本上這類型的超巨大BOSS與一般BOSS差異不會太大，只要注意狀態轉換應該就OK(不過我也沒有仔細看過這類型BOSS的資料檔，因此只能說是不負責任推估)</p>
-<p>最後就用獅子王的咆哮來祝各位新年快樂！</p>
-<img src="/2017/02/02/MapleStory-Stage-6/004.png" alt="獅子王的咆哮！" title="獅子王的咆哮！">
-<img src="/2017/02/02/MapleStory-Stage-6/005.png" alt="好吧，這麼大隻的確是打不贏..." title="好吧，這麼大隻的確是打不贏...">
-<p>下一篇終於要來說明地圖的背景繪製了～</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;各位2017新年快樂～這一項專案終於迎來了他的第三個年頭，老實說當初我也根本不曉得這項瘋狂的計畫會持續這麼久。&lt;/p&gt;
-&lt;p&gt;雖然說不能上架讓人很難過，但其實偶爾打開APP，還真會有種我真厲害的自豪之情油然而生。所以不能上架就算了吧，至少有其他作品能上架(?)。&lt;/p&gt;
-&lt;p&gt;話又說回來，當然還是上架有人能回饋互動的感覺更好一些，至少能在我懶散魂發作的時候給一點前進的動力。所以如果剛好有那麼一點後起之秀或是剛好想自製楓之谷的巴友，剛剛好找到了這篇系列紀錄文，可以的話就留言紀念一下吧～就跟我常會在圖書館借來的書後面還書時間表上簽名一樣(?)。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="個人作品" scheme="https://infinitewing.github.io/categories/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
-    
-      <category term="楓之谷APP" scheme="https://infinitewing.github.io/categories/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/%E6%A5%93%E4%B9%8B%E8%B0%B7APP/"/>
-    
-    
-      <category term="個人作品" scheme="https://infinitewing.github.io/tags/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
-    
-      <category term="Android APP" scheme="https://infinitewing.github.io/tags/Android-APP/"/>
-    
-      <category term="童年" scheme="https://infinitewing.github.io/tags/%E7%AB%A5%E5%B9%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>楓之谷APP開發日誌 ─ 第五章</title>
-    <link href="https://infinitewing.github.io/2017/01/22/MapleStory-Stage-5/"/>
-    <id>https://infinitewing.github.io/2017/01/22/MapleStory-Stage-5/</id>
-    <published>2017-01-22T08:52:14.000Z</published>
-    <updated>2017-07-07T17:00:21.063Z</updated>
-    
-    <content type="html"><![CDATA[<p>本來這篇是打算介紹楓之谷的地圖背景繪製，不過因為實際開發時這個好像比較晚才實裝，所以就臨時改變主題了。</p>
-<p>今天要介紹的是怪物的技能施放以及角色的技能特效。(好吧因為發現光角色的技能特效就打友點多了，下次再講怪物的技能施放好了…)</p>
-<p>首先再次重提當初玩楓之谷讓我最感動的事情─龍咆哮。<br><a id="more"></a><br><img src="/2017/01/22/MapleStory-Stage-5/001.jpg" alt="龍咆哮" title="龍咆哮"></p>
-<p>當年的龍咆哮雖然沒有後來的天怒、暴風雪等等法師四轉技能來的帥氣，不過在冰原雪域還是高手練功點的時代，能放出龍咆哮的龍騎士基本上一定是自由市場裡最引人注目的存在。</p>
-<p>其實早在兩年前我就已經把單純只有在角色身上出現特效的技能表現給大致完成了，不過由於最近我又打算加上天怒、暴風雪、穢土轉生等等超帥四轉技能到遊戲裡，所以關於技能的部分又重新修改了一下。</p>
-<p>原先的話是只有針對Effect(也就是角色身上出現的特效)做處理，不過因為天怒、暴風雪等等大型範圍技能，還牽扯到Tile的部分(用天怒來解釋，也就是後面場景的光柱)，所以基本上我又重新把技能相關程式加工了一次，同時也將技能打中的Hit效果做處理。</p>
-<p>我們用以下這張天怒圖來做解釋好了：</p>
-<img src="/2017/01/22/MapleStory-Stage-5/002.jpg" alt="002.jpg" title="">
-<p>紅色1的地方，就是技能裡面的Effect部分，基本上是跟著人移動的<br>綠色2的地方，就是Tile的部分，屬於類似技能背景的東西。同時在Tile的繪製上，他是採取彼此的間隔(就是每兩個tile中間會隔固定大小的間距)。</p>
-<p>至於Hit的效果，就是當技能打到怪物時，怪物身上除了會跳出一排傷害數字外，同時也會有受到傷害的顯示效果：</p>
-<img src="/2017/01/22/MapleStory-Stage-5/003.png" alt="003.png" title="">
-<p>上方的圖例是怪物受到龍咆哮的攻擊後，身上會出現Hit的效果。</p>
-<p>諸如上述，經過一番努力之後，我的手機裡終於出現了第一種能同時放龍咆哮、天怒、暴風雪的隱藏職業魔劍士。</p>
-<img src="/2017/01/22/MapleStory-Stage-5/004.png" alt="天怒實裝畫面" title="天怒實裝畫面">
-<p>明明是劍士，卻能放天怒這樣對嗎！！！</p>
-<img src="/2017/01/22/MapleStory-Stage-5/005.png" alt="天怒實裝畫面" title="天怒實裝畫面">
-<p>老實說楓之谷越出越豐富，龍咆哮已經不知道被甩開幾個街角了，帥氣程度根本比不上龍神之怒。</p>
-<img src="/2017/01/22/MapleStory-Stage-5/006.png" alt="華麗Level Max的龍神之怒" title="華麗Level Max的龍神之怒">
-<p>好，今天的介紹就到此告一段落，不過其實已經可以看到技能示意圖的後方已經出現了背景的繪製，等接下來說明完怪物的技能施放後，應該就會開始說明楓之谷的地圖背景繪製機制了。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本來這篇是打算介紹楓之谷的地圖背景繪製，不過因為實際開發時這個好像比較晚才實裝，所以就臨時改變主題了。&lt;/p&gt;
-&lt;p&gt;今天要介紹的是怪物的技能施放以及角色的技能特效。(好吧因為發現光角色的技能特效就打友點多了，下次再講怪物的技能施放好了…)&lt;/p&gt;
-&lt;p&gt;首先再次重提當初玩楓之谷讓我最感動的事情─龍咆哮。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="個人作品" scheme="https://infinitewing.github.io/categories/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
-    
-      <category term="楓之谷APP" scheme="https://infinitewing.github.io/categories/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/%E6%A5%93%E4%B9%8B%E8%B0%B7APP/"/>
-    
-    
-      <category term="個人作品" scheme="https://infinitewing.github.io/tags/%E5%80%8B%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
-    
-      <category term="Android APP" scheme="https://infinitewing.github.io/tags/Android-APP/"/>
-    
-      <category term="童年" scheme="https://infinitewing.github.io/tags/%E7%AB%A5%E5%B9%B4/"/>
     
   </entry>
   
