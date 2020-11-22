@@ -75,9 +75,9 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
-      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
-    
       <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
       <category term="NLP" scheme="https://infinitewing.github.io/tags/NLP/"/>
     
@@ -110,9 +110,9 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
-      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
-    
       <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
       <category term="KO" scheme="https://infinitewing.github.io/tags/KO/"/>
     
@@ -181,9 +181,9 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
-      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
-    
       <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
       <category term="WSDM" scheme="https://infinitewing.github.io/tags/WSDM/"/>
     
@@ -265,9 +265,9 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
-      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
-    
       <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
   </entry>
   
@@ -304,9 +304,9 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
-      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
-    
       <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
   </entry>
   
@@ -339,11 +339,11 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
       <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
       <category term="Notebook" scheme="https://infinitewing.github.io/tags/Notebook/"/>
-    
-      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
     
   </entry>
   
@@ -429,11 +429,11 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
       <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
       <category term="Notebook" scheme="https://infinitewing.github.io/tags/Notebook/"/>
-    
-      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
     
   </entry>
   
@@ -524,11 +524,11 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
+      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
+    
       <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
       <category term="Notebook" scheme="https://infinitewing.github.io/tags/Notebook/"/>
-    
-      <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
     
   </entry>
   
@@ -570,8 +570,6 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
-      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
-    
       <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
     
       <category term="Deep Learning" scheme="https://infinitewing.github.io/tags/Deep-Learning/"/>
@@ -579,6 +577,8 @@
       <category term="Keras" scheme="https://infinitewing.github.io/tags/Keras/"/>
     
       <category term="CNN" scheme="https://infinitewing.github.io/tags/CNN/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
   </entry>
   
@@ -664,8 +664,6 @@
     
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
-      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
-    
       <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
     
       <category term="Deep Learning" scheme="https://infinitewing.github.io/tags/Deep-Learning/"/>
@@ -673,6 +671,8 @@
       <category term="Keras" scheme="https://infinitewing.github.io/tags/Keras/"/>
     
       <category term="CNN" scheme="https://infinitewing.github.io/tags/CNN/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
   </entry>
   
