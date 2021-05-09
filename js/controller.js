@@ -1,6 +1,6 @@
 var azurlane_models = ["dujiaoshou_4", "dujiaoshou_4"];
 
-var iframe_heights = ["400px", "400px"]
+var iframe_heights = ["300px", "300px"]
 
 var model_index = 0;
 $(function () {

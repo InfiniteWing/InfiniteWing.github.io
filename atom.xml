@@ -572,13 +572,13 @@
     
       <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
     
-      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
-    
       <category term="Deep Learning" scheme="https://infinitewing.github.io/tags/Deep-Learning/"/>
     
       <category term="Keras" scheme="https://infinitewing.github.io/tags/Keras/"/>
     
       <category term="CNN" scheme="https://infinitewing.github.io/tags/CNN/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
   </entry>
   
@@ -666,13 +666,13 @@
     
       <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
     
-      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
-    
       <category term="Deep Learning" scheme="https://infinitewing.github.io/tags/Deep-Learning/"/>
     
       <category term="Keras" scheme="https://infinitewing.github.io/tags/Keras/"/>
     
       <category term="CNN" scheme="https://infinitewing.github.io/tags/CNN/"/>
+    
+      <category term="Kaggle" scheme="https://infinitewing.github.io/tags/Kaggle/"/>
     
   </entry>
   
@@ -714,6 +714,8 @@
       <category term="Cloud Computing" scheme="https://infinitewing.github.io/categories/Big-Data/Cloud-Computing/"/>
     
     
+      <category term="第一次" scheme="https://infinitewing.github.io/tags/%E7%AC%AC%E4%B8%80%E6%AC%A1/"/>
+    
       <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
       <category term="Big Data" scheme="https://infinitewing.github.io/tags/Big-Data/"/>
@@ -721,8 +723,6 @@
       <category term="Cloud Computing" scheme="https://infinitewing.github.io/tags/Cloud-Computing/"/>
     
       <category term="GCP" scheme="https://infinitewing.github.io/tags/GCP/"/>
-    
-      <category term="第一次" scheme="https://infinitewing.github.io/tags/%E7%AC%AC%E4%B8%80%E6%AC%A1/"/>
     
   </entry>
   
@@ -870,9 +870,9 @@
     
       <category term="網站設計" scheme="https://infinitewing.github.io/tags/%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88/"/>
     
-      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
-    
       <category term="第一次" scheme="https://infinitewing.github.io/tags/%E7%AC%AC%E4%B8%80%E6%AC%A1/"/>
+    
+      <category term="經驗" scheme="https://infinitewing.github.io/tags/%E7%B6%93%E9%A9%97/"/>
     
   </entry>
   

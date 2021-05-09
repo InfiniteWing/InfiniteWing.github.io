@@ -31,7 +31,7 @@ $(function () {
             $('.IW-guider').css("bottom","-445px").show();
             $('.IW-guider').stop(false, false).animate({"bottom":"+=430px"},1000);
             $(".IW-guider .msg-box span").typed({
-                strings: ["^1000總覺得我一直在尋覓著什麼..."],
+                strings: ["^100總覺得我一直在尋覓著什麼..."],
                 typeSpeed: 100
             });
         }
@@ -89,7 +89,7 @@ $(function () {
                 GuiderPowerOff = false;
                 $(".IW-guider").stop(false, false).animate({"left": "10px"}, 1000);
                 $(".IW-guider .msg-box span").typed({
-                    strings: ["^1000總覺得我一直在尋覓著什麼..."],
+                    strings: ["^100總覺得我一直在尋覓著什麼..."],
                     typeSpeed: 100
                 });
                 setTimeout(function () {
@@ -109,7 +109,7 @@ $(function () {
         }
     });
     $(".IW-guider .msg-box span").typed({
-        strings: ["^1000總覺得我一直在尋覓著什麼..."],
+        strings: ["^100總覺得我一直在尋覓著什麼..."],
         typeSpeed: 100
     });
     setInterval(ReloadStrings, 20000);
@@ -133,12 +133,12 @@ function ReloadStrings() {
     lastGuiderAction = rand;
     if (rand < 5000) {
         $(".IW-guider .msg-box span").typed({
-			strings: ["^1000總覺得我一直在尋覓著什麼..."],
+			strings: ["^100總覺得我一直在尋覓著什麼..."],
 			typeSpeed: 100
 		});
     } else {
         $(".IW-guider .msg-box span").typed({
-			strings: ["^1000Where Do We Come From?<br />^1000What Are We?<br />^1000Where Are We Going?"],
+			strings: ["^100Where Do We Come From?<br />^1000What Are We?<br />^1000Where Are We Going?"],
 			typeSpeed: 100
 		});
     }
