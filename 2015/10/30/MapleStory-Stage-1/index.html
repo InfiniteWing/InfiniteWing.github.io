@@ -160,6 +160,9 @@ ga('send', 'pageview');
         <a class="main-nav-link nav-icon" href="/gallery">
           <li class="fa fa-heart" style="font-size: 1.3em;"></li>
         </a>
+        <a class="main-nav-link nav-icon" href="/private/">
+          <li class="fa fa-lock" style="font-size: 1.3em;"></li>
+        </a>
       </nav>
       <nav id="sub-nav">
         
@@ -227,7 +230,7 @@ ga('send', 'pageview');
         Posted at 
         2015-10-30 01:38:58
       </div>
-      <a data-url="https://infinitewing.github.io/2015/10/30/MapleStory-Stage-1/" data-id="ckht08qsx001accu8kjcwq124" class="article-share-link">Share</a>
+      <a data-url="https://infinitewing.github.io/2015/10/30/MapleStory-Stage-1/" data-id="ckoh89hrd001dtku8vetmbc7o" class="article-share-link">Share</a>
       
         <a href="https://infinitewing.github.io/2015/10/30/MapleStory-Stage-1/#disqus_thread" class="article-comment-link">留言</a>
       
@@ -285,10 +288,7 @@ ga('send', 'pageview');
         <a href="https://www.linkedin.com/in/InfiniteWing/" target="_blank">
           <i class="fa fa-linkedin-square fa-3x"></i>
         </a>
-        <!---a href="https://twitter.com/inthewing" target="_blank">
-          <i class="fa fa-twitter-square fa-3x"></i>
-        </a--->
-        <a href="mailto:iamshanawing@gmail.com" target="_blank">
+        <a href="mailto:sars6608@gmail.com" target="_blank">
           <i class="fa fa-envelope-square fa-3x"></i>
         </a>
         <a href="https://www.kaggle.com/infinitewing" target="_blank">
@@ -299,7 +299,7 @@ ga('send', 'pageview');
       </div>
     </div>
     <div class="widget" style="color: white;">
-      Where Do We Come From?<br />What Are We?<br />Where Are We Going?
+      總覺得我一直在尋覓著什麼
     </div>
   </div>
   
@@ -375,7 +375,7 @@ ga('send', 'pageview');
   
   <div class="outer">
     <div id="footer-info" class="inner center">
-      &copy; 2020 InfiniteWing all rights reserved.<br>
+      &copy; 2021 InfiniteWing all rights reserved.<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -396,6 +396,9 @@ ga('send', 'pageview');
   </a>
   <a class="mobile-nav-link nav-icon" href="/gallery">
     <li class="fa fa-heart" style="font-size: 1.3em;"></li>Gallery
+  </a>
+  <a class="mobile-nav-link nav-icon" href="/private/">
+    <li class="fa fa-lock" style="font-size: 1.3em;"></li>Private
   </a>
 </nav>
     
@@ -425,11 +428,13 @@ ga('send', 'pageview');
 <script src="/js/guider.js"></script>
 <script src="/js/js.cookie.js"></script>
 <script src="/js/typed.js"></script>
-<script src="/js/youtube_embed.js"></script>
+<script src="/js/jquery.mb.YTPlayer.js"></script>
 <script src="/js/SmoothScroll.min.js"></script>
 <script src="/js/top.js"></script>
+<script src="/js/youtube_playlist.js"></script>
 
 <link rel="stylesheet" href="/css/InfiniteWing.css">
+<div class="yt_player" style="display: none;"></div>
 <div class="IW-guider" style="display: none;">
     <div class="audio-box">
         <div style="text-align: center;padding-top: 3px;">
@@ -443,11 +448,12 @@ ga('send', 'pageview');
             <div data-video="HQnC1UHBvWA" id="youtube-audio"></div>
         </div>
         <script src="https://www.youtube.com/iframe_api"></script>
+		
     </div>
     <div class="msg-box">
         <span></span>
     </div>
-    <div class="guider-img-public" style="display: none;">
+    <div class="guider-img-public" style="display: none; width: 0px; height: 0px;">
     </div>
     <div class="guider-img-base" style="display: none;">
         <div class="guider-img">
@@ -456,12 +462,160 @@ ga('send', 'pageview');
     </div>
     <div class="IW-guider-control-panel">
         <div class="IW-guider-control-btn"><span class="fa fa-arrow-up guider-up"></span></div>
-        <div class="IW-guider-control-btn"><span class="fa fa-arrow-down guider-down"></span></div>    
+        <div class="IW-guider-control-btn"><span class="fa fa-arrow-down guider-down"></span></div>  
+        <div class="IW-guider-control-btn"><span class="fa fa-random guider-random"></span></div>    
         <div class="IW-guider-control-btn"><span class="fa fa-copyright guider-copyright"></span></div>
         <div class="IW-guider-control-btn"><span class="fa fa-music guider-music"></span></div>
         <div class="IW-guider-control-btn"><span class="fa fa-power-off guider-power"></span></div>
     </div>
+	
+	<!--- Live2D --->
+	<!--- >
+	<link rel="stylesheet" href="/css/live2d.css">
+	<div id="landlord" class="landlord">
+		<canvas id="live2d" width="2000" height="2000" class="live2d"></canvas>
+	</div>
+
+	<script type="text/javascript" src="/js/live2d.js"></script>
+	<script type="text/javascript">
+		var path = 'Midsummer Pixie';
+		loadlive2d("live2d", "/model/"+path+"/model.json");
+	</script>
+	<--->
+	<!--- End Live2D --->
+	
+	<!--- Live2D Ver.3 --->
+	<!---script type="text/javascript" src="
+<script>
+  var disqus_shortname = 'infinitewing';
+  
+  var disqus_url = 'https://infinitewing.github.io/2015/10/30/MapleStory-Stage-1/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/guider.js"></script>
+<script src="/js/js.cookie.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/jquery.mb.YTPlayer.js"></script>
+<script src="/js/SmoothScroll.min.js"></script>
+<script src="/js/top.js"></script>
+<script src="/js/youtube_playlist.js"></script>
+
+<link rel="stylesheet" href="/css/InfiniteWing.css">
+<div class="yt_player" style="display: none;"></div>
+<div class="IW-guider" style="display: none;">
+    <div class="audio-box">
+        <div style="text-align: center;padding-top: 3px;">
+            <span class="fa fa-step-backward youtube-audio-backward"></span>
+            <span class="fa fa-play youtube-audio-play-control"></span>
+            <span class="fa fa-stop youtube-audio-stop"></span>
+            <span class="fa fa-step-forward youtube-audio-forward"></span>
+            <span class="fa fa-youtube-play youtube-audio-youtube"></span>
+        </div>
+        <div style="display: none;">
+            <div data-video="HQnC1UHBvWA" id="youtube-audio"></div>
+        </div>
+        <script src="https://www.youtube.com/iframe_api"></script>
+		
+    </div>
+    <div class="msg-box">
+        <span></span>
+    </div>
+    <div class="guider-img-public" style="display: none; width: 0px; height: 0px;">
+    </div>
+    <div class="guider-img-base" style="display: none;">
+        <div class="guider-img">
+
+        </div>
+    </div>
+    <div class="IW-guider-control-panel">
+        <div class="IW-guider-control-btn"><span class="fa fa-arrow-up guider-up"></span></div>
+        <div class="IW-guider-control-btn"><span class="fa fa-arrow-down guider-down"></span></div>  
+        <div class="IW-guider-control-btn"><span class="fa fa-random guider-random"></span></div>    
+        <div class="IW-guider-control-btn"><span class="fa fa-copyright guider-copyright"></span></div>
+        <div class="IW-guider-control-btn"><span class="fa fa-music guider-music"></span></div>
+        <div class="IW-guider-control-btn"><span class="fa fa-power-off guider-power"></span></div>
+    </div>
+	
+	<!--- Live2D --->
+	<!--- >
+	<link rel="stylesheet" href="/css/live2d.css">
+	<div id="landlord" class="landlord">
+		<canvas id="live2d" width="2000" height="2000" class="live2d"></canvas>
+	</div>
+
+	<script type="text/javascript" src="/js/live2d.js"></script>
+	<script type="text/javascript">
+		var path = 'Midsummer Pixie';
+		loadlive2d("live2d", "/model/"+path+"/model.json");
+	</script>
+	<--->
+	<!--- End Live2D --->
+	
+	<!--- Live2D Ver.3 --->
+	<!---script type="text/javascript" src="/js/pixi.min.js"></script>
+	<script type="text/javascript" src="/js/live2dcubismcore.min.js"></script>
+	<script type="text/javascript" src="/js/live2dcubismframework.js"></script>
+	<script type="text/javascript" src="/js/loadModel.js"></script>
+	<script type="text/javascript" src="/js/live2dcubismpixi.js"></script>
+	<script type="text/javascript" src="/js/controller.js"></script>
+	<link rel="stylesheet" href="/css/live2d_v3.css">
+	
+	<div class="landlord live2d_azurlane_idang_2" id="landlord">
+		<canvas id="live2d" class="live2d" style="margin-left:0px; margin-top:0px; width:300px; "></canvas>
+	</div>
+	<script>
+		modelPath = "/model_azurlane/wuqi_2/wuqi_2.model3.json";
+		//loadModel會用到的參數
+		var modelWidth = 2400;
+		var modelHight = 3000;
+		loadModel(modelPath);
+	</script--->
+	<!--- End Live2D Ver.3 --->
+	<script type="text/javascript" src="/js/controller.js"></script>
+	<iframe id="live2d_iframe" src="/azurlane.html?model_name=wuqi_2" style="width:300px; height:400px; background: transparent;" allowtransparency="true"></iframe>
 </div>
+
+<script src="/js/script.js"></script>
+js/pixi.min.js"></script>
+	<script type="text/javascript" src="/js/live2dcubismcore.min.js"></script>
+	<script type="text/javascript" src="/js/live2dcubismframework.js"></script>
+	<script type="text/javascript" src="/js/loadModel.js"></script>
+	<script type="text/javascript" src="/js/live2dcubismpixi.js"></script>
+	<script type="text/javascript" src="/js/controller.js"></script>
+	<link rel="stylesheet" href="/css/live2d_v3.css">
+	
+	<div class="landlord live2d_azurlane_idang_2" id="landlord">
+		<canvas id="live2d" class="live2d" style="margin-left:0px; margin-top:0px; width:300px; "></canvas>
+	</div>
+	<script>
+		modelPath = "/model_azurlane/wuqi_2/wuqi_2.model3.json";
+		//loadModel會用到的參數
+		var modelWidth = 2400;
+		var modelHight = 3000;
+		loadModel(modelPath);
+	</script--->
+	<!--- End Live2D Ver.3 --->
+	<script type="text/javascript" src="/js/controller.js"></script>
+	<iframe id="live2d_iframe" src="/azurlane.html?model_name=wuqi_2" style="width:300px; height:400px; background: transparent;" allowtransparency="true"></iframe>
+</div>
+
 <script src="/js/script.js"></script>
 
     </div>
