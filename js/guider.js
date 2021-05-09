@@ -5,10 +5,13 @@ var typedLocked = false;
 var powerOffLocked = false;
 var GuiderPowerOff;
 var GuiderYouTubeOff;
+var GuiderShow;
 $(function () {
     GuiderSkin = typeof (Cookies.get('GuiderSkin')) === 'undefined' ? 0 : parseInt(Cookies.get('GuiderSkin'));
     GuiderPowerOff = typeof (Cookies.get('GuiderPowerOff')) === 'undefined' ? false : parseBoolean(Cookies.get('GuiderPowerOff'));
     GuiderYouTubeOff = typeof (Cookies.get('GuiderYouTubeOff')) === 'undefined' ? false : parseBoolean(Cookies.get('GuiderYouTubeOff'));
+    
+    GuiderShow = typeof (Cookies.get('GuiderShow')) === 'undefined' ? false : parseBoolean(Cookies.get('GuiderShow'));
     switch (GuiderSkin) {
         case 0:
             $(".guider-img-public").show();
@@ -17,19 +20,37 @@ $(function () {
             $(".guider-img-base").show();
             break;
     }
+    if(GuiderShow){
+        $('.IW-guider').show();
+    }else{
+        $('.IW-guider').hide();
+    }
+    $('.widget-profile').dblclick(function() {
+        if($('.IW-guider').css('display') == 'none' || $('.IW-guider').css("visibility") == "hidden"){
+            GuiderShow = true;
+            $('.IW-guider').css("bottom","-445px").show();
+            $('.IW-guider').stop(false, false).animate({"bottom":"+=430px"},1000);
+            $(".IW-guider .msg-box span").typed({
+                strings: ["^1000總覺得我一直在尋覓著什麼..."],
+                typeSpeed: 100
+            });
+        }
+        else{
+            GuiderShow = false;
+            $('.IW-guider').stop(false, false).animate({"bottom":"-=430px"},1000,function(){
+                $(this).hide();
+            });
+        }
+    });
+    
+    
     if (GuiderYouTubeOff) {
         $(".IW-guider>.audio-box").stop(false, false).hide();
     }
     if (GuiderPowerOff) {
         $(".IW-guider").animate({"left": "-350px"}, 0);
     }
-    /*
-    $(".guider-img-public").dblclick(function () {
-        $(".guider-img-public").hide();
-        $(".guider-img-base").show();
-        GuiderSkin = 1;
-    });
-    */
+
     $(".guider-img-base").dblclick(function () {
         $(".guider-img-base").hide();
         $(".guider-img-public").show();
@@ -53,7 +74,7 @@ $(function () {
                 typedLocked = true;
                 powerOffLocked = true;
                 $(".IW-guider .msg-box span").typed({
-                    strings: ["主人^600.^600.^600.^600<br />歐呀絲咪"],
+                    strings: ["Shutdown.."],
                     typeSpeed: 60
                 });
                 setTimeout(function () {
@@ -68,7 +89,7 @@ $(function () {
                 GuiderPowerOff = false;
                 $(".IW-guider").stop(false, false).animate({"left": "10px"}, 1000);
                 $(".IW-guider .msg-box span").typed({
-                    strings: ["^1100主人，歡迎回來(´・ω・`)^1000<br />很高興再次見到你！"],
+                    strings: ["^1000總覺得我一直在尋覓著什麼..."],
                     typeSpeed: 100
                 });
                 setTimeout(function () {
@@ -87,17 +108,16 @@ $(function () {
             $(".IW-guider>.audio-box").stop(false, false).fadeIn(600);
         }
     });
-    //$.preload('/IDC/images/guider/guider04.png', '/IDC/images/guider/guider06.png', '/IDC/images/guider/guider02.png', '/IDC/images/guider/guider18.png');
     $(".IW-guider .msg-box span").typed({
-        strings: ["主人，歡迎回來！！"],
+        strings: ["^1000總覺得我一直在尋覓著什麼..."],
         typeSpeed: 100
     });
-    //setInterval(ChangeImage, 4500);
     setInterval(ReloadStrings, 20000);
     $(window).unload(function () {
         Cookies.set('GuiderPowerOff', GuiderPowerOff);
         Cookies.set('GuiderYouTubeOff', GuiderYouTubeOff);
         Cookies.set('GuiderSkin', GuiderSkin);
+        Cookies.set('GuiderShow', GuiderShow);
     });
 });
 
@@ -107,81 +127,23 @@ function ReloadStrings() {
     }
     stayTime += 20;
     var rand = Random(10000);
-    while (rand % 2500 == lastGuiderAction) {
+    while (rand == lastGuiderAction) {
         rand = Random(10000);
     }
-    lastGuiderAction = rand % 2500;
-    if (rand < 2500) {
-        if (stayTime > 60 * 5 && stayTime < 60 * 10) {
-            $(".IW-guider .msg-box span").typed({
-                strings: ["沒想到主人是一個...^1000這麼專情的人！"],
-                typeSpeed: 100
-            });
-        } else if (stayTime > 60 * 10) {
-            $(".IW-guider .msg-box span").typed({
-                strings: ["好睏唷..."],
-                typeSpeed: 100
-            });
-        } else {
-            $(".IW-guider .msg-box span").typed({
-                strings: ["主人...^1000最喜歡！！"],
-                typeSpeed: 100
-            });
-        }
-    } else if (rand < 5000) {
-        $(".IW-guider .msg-box span").typed({
-            strings: ["嗚喵～^1000嗚喵～^1000嗚喵～"],
-            typeSpeed: 100
-        });
-    } else if (rand < 7500) {
-        $(".IW-guider .msg-box span").typed({
-            strings: ["主人^400.^400.^400.^400你要左邊還是右邊呢？"],
-            typeSpeed: 100
-        });
-    } else {
-        /*
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(ShowWeather);
-        } else {
-            $(".IW-guider .msg-box span").typed({
-                strings: ["對於經緯度了利用，我們只是想做即時氣象的提醒(雖然還沒做出來Orz)。"],
-                typeSpeed: 100
-            });
-        }
-        */
-    }
-}
-function ShowWeather(position) {
-    /*
-    var lat = position.coords.latitude;
-    var lon = position.coords.longitude;
-    $(".IW-guider .msg-box span").typed({
-        strings: ["你的經緯度座標為：^500(" + lat.toFixed(3) + "," + lon.toFixed(3) + ")，^800很抱歉目前還沒有聰明到能提供即時氣象資訊。"],
-        typeSpeed: 100
-    });
-    */
-}
-function ChangeImage() {
-    /*
-    var rand = Random(15000);
+    lastGuiderAction = rand;
     if (rand < 5000) {
-        $(".IW-guider .guider-img").css("background-image", "url('/IDC/images/guider/guider18.png')").delay(200).queue(function (next) {
-            $(this).css("background-image", "url('/IDC/images/guider/guider04.png')");
-            next();
-        });
-    } else if (rand < 10000) {
-        $(".IW-guider .guider-img").css("background-image", "url('/IDC/images/guider/guider02.png')").delay(200).queue(function (next) {
-            $(this).css("background-image", "url('/IDC/images/guider/guider04.png')");
-            next();
-        });
+        $(".IW-guider .msg-box span").typed({
+			strings: ["^1000總覺得我一直在尋覓著什麼..."],
+			typeSpeed: 100
+		});
     } else {
-        $(".IW-guider .guider-img").css("background-image", "url('/IDC/images/guider/guider06.png')").delay(200).queue(function (next) {
-            $(this).css("background-image", "url('/IDC/images/guider/guider04.png')");
-            next();
-        });
+        $(".IW-guider .msg-box span").typed({
+			strings: ["^1000Where Do We Come From?<br />^1000What Are We?<br />^1000Where Are We Going?"],
+			typeSpeed: 100
+		});
     }
-    */
 }
+
 function Random(size) {
     return Math.floor(Math.random() * (size) + 1);
 }
@@ -201,3 +163,5 @@ function parseBoolean(str) {
             tmp.push($('<img />').attr('src', imgs[ i ]));
     };
 })(jQuery);
+
+

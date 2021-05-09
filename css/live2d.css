@@ -1,0 +1,10 @@
+body{
+    background: black;
+}
+#live2d{
+    position: fixed;
+    left:-60px;
+    bottom:-70px;
+	z-index:-5;
+	width:450px;
+}
